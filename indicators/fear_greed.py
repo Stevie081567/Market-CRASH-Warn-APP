@@ -2,9 +2,11 @@
 fear_greed.py — CNN Fear & Greed Index
 Quelle: CNN inoffizieller API-Endpunkt
 0 = Extreme Fear, 100 = Extreme Greed
+
+Hinweis: CNN liefert einen 7-Tage-Durchschnitt als "score".
+Ein abweichender Tageswert anderer Quellen ist daher normal.
 """
 
-import json
 import logging
 import requests
 from indicators.base import IndicatorResult
@@ -24,21 +26,17 @@ def get_signal() -> IndicatorResult:
     try:
         resp = requests.get(CNN_URL, headers=HEADERS, timeout=10)
         resp.raise_for_status()
-        data = resp.json()
-
-        # ── DEBUG: alle Felder ausgeben ──────────────────────────
-        fg_raw = data.get("fear_and_greed", {})
-        print("\n── Fear & Greed API Debug ──────────────────────────────")
-        print(json.dumps(fg_raw, indent=2))
-        print("────────────────────────────────────────────────────────\n")
-        # ── END DEBUG ────────────────────────────────────────────
-
+        data       = resp.json()
         score_data = data.get("fear_and_greed", {})
-        value = float(score_data.get("score", -1))
-        label = score_data.get("rating", "Unknown")
+        value      = float(score_data.get("score", -1))
+        label      = score_data.get("rating", "Unknown")
+        timestamp  = score_data.get("timestamp", "")[:10]   # nur Datum
 
         if value < 0:
             raise ValueError("Ungültiger Fear & Greed Wert")
+
+        # Hinweis im Message: CNN-Wert ist 7-Tage-Durchschnitt
+        suffix = f" (Stand: {timestamp}, 7T-Ø)" if timestamp else " (7T-Ø)"
 
         if value <= config.FEAR_GREED_RED:
             return IndicatorResult(
@@ -46,7 +44,7 @@ def get_signal() -> IndicatorResult:
                 value=value,
                 status="red",
                 score=config.SCORE_PER_RED,
-                message=f"F&G={value:.0f} ({label}) — EXTREME FEAR 🔴"
+                message=f"F&G={value:.0f} ({label}) — EXTREME FEAR 🔴{suffix}"
             )
         elif value <= config.FEAR_GREED_YELLOW:
             return IndicatorResult(
@@ -54,7 +52,7 @@ def get_signal() -> IndicatorResult:
                 value=value,
                 status="yellow",
                 score=config.SCORE_PER_YELLOW,
-                message=f"F&G={value:.0f} ({label}) — Angst im Markt 🟡"
+                message=f"F&G={value:.0f} ({label}) — Angst im Markt 🟡{suffix}"
             )
         else:
             return IndicatorResult(
@@ -62,7 +60,7 @@ def get_signal() -> IndicatorResult:
                 value=value,
                 status="green",
                 score=0,
-                message=f"F&G={value:.0f} ({label})"
+                message=f"F&G={value:.0f} ({label}){suffix}"
             )
 
     except Exception as e:
