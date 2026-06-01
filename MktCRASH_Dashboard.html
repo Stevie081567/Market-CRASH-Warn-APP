@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StockCRASH WarnAPP — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ─── DESIGN TOKENS ─────────────────────────────────────── */
+  :root {
+    --bg-base:       #0a0c0f;
+    --bg-panel:      #0f1217;
+    --bg-card:       #141820;
+    --bg-card-hover: #1a2030;
+    --border:        #1e2535;
+    --border-bright: #2a3448;
+
+    --text-primary:  #e8edf5;
+    --text-secondary:#7a8aa0;
+    --text-dim:      #3d4e63;
+
+    --green:         #00c896;
+    --green-dim:     #003d2e;
+    --green-glow:    rgba(0,200,150,0.15);
+    --yellow:        #f5a623;
+    --yellow-dim:    #3d2800;
+    --yellow-glow:   rgba(245,166,35,0.15);
+    --red:           #e63946;
+    --red-dim:       #3d0008;
+    --red-glow:      rgba(230,57,70,0.2);
+
+    --accent:        #2979ff;
+    --accent-dim:    #0d1f4a;
+
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-sans: 'IBM Plex Sans', sans-serif;
+
+    --radius: 4px;
+    --radius-lg: 8px;
+  }
+
+  /* ─── RESET & BASE ──────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { font-size: 14px; }
+
+  body {
+    background: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Subtle grid texture */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(41,121,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(41,121,255,0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ─── LAYOUT ────────────────────────────────────────────── */
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 16px 40px;
+  }
+
+  /* ─── HEADER ────────────────────────────────────────────── */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 16px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo-icon {
+    width: 32px; height: 32px;
+    background: var(--accent);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+    animation: pulse-icon 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-icon {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(41,121,255,0.4); }
+    50%       { box-shadow: 0 0 0 8px rgba(41,121,255,0); }
+  }
+
+  .logo-text {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+  }
+
+  .logo-sub {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .clock {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-align: right;
+  }
+
+  .clock-time {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  .live-dot {
+    width: 8px; height: 8px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: blink 2s ease-in-out infinite;
+    box-shadow: 0 0 6px var(--green);
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.3; }
+  }
+
+  /* ─── MAIN AMPEL BANNER ─────────────────────────────────── */
+  .ampel-banner {
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    padding: 28px 32px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+
+  .ampel-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    transition: background 0.5s ease;
+  }
+
+  .ampel-banner.green  { border-color: var(--green);  background: linear-gradient(135deg, #0a150f 0%, var(--bg-panel) 60%); }
+  .ampel-banner.yellow { border-color: var(--yellow); background: linear-gradient(135deg, #150e00 0%, var(--bg-panel) 60%); }
+  .ampel-banner.red    { border-color: var(--red);    background: linear-gradient(135deg, #150003 0%, var(--bg-panel) 60%); }
+
+  .ampel-banner.red { animation: red-pulse 2s ease-in-out infinite; }
+
+  @keyframes red-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(230,57,70,0); }
+    50%       { box-shadow: 0 0 30px 2px rgba(230,57,70,0.15); }
+  }
+
+  .ampel-circle {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2.2rem;
+    flex-shrink: 0;
+    border: 2px solid;
+    position: relative;
+  }
+
+  .ampel-circle.green  { border-color: var(--green);  background: var(--green-dim);  box-shadow: 0 0 20px var(--green-glow); }
+  .ampel-circle.yellow { border-color: var(--yellow); background: var(--yellow-dim); box-shadow: 0 0 20px var(--yellow-glow); }
+  .ampel-circle.red    { border-color: var(--red);    background: var(--red-dim);    box-shadow: 0 0 20px var(--red-glow); animation: red-circle-pulse 1.5s ease-in-out infinite; }
+
+  @keyframes red-circle-pulse {
+    0%, 100% { box-shadow: 0 0 20px var(--red-glow); }
+    50%       { box-shadow: 0 0 40px rgba(230,57,70,0.4); }
+  }
+
+  .ampel-info { flex: 1; }
+
+  .ampel-status-label {
+    font-family: var(--font-mono);
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    margin-bottom: 6px;
+  }
+
+  .ampel-status-label.green  { color: var(--green); }
+  .ampel-status-label.yellow { color: var(--yellow); }
+  .ampel-status-label.red    { color: var(--red); }
+
+  .ampel-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+
+  .ampel-meta {
+    display: flex;
+    gap: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-dim);
+  }
+
+  .ampel-meta span { color: var(--text-secondary); }
+
+  .score-display {
+    text-align: center;
+    flex-shrink: 0;
+    padding: 0 8px;
+  }
+
+  .score-number {
+    font-family: var(--font-mono);
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--text-primary);
+  }
+
+  .score-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .score-bar-wrap {
+    width: 120px;
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    margin: 8px auto 0;
+    overflow: hidden;
+  }
+
+  .score-bar {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 1s ease, background 0.5s ease;
+  }
+
+  /* ─── GRID ──────────────────────────────────────────────── */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  /* ─── PANELS ────────────────────────────────────────────── */
+  .panel {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .panel-header {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-card);
+  }
+
+  .panel-title {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+
+  .panel-badge {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    padding: 2px 7px;
+    border-radius: 2px;
+    background: var(--border);
+    color: var(--text-dim);
+  }
+
+  .panel-body { padding: 16px; }
+
+  /* ─── INDICATOR CARDS ───────────────────────────────────── */
+  .indicators-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .ind-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px;
+    cursor: default;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ind-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+  }
+
+  .ind-card.green::before  { background: var(--green); }
+  .ind-card.yellow::before { background: var(--yellow); }
+  .ind-card.red::before    { background: var(--red); }
+  .ind-card.error::before  { background: var(--text-dim); }
+
+  .ind-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-bright);
+    transform: translateY(-1px);
+  }
+
+  .ind-card.red { animation: ind-red-pulse 3s ease-in-out infinite; }
+
+  @keyframes ind-red-pulse {
+    0%, 100% { border-color: var(--border); }
+    50%       { border-color: rgba(230,57,70,0.4); }
+  }
+
+  .ind-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  .ind-name {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    line-height: 1.3;
+  }
+
+  .ind-emoji { font-size: 1rem; flex-shrink: 0; margin-left: 8px; }
+
+  .ind-value {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .ind-card.green  .ind-value { color: var(--green); }
+  .ind-card.yellow .ind-value { color: var(--yellow); }
+  .ind-card.red    .ind-value { color: var(--red); }
+  .ind-card.error  .ind-value { color: var(--text-dim); }
+
+  .ind-msg {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    line-height: 1.4;
+    font-family: var(--font-mono);
+  }
+
+  .ind-score-dots {
+    display: flex;
+    gap: 3px;
+    margin-top: 8px;
+  }
+
+  .dot {
+    width: 6px; height: 6px;
+    border-radius: 1px;
+    background: var(--border);
+  }
+
+  .dot.filled.green  { background: var(--green); }
+  .dot.filled.yellow { background: var(--yellow); }
+  .dot.filled.red    { background: var(--red); }
+
+  /* ─── SCORE CHART ───────────────────────────────────────── */
+  .chart-wrap {
+    position: relative;
+    height: 120px;
+    margin-top: 4px;
+  }
+
+  canvas#scoreChart {
+    width: 100% !important;
+    height: 120px !important;
+  }
+
+  /* ─── HISTORY TABLE ─────────────────────────────────────── */
+  .history-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+  }
+
+  .history-table th {
+    color: var(--text-dim);
+    text-align: left;
+    padding: 4px 8px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+    font-weight: 400;
+  }
+
+  .history-table td {
+    padding: 5px 8px;
+    border-bottom: 1px solid rgba(30,37,53,0.5);
+    color: var(--text-secondary);
+    vertical-align: middle;
+  }
+
+  .history-table tr:last-child td { border-bottom: none; }
+
+  .history-table tr:hover td { background: var(--bg-card-hover); }
+
+  .status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 1px 6px;
+    border-radius: 2px;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .status-pill.green  { background: var(--green-dim);  color: var(--green); }
+  .status-pill.yellow { background: var(--yellow-dim); color: var(--yellow); }
+  .status-pill.red    { background: var(--red-dim);    color: var(--red); }
+
+  .score-mini-bar {
+    display: inline-block;
+    height: 4px;
+    border-radius: 2px;
+    vertical-align: middle;
+    margin-left: 6px;
+  }
+
+  /* ─── THRESHOLDS TABLE ──────────────────────────────────── */
+  .thresh-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+  }
+
+  .thresh-table th {
+    color: var(--text-dim);
+    padding: 4px 8px;
+    text-align: left;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .thresh-table td {
+    padding: 5px 8px;
+    border-bottom: 1px solid rgba(30,37,53,0.5);
+    color: var(--text-secondary);
+  }
+
+  .thresh-table .y { color: var(--yellow); }
+  .thresh-table .r { color: var(--red); }
+  .thresh-table .g { color: var(--green); }
+
+  /* ─── REFRESH BUTTON ────────────────────────────────────── */
+  .refresh-btn {
+    background: var(--accent-dim);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    padding: 6px 14px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+
+  .refresh-btn:hover {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .refresh-btn:active { transform: scale(0.97); }
+
+  /* ─── FOOTER ────────────────────────────────────────────── */
+  footer {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--text-dim);
+  }
+
+  /* ─── ANIMATIONS ────────────────────────────────────────── */
+  .fade-in {
+    animation: fadeIn 0.4s ease forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+  .stagger-1 { animation-delay: 0.05s; }
+  .stagger-2 { animation-delay: 0.10s; }
+  .stagger-3 { animation-delay: 0.15s; }
+  .stagger-4 { animation-delay: 0.20s; }
+  .stagger-5 { animation-delay: 0.25s; }
+
+  /* ─── RESPONSIVE ────────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    .indicators-grid { grid-template-columns: 1fr; }
+    .ampel-banner { flex-direction: column; gap: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <div class="logo-icon">📉</div>
+      <div>
+        <div class="logo-text">StockCRASH WarnAPP</div>
+        <div class="logo-sub">Markt-Frühwarnsystem · Stefan Schauß</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="clock">
+        <div class="clock-time" id="clockTime">--:--:--</div>
+        <div id="clockDate">--- -- ----</div>
+      </div>
+      <div class="live-dot" id="liveDot" title="Live"></div>
+    </div>
+  </header>
+
+  <!-- AMPEL BANNER -->
+  <div class="ampel-banner fade-in" id="ampelBanner">
+    <div class="ampel-circle" id="ampelCircle">
+      <span id="ampelEmoji">🟢</span>
+    </div>
+    <div class="ampel-info">
+      <div class="ampel-status-label" id="ampelLabel">GRÜN</div>
+      <div class="ampel-desc" id="ampelDesc">Kein erhöhtes Risiko — Märkte stabil</div>
+      <div class="ampel-meta">
+        <span>🔴 Rot: <span id="metaRed">0</span></span>
+        <span>🟡 Gelb: <span id="metaYellow">0</span></span>
+        <span>⚫ Fehler: <span id="metaError">0</span></span>
+        <span>Aktualisiert: <span id="metaTime">--:--</span></span>
+      </div>
+    </div>
+    <div class="score-display">
+      <div class="score-number" id="scoreNumber">0</div>
+      <div class="score-label">SCORE</div>
+      <div class="score-bar-wrap">
+        <div class="score-bar" id="scoreBar" style="width:0%"></div>
+      </div>
+    </div>
+    <button class="refresh-btn" onclick="loadData()">↻ Refresh</button>
+  </div>
+
+  <!-- ROW 1: Indicators + Score Chart -->
+  <div class="grid-2 fade-in stagger-1">
+
+    <!-- INDIKATOREN -->
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">Indikatoren</span>
+        <span class="panel-badge" id="indicatorCount">-- Aktiv</span>
+      </div>
+      <div class="panel-body">
+        <div class="indicators-grid" id="indicatorsGrid">
+          <!-- dynamisch befüllt -->
+        </div>
+      </div>
+    </div>
+
+    <!-- SCORE-VERLAUF -->
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">Score-Verlauf (Heute)</span>
+        <span class="panel-badge">15-Min-Intervall</span>
+      </div>
+      <div class="panel-body">
+        <div class="chart-wrap">
+          <canvas id="scoreChart"></canvas>
+        </div>
+        <div style="margin-top:16px;">
+          <table class="history-table" id="historyTable">
+            <thead>
+              <tr>
+                <th>Zeit</th>
+                <th>Score</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="historyBody">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 2: Schwellenwerte -->
+  <div class="panel fade-in stagger-2" style="margin-bottom:16px;">
+    <div class="panel-header">
+      <span class="panel-title">Schwellenwerte (aus config.py)</span>
+      <span class="panel-badge">Score 0–2=🟢 / 3–5=🟡 / 6+=🔴</span>
+    </div>
+    <div class="panel-body">
+      <div style="display:grid; grid-template-columns: repeat(2,1fr); gap: 0 32px;">
+        <table class="thresh-table">
+          <thead><tr><th>Indikator</th><th>🟡 Gelb</th><th>🔴 Rot</th><th>Punkte</th></tr></thead>
+          <tbody>
+            <tr><td>VIX Fear Index</td><td class="y">&gt; 20</td><td class="r">&gt; 30</td><td>2</td></tr>
+            <tr><td>S&P 500 Intraday</td><td class="y">&gt; -1,5%</td><td class="r">&gt; -3%</td><td>2</td></tr>
+            <tr><td>S&P 500 vom ATH</td><td class="y">&gt; -5%</td><td class="r">&gt; -10%</td><td>2</td></tr>
+            <tr><td>Fear &amp; Greed</td><td class="y">&lt; 35</td><td class="r">&lt; 20</td><td>2</td></tr>
+          </tbody>
+        </table>
+        <table class="thresh-table">
+          <thead><tr><th>Indikator</th><th>🟡 Gelb</th><th>🔴 Rot</th><th>Punkte</th></tr></thead>
+          <tbody>
+            <tr><td>Yield Curve 10Y-2Y</td><td class="y">&lt; 0,3%</td><td class="r">Invertiert</td><td>1</td></tr>
+            <tr><td>Put/Call Ratio</td><td class="y">&gt; 1,0</td><td class="r">&gt; 1,3</td><td>1</td></tr>
+            <tr><td>E-Mini Futures</td><td class="y">&lt; -0,5%</td><td class="r">&lt; -1,5%</td><td>1</td></tr>
+            <tr><td>Buffett Indicator</td><td class="y">&gt; 150%</td><td class="r">&gt; 180%</td><td>1</td></tr>
+            <tr><td>Globale Märkte</td><td class="y">Ø &gt; -1%</td><td class="r">Ø &gt; -2%</td><td>1</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>StockCRASH WarnAPP © Stefan Schauß — Kein Finanzberatungsersatz</span>
+    <span id="footerInfo">Daten mit 15-Min-Delay · Pushover aktiv</span>
+  </footer>
+
+</div>
+
+<!-- ─── SCRIPTS ──────────────────────────────────────────────── -->
+<script>
+/* ── DEMO-DATEN (werden durch state.json ersetzt wenn vorhanden) ── */
+const DEMO = {
+  status: "yellow",
+  score: 4,
+  red_count: 1,
+  yellow_count: 3,
+  error_count: 0,
+  last_updated: new Date().toLocaleTimeString('de-DE', {hour:'2-digit',minute:'2-digit'}),
+  indicators: [
+    { name:"VIX Fear Index",       value:24.3,  status:"yellow", score:1, message:"VIX=24.3 — erhöhte Volatilität" },
+    { name:"S&P 500",              value:5280,  status:"yellow", score:1, message:"SPX=5280 | Intraday -1.7% | ATH -2.1%" },
+    { name:"Yield Curve (10Y-2Y)", value:0.18,  status:"yellow", score:1, message:"Spread=+0.18% — flache Kurve" },
+    { name:"Fear & Greed",         value:31,    status:"red",    score:2, message:"F&G=31 — Extreme Fear" },
+    { name:"E-Mini Futures",       value:-0.8,  status:"yellow", score:1, message:"Ø -0.8% | S&P:-0.9% | NQ:-0.7%" },
+    { name:"Globale Märkte",       value:-0.6,  status:"green",  score:0, message:"Ø -0.6% — DAX:-0.5% | NK:-0.8%" },
+    { name:"Buffett Indicator",    value:162,   status:"yellow", score:1, message:"162% — überbewertet" },
+    { name:"Put/Call Ratio",       value:0.87,  status:"green",  score:0, message:"P/C=0.87 — normal" },
+  ],
+  history: [
+    {time:"14:00",score:1,status:"green"},
+    {time:"15:00",score:2,status:"green"},
+    {time:"15:30",score:2,status:"green"},
+    {time:"15:45",score:3,status:"yellow"},
+    {time:"16:00",score:3,status:"yellow"},
+    {time:"16:15",score:4,status:"yellow"},
+    {time:"16:30",score:4,status:"yellow"},
+    {time:"16:45",score:5,status:"yellow"},
+    {time:"17:00",score:5,status:"yellow"},
+    {time:"17:15",score:4,status:"yellow"},
+    {time:"17:30",score:4,status:"yellow"},
+    {time:"17:45",score:4,status:"yellow"},
+    {time:"18:00",score:3,status:"yellow"},
+    {time:"18:15",score:4,status:"yellow"},
+    {time:"18:30",score:4,status:"yellow"},
+    {time:"18:45",score:4,status:"yellow"},
+  ]
+};
+
+/* ── FARBEN ─────────────────────────────────────────────────── */
+const C = {
+  green:  '#00c896',
+  yellow: '#f5a623',
+  red:    '#e63946',
+  dim:    '#3d4e63'
+};
+
+const LABELS = {
+  green:  { text:'GRÜN',  desc:'Kein erhöhtes Risiko — Märkte stabil' },
+  yellow: { text:'GELB',  desc:'Erhöhtes Risiko — Vorsicht geboten' },
+  red:    { text:'ROT',   desc:'CRASH-ALARM — Sofort handeln!' },
+};
+
+const EMOJIS = { green:'🟢', yellow:'🟡', red:'🔴' };
+
+/* ── CLOCK ──────────────────────────────────────────────────── */
+function updateClock() {
+  const now = new Date();
+  document.getElementById('clockTime').textContent =
+    now.toLocaleTimeString('de-DE', {hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  document.getElementById('clockDate').textContent =
+    now.toLocaleDateString('de-DE', {weekday:'short',day:'2-digit',month:'short',year:'numeric'});
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+/* ── CHART ──────────────────────────────────────────────────── */
+let chartInstance = null;
+
+function drawChart(history) {
+  const canvas = document.getElementById('scoreChart');
+  const ctx = canvas.getContext('2d');
+
+  // Retina
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width  = canvas.offsetWidth  * dpr;
+  canvas.height = 120 * dpr;
+  ctx.scale(dpr, dpr);
+
+  const W = canvas.offsetWidth;
+  const H = 120;
+  const PAD = { top:12, right:12, bottom:24, left:28 };
+  const iW = W - PAD.left - PAD.right;
+  const iH = H - PAD.top  - PAD.bottom;
+  const MAX_SCORE = 10;
+
+  ctx.clearRect(0, 0, W, H);
+
+  if (!history || history.length === 0) return;
+
+  const n = history.length;
+  const xStep = iW / Math.max(n - 1, 1);
+
+  // Grid lines
+  for (let s = 0; s <= MAX_SCORE; s += 2) {
+    const y = PAD.top + iH - (s / MAX_SCORE) * iH;
+    ctx.beginPath();
+    ctx.strokeStyle = s === 3 ? 'rgba(245,166,35,0.2)' : s === 6 ? 'rgba(230,57,70,0.2)' : 'rgba(30,37,53,0.8)';
+    ctx.lineWidth = s === 3 || s === 6 ? 1 : 0.5;
+    ctx.setLineDash(s === 3 || s === 6 ? [4,3] : []);
+    ctx.moveTo(PAD.left, y);
+    ctx.lineTo(PAD.left + iW, y);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Y-labels
+    ctx.fillStyle = 'rgba(122,138,160,0.6)';
+    ctx.font = `${9 * (1/dpr * dpr)}px IBM Plex Mono, monospace`;
+    ctx.textAlign = 'right';
+    ctx.fillText(s, PAD.left - 4, y + 3);
+  }
+
+  // Gradient fill
+  const grad = ctx.createLinearGradient(0, PAD.top, 0, PAD.top + iH);
+  grad.addColorStop(0,   'rgba(230,57,70,0.3)');
+  grad.addColorStop(0.4, 'rgba(245,166,35,0.2)');
+  grad.addColorStop(1,   'rgba(0,200,150,0.05)');
+
+  ctx.beginPath();
+  history.forEach((h, i) => {
+    const x = PAD.left + i * xStep;
+    const y = PAD.top + iH - (h.score / MAX_SCORE) * iH;
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  });
+  const lastX = PAD.left + (n-1) * xStep;
+  ctx.lineTo(lastX, PAD.top + iH);
+  ctx.lineTo(PAD.left, PAD.top + iH);
+  ctx.closePath();
+  ctx.fillStyle = grad;
+  ctx.fill();
+
+  // Line
+  ctx.beginPath();
+  history.forEach((h, i) => {
+    const x = PAD.left + i * xStep;
+    const y = PAD.top + iH - (h.score / MAX_SCORE) * iH;
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  });
+  ctx.strokeStyle = C[history[history.length-1].status] || C.green;
+  ctx.lineWidth = 1.5;
+  ctx.stroke();
+
+  // Dots + X-labels
+  history.forEach((h, i) => {
+    const x = PAD.left + i * xStep;
+    const y = PAD.top + iH - (h.score / MAX_SCORE) * iH;
+    ctx.beginPath();
+    ctx.arc(x, y, 3, 0, Math.PI * 2);
+    ctx.fillStyle = C[h.status] || C.green;
+    ctx.fill();
+
+    // X-labels (every 4th)
+    if (i % 4 === 0 || i === n - 1) {
+      ctx.fillStyle = 'rgba(122,138,160,0.6)';
+      ctx.font = `9px IBM Plex Mono, monospace`;
+      ctx.textAlign = 'center';
+      ctx.fillText(h.time, x, H - 4);
+    }
+  });
+}
+
+/* ── RENDER ─────────────────────────────────────────────────── */
+function render(data) {
+  const s = data.status || 'green';
+
+  // Banner
+  const banner = document.getElementById('ampelBanner');
+  banner.className = `ampel-banner fade-in ${s}`;
+  document.getElementById('ampelCircle').className = `ampel-circle ${s}`;
+  document.getElementById('ampelEmoji').textContent = EMOJIS[s];
+  document.getElementById('ampelLabel').className = `ampel-status-label ${s}`;
+  document.getElementById('ampelLabel').textContent = LABELS[s].text;
+  document.getElementById('ampelDesc').textContent  = LABELS[s].desc;
+  document.getElementById('metaRed').textContent    = data.red_count    || 0;
+  document.getElementById('metaYellow').textContent = data.yellow_count || 0;
+  document.getElementById('metaError').textContent  = data.error_count  || 0;
+  document.getElementById('metaTime').textContent   = data.last_updated || '--:--';
+
+  // Score
+  const score = data.score || 0;
+  document.getElementById('scoreNumber').textContent = score;
+  const bar = document.getElementById('scoreBar');
+  bar.style.width    = Math.min(score / 10 * 100, 100) + '%';
+  bar.style.background = C[s];
+
+  // Indikatoren
+  const grid = document.getElementById('indicatorsGrid');
+  grid.innerHTML = '';
+  (data.indicators || []).forEach(ind => {
+    const valFmt = ind.value !== null && ind.value !== undefined
+      ? (Math.abs(ind.value) < 10 ? ind.value.toFixed(2) : Math.round(ind.value))
+      : '—';
+
+    const dots = Array.from({length:2}, (_, i) =>
+      `<div class="dot ${i < ind.score ? 'filled ' + ind.status : ''}"></div>`
+    ).join('');
+
+    grid.innerHTML += `
+      <div class="ind-card ${ind.status}">
+        <div class="ind-top">
+          <div class="ind-name">${ind.name}</div>
+          <div class="ind-emoji">${EMOJIS[ind.status] || '⚫'}</div>
+        </div>
+        <div class="ind-value">${valFmt}</div>
+        <div class="ind-msg">${ind.message}</div>
+        <div class="ind-score-dots">${dots}</div>
+      </div>`;
+  });
+
+  document.getElementById('indicatorCount').textContent =
+    `${(data.indicators||[]).filter(i=>i.status!=='error').length} Aktiv`;
+
+  // History table
+  const tbody = document.getElementById('historyBody');
+  tbody.innerHTML = '';
+  const hist = (data.history || []).slice().reverse();
+  hist.forEach(h => {
+    const barW = Math.min(h.score / 10 * 60, 60);
+    tbody.innerHTML += `
+      <tr>
+        <td>${h.time}</td>
+        <td>
+          ${h.score}
+          <span class="score-mini-bar" style="width:${barW}px;background:${C[h.status]||C.green}"></span>
+        </td>
+        <td><span class="status-pill ${h.status}">${EMOJIS[h.status]} ${h.status.toUpperCase()}</span></td>
+      </tr>`;
+  });
+
+  // Chart
+  setTimeout(() => drawChart(data.history || []), 50);
+}
+
+/* ── DATA LOADING ───────────────────────────────────────────── */
+async function loadData() {
+  // Versuche state.json zu laden (liegt im gleichen Verzeichnis)
+  try {
+    const resp = await fetch('state.json?' + Date.now());
+    if (resp.ok) {
+      const raw = await resp.json();
+      // state.json hat anderes Format — wir zeigen was vorhanden ist
+      // und füllen Fehlende mit Demo-Daten
+      const merged = Object.assign({}, DEMO, raw);
+      render(merged);
+      document.getElementById('footerInfo').textContent =
+        'Daten aus state.json · ' + new Date().toLocaleTimeString('de-DE');
+      return;
+    }
+  } catch(e) {}
+
+  // Fallback: Demo-Daten
+  DEMO.last_updated = new Date().toLocaleTimeString('de-DE', {hour:'2-digit',minute:'2-digit'});
+  render(DEMO);
+  document.getElementById('footerInfo').textContent =
+    'Demo-Modus (state.json nicht gefunden) · ' + new Date().toLocaleTimeString('de-DE');
+}
+
+/* ── AUTO-REFRESH alle 60s ──────────────────────────────────── */
+loadData();
+setInterval(loadData, 60000);
+
+/* ── RESIZE CHART ───────────────────────────────────────────── */
+window.addEventListener('resize', () => {
+  if (DEMO.history) drawChart(DEMO.history);
+});
+</script>
+</body>
+</html>
