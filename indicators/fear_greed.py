@@ -4,6 +4,7 @@ Quelle: CNN inoffizieller API-Endpunkt
 0 = Extreme Fear, 100 = Extreme Greed
 """
 
+import json
 import logging
 import requests
 from indicators.base import IndicatorResult
@@ -23,7 +24,15 @@ def get_signal() -> IndicatorResult:
     try:
         resp = requests.get(CNN_URL, headers=HEADERS, timeout=10)
         resp.raise_for_status()
-        data  = resp.json()
+        data = resp.json()
+
+        # ── DEBUG: alle Felder ausgeben ──────────────────────────
+        fg_raw = data.get("fear_and_greed", {})
+        print("\n── Fear & Greed API Debug ──────────────────────────────")
+        print(json.dumps(fg_raw, indent=2))
+        print("────────────────────────────────────────────────────────\n")
+        # ── END DEBUG ────────────────────────────────────────────
+
         score_data = data.get("fear_and_greed", {})
         value = float(score_data.get("score", -1))
         label = score_data.get("rating", "Unknown")
