@@ -2,11 +2,14 @@
 main.py — StockCRASH_WarnAPP Einstiegspunkt
 Startet den APScheduler mit allen Markt-Überwachungs-Jobs.
 
-Zeitfenster (Europe/Berlin):
-  Pre-Market:     Mo-Fr 14:00–15:30 (Futures + Global)
-  Intraday:       Mo-Fr 15:30–22:00 (alle 15 Min, nur bei Statuswechsel)
-  Daily Summary:  Mo-Fr 22:30 (immer senden)
-  Weekend Check:  Sa 10:00 (Wochenzusammenfassung)
+Alle Zeiten in Eastern Time (ET) — NYSE-zentriert.
+Läuft korrekt auf jedem Server weltweit (Tokyo, Frankfurt, Sydney...).
+
+Zeitfenster (ET):
+  Pre-Market:     Mo-Fr 08:00 & 09:00 ET  (Futures + Global)
+  Intraday:       Mo-Fr 09:30–16:00 ET    (alle 15 Min)
+  Daily Summary:  Mo-Fr 16:30 ET          (nach Börsenschluss)
+  Weekend Check:  Sa 10:00 ET
 """
 
 import logging
@@ -21,6 +24,7 @@ from apscheduler.triggers.cron import CronTrigger
 
 import config
 from core import alert_engine, notifier, state_manager
+from dashboard_export import update_dashboard
 
 # ---------------------------------------------------------------------------
 # Logging einrichten
@@ -70,13 +74,14 @@ def validate_config() -> bool:
 # Job-Funktionen
 # ---------------------------------------------------------------------------
 def job_premarket_check():
-    """Pre-Market: Futures + globale Märkte vor US-Öffnung."""
-    logger.info("=== PRE-MARKET CHECK gestartet ===")
+    """Pre-Market: Futures + globale Märkte vor NYSE-Öffnung (ET)."""
+    tz  = pytz.timezone(config.TIMEZONE)
+    now = datetime.now(tz)
+    logger.info(f"=== PRE-MARKET CHECK {now.strftime('%H:%M ET')} ===")
     alert = alert_engine.run_all_checks(include_futures=True)
-
+    update_dashboard(alert)
     logger.info(f"Status: {alert.status.upper()} | Score: {alert.total_score}")
 
-    # Immer senden wenn gelb oder rot, sonst nur bei Statuswechsel
     if alert.status in ("yellow", "red") or state_manager.status_changed(alert.status):
         notifier.send_alert(alert)
         state_manager.set_status(alert.status)
@@ -86,10 +91,12 @@ def job_premarket_check():
 
 def job_intraday_check():
     """Intraday: alle 15 Minuten — nur bei Statuswechsel Notification."""
-    now = datetime.now(pytz.timezone(config.TIMEZONE))
-    logger.info(f"=== INTRADAY CHECK {now.strftime('%H:%M')} ===")
+    tz  = pytz.timezone(config.TIMEZONE)
+    now = datetime.now(tz)
+    logger.info(f"=== INTRADAY CHECK {now.strftime('%H:%M ET')} ===")
 
     alert = alert_engine.run_all_checks(include_futures=True)
+    update_dashboard(alert)
     logger.info(f"Status: {alert.status.upper()} | Score: {alert.total_score}")
 
     if state_manager.status_changed(alert.status):
@@ -102,13 +109,15 @@ def job_intraday_check():
 
 
 def job_daily_summary():
-    """Tägliche Zusammenfassung um 22:30 — wird IMMER gesendet."""
+    """Tägliche Zusammenfassung 16:30 ET — wird IMMER gesendet."""
+    tz  = pytz.timezone(config.TIMEZONE)
+    now = datetime.now(tz)
     logger.info("=== DAILY SUMMARY ===")
     alert = alert_engine.run_all_checks(include_futures=False)
+    update_dashboard(alert)
 
-    # Titel anpassen
     title   = f"📊 Tages-Report: {alert.status_emoji()} {alert.status.upper()}"
-    message = f"Tagesabschluss — {datetime.now().strftime('%d.%m.%Y')}\n\n"
+    message = f"Tagesabschluss — {now.strftime('%d.%m.%Y %H:%M ET')}\n\n"
     message += alert.to_pushover_message()
 
     notifier.send_notification(
@@ -121,12 +130,15 @@ def job_daily_summary():
 
 
 def job_weekend_check():
-    """Samstags: Wochenzusammenfassung."""
+    """Samstags 10:00 ET: Wochenzusammenfassung."""
+    tz  = pytz.timezone(config.TIMEZONE)
+    now = datetime.now(tz)
     logger.info("=== WEEKEND CHECK ===")
     alert = alert_engine.run_all_checks(include_futures=False)
+    update_dashboard(alert)
 
     title   = f"📅 Wochen-Report: {alert.status_emoji()} {alert.status.upper()}"
-    message = f"Wochenabschluss — {datetime.now().strftime('%d.%m.%Y')}\n\n"
+    message = f"Wochenabschluss — {now.strftime('%d.%m.%Y %H:%M ET')}\n\n"
     message += alert.to_pushover_message()
 
     notifier.send_notification(
@@ -138,51 +150,51 @@ def job_weekend_check():
 
 
 # ---------------------------------------------------------------------------
-# Scheduler einrichten
+# Scheduler einrichten — alle Zeiten in ET
 # ---------------------------------------------------------------------------
 def setup_scheduler() -> BlockingScheduler:
-    tz = pytz.timezone(config.TIMEZONE)
+    tz        = pytz.timezone(config.TIMEZONE)
     scheduler = BlockingScheduler(timezone=tz)
 
-    # Pre-Market: 14:00 und 15:00 Mo-Fr
+    # Pre-Market: 08:00 und 09:00 ET Mo-Fr
     scheduler.add_job(
         job_premarket_check,
-        CronTrigger(day_of_week="mon-fri", hour=14, minute=0, timezone=tz),
-        id="premarket_1400",
-        name="Pre-Market 14:00",
+        CronTrigger(day_of_week="mon-fri", hour=8, minute=0, timezone=tz),
+        id="premarket_0800",
+        name="Pre-Market 08:00 ET",
     )
     scheduler.add_job(
         job_premarket_check,
-        CronTrigger(day_of_week="mon-fri", hour=15, minute=0, timezone=tz),
-        id="premarket_1500",
-        name="Pre-Market 15:00",
+        CronTrigger(day_of_week="mon-fri", hour=9, minute=0, timezone=tz),
+        id="premarket_0900",
+        name="Pre-Market 09:00 ET",
     )
 
-    # Intraday: alle 15 Minuten Mo-Fr 15:30–21:45
+    # Intraday: alle 15 Min Mo-Fr 09:30–15:45 ET
     scheduler.add_job(
         job_intraday_check,
         CronTrigger(
             day_of_week="mon-fri",
-            hour="15-21",
+            hour="9-15",
             minute="30,45",
             timezone=tz,
         ),
         id="intraday_half",
-        name="Intraday :30/:45",
+        name="Intraday :30/:45 ET",
     )
     scheduler.add_job(
         job_intraday_check,
         CronTrigger(
             day_of_week="mon-fri",
-            hour="16-21",
+            hour="10-15",
             minute="0,15",
             timezone=tz,
         ),
         id="intraday_full",
-        name="Intraday :00/:15",
+        name="Intraday :00/:15 ET",
     )
 
-    # Daily Summary: 22:30 Mo-Fr
+    # Daily Summary: 16:30 ET Mo-Fr
     scheduler.add_job(
         job_daily_summary,
         CronTrigger(
@@ -192,10 +204,10 @@ def setup_scheduler() -> BlockingScheduler:
             timezone=tz,
         ),
         id="daily_summary",
-        name="Daily Summary",
+        name="Daily Summary 16:30 ET",
     )
 
-    # Weekend Check: Sa 10:00
+    # Weekend Check: Sa 10:00 ET
     scheduler.add_job(
         job_weekend_check,
         CronTrigger(
@@ -205,7 +217,7 @@ def setup_scheduler() -> BlockingScheduler:
             timezone=tz,
         ),
         id="weekend_check",
-        name="Weekend Check",
+        name="Weekend Check 10:00 ET",
     )
 
     return scheduler
@@ -215,24 +227,26 @@ def setup_scheduler() -> BlockingScheduler:
 # Main
 # ---------------------------------------------------------------------------
 def main():
+    tz  = pytz.timezone(config.TIMEZONE)
+    now = datetime.now(tz)
     logger.info("=" * 50)
     logger.info("StockCRASH_WarnAPP gestartet")
-    logger.info(f"Zeitzone: {config.TIMEZONE}")
+    logger.info(f"Serverzeit: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} lokal")
+    logger.info(f"NYSE-Zeit:  {now.strftime('%Y-%m-%d %H:%M:%S ET')}")
     logger.info("=" * 50)
 
     if not validate_config():
-        logger.error("Konfiguration unvollständig — App beendet. Bitte .env befüllen.")
+        logger.error("Konfiguration unvollständig — App beendet.")
         sys.exit(1)
 
-    # Startup-Test
     logger.info("Sende Test-Notification...")
     if notifier.send_test_notification():
         logger.info("✅ Pushover Verbindung OK")
     else:
-        logger.error("❌ Pushover Verbindung fehlgeschlagen — prüfe PUSHOVER_APP_TOKEN und PUSHOVER_USER_KEY")
+        logger.error("❌ Pushover Verbindung fehlgeschlagen")
 
     scheduler = setup_scheduler()
-    logger.info("Scheduler Jobs:")
+    logger.info("Scheduler Jobs (alle Zeiten ET):")
     for job in scheduler.get_jobs():
         logger.info(f"  • {job.name}: {job.trigger}")
 
@@ -248,17 +262,17 @@ def main():
 
 
 if __name__ == "__main__":
-    # Kommandozeilen-Argumente
     if len(sys.argv) > 1:
         cmd = sys.argv[1]
         if cmd == "--test":
-            # Sofortiger Test-Check ohne Scheduler
             logging.basicConfig(level=logging.INFO, handlers=[console_handler])
             logger.info("=== MANUELLER TEST-CHECK ===")
             alert = alert_engine.run_all_checks(include_futures=True)
+            update_dashboard(alert)
             for line in alert.summary_lines():
                 print(line)
             print(f"\nGesamtpunktzahl: {alert.total_score}")
+            print("✅ state.json aktualisiert — dashboard.html im Browser öffnen")
         elif cmd == "--notify-test":
             logging.basicConfig(level=logging.INFO, handlers=[console_handler])
             validate_config()
