@@ -18,10 +18,13 @@ venv/
 env/
 ENV/
 
-# Logs & state
+# Logs
 logs/
 *.log
-state.json
+
+# state.json wird von GitHub Actions committed (GitHub Pages Dashboard)
+# Lokal: wird generiert von run_check.py / main.py — kein Handlungsbedarf
+# !state.json  ← absichtlich NICHT ignoriert
 
 # IDE
 .vscode/

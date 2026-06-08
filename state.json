@@ -1,0 +1,94 @@
+{
+  "status": "green",
+  "score": 0,
+  "red_count": 0,
+  "yellow_count": 0,
+  "error_count": 3,
+  "last_updated": "15:20",
+  "last_updated_full": "2026-06-03T15:20:54.686728",
+  "indicators": [
+    {
+      "name": "VIX Fear Index",
+      "value": 16.239999771118164,
+      "status": "green",
+      "score": 0,
+      "message": "VIX=16.2 — normal"
+    },
+    {
+      "name": "S&P 500",
+      "value": 7610.509765625,
+      "status": "green",
+      "score": 0,
+      "message": "SPX=7611 | Intraday +0.2% | ATH-Abstand -0.1%"
+    },
+    {
+      "name": "Yield Curve (10Y-2Y)",
+      "value": null,
+      "status": "error",
+      "score": 0,
+      "message": "Datenfehler: 400 Client Error: Bad Request for url: https://api.stlouisfed.org/fred/series/observations?series_id=DGS10&api_key=your_fred_api_key_here&file_type=json&sort_order=desc&limit=5&observation_end=9999-12-31"
+    },
+    {
+      "name": "Fear & Greed Index",
+      "value": 56.9714285714286,
+      "status": "green",
+      "score": 0,
+      "message": "F&G=57 (greed) (Stand: 2026-06-03, 7T-Ø)"
+    },
+    {
+      "name": "E-Mini Futures",
+      "value": 0.4422040605619338,
+      "status": "green",
+      "score": 0,
+      "message": "Ø +0.4% — S&P: +0.1% | Nasdaq: +0.7% | Dow: +0.5%"
+    },
+    {
+      "name": "Globale Märkte",
+      "value": -0.03862002467633444,
+      "status": "green",
+      "score": 0,
+      "message": "Ø -0.0% — Hang Seng: -1.6% | DAX: -0.9% | Euro Stoxx 50: -0.6%"
+    },
+    {
+      "name": "Buffett Indicator",
+      "value": null,
+      "status": "error",
+      "score": 0,
+      "message": "Datenfehler: 400 Client Error: Bad Request for url: https://api.stlouisfed.org/fred/series/observations?series_id=GDP&api_key=your_fred_api_key_here&file_type=json&sort_order=desc&limit=4"
+    },
+    {
+      "name": "Put/Call Ratio",
+      "value": null,
+      "status": "error",
+      "score": 0,
+      "message": "Datenfehler: alle Quellen nicht erreichbar"
+    }
+  ],
+  "history": [
+    {
+      "time": "11:43",
+      "score": 2,
+      "status": "green"
+    },
+    {
+      "time": "11:47",
+      "score": 2,
+      "status": "green"
+    },
+    {
+      "time": "11:54",
+      "score": 2,
+      "status": "green"
+    },
+    {
+      "time": "12:20",
+      "score": 2,
+      "status": "green"
+    },
+    {
+      "time": "15:20",
+      "score": 0,
+      "status": "green"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+name: 📊 Market Crash Check
+
+on:
+  schedule:
+    # Mo-Fr, 12:00–21:00 UTC alle 15 Min
+    # Deckt ab: EDT (UTC-4) Pre-Market 08:00 ET bis Market Close 16:00 ET
+    #           EST (UTC-5) Pre-Market 08:00 ET bis Market Close 16:00 ET
+    - cron: '0,15,30,45 12-21 * * 1-5'
+    # Samstag 14:00 UTC = 10:00 ET — Wochenzusammenfassung
+    - cron: '0 14 * * 6'
+
+  # Manuell aus GitHub UI triggern
+  workflow_dispatch:
+    inputs:
+      force_notify:
+        description: 'Pushover auch ohne Statuswechsel senden'
+        required: false
+        default: 'false'
+        type: boolean
+
+# Schreibrechte für den auto-commit von state.json
+permissions:
+  contents: write
+
+jobs:
+  market-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # Immer den aktuellen Stand holen (inkl. letzter state.json)
+          fetch-depth: 1
+
+      - name: 🐍 Python 3.11 Setup
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 📦 Dependencies installieren
+        run: pip install -r requirements.txt
+
+      - name: 🔍 Markt-Check ausführen
+        env:
+          PUSHOVER_APP_TOKEN: ${{ secrets.PUSHOVER_APP_TOKEN }}
+          PUSHOVER_USER_KEY:  ${{ secrets.PUSHOVER_USER_KEY }}
+          FRED_API_KEY:       ${{ secrets.FRED_API_KEY }}
+        run: python run_check.py
+
+      - name: 💾 state.json committen & pushen
+        run: |
+          git config user.name  "StockCRASH Bot 🤖"
+          git config user.email "bot@stockcrash.local"
+          git add state.json
+          # Nur committen wenn sich state.json geändert hat
+          if git diff --staged --quiet; then
+            echo "state.json unverändert — kein Commit nötig"
+          else
+            STATUS=$(python -c "import json; d=json.load(open('state.json')); print(d.get('status','?').upper())")
+            SCORE=$(python -c "import json; d=json.load(open('state.json')); print(d.get('score','?'))")
+            git commit -m "data: market check ${STATUS} score=${SCORE} [skip ci]"
+            git push
+            echo "✅ state.json committed und gepusht"
+          fi
