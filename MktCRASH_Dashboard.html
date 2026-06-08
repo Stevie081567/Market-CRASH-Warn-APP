@@ -647,7 +647,98 @@ async function loadData() {
     'Demo mode (state.json not found) · '+new Date().toLocaleTimeString('en-US',{hour12:false});
 }
 
-// Initial load + auto-refresh
+/* ── STALE CHECK ── */
+function checkStale(lastUpdatedFull) {
+  const staleBar = document.getElementById('staleBar');
+  const staleMin = document.getElementById('staleMinutes');
+  if (!lastUpdatedFull) { staleBar.style.display='none'; return; }
+  const diffMs  = Date.now() - new Date(lastUpdatedFull).getTime();
+  const diffMin = Math.floor(diffMs / 60000);
+  // Als veraltet gilt: älter als 30 Minuten während Marktzeiten
+  const h = new Date().getUTCHours();
+  const isMarketHours = h >= 12 && h <= 21;
+  if (isMarketHours && diffMin > 30) {
+    staleMin.textContent = diffMin;
+    staleBar.style.display = 'block';
+  } else {
+    staleBar.style.display = 'none';
+  }
+}
+
+/* ── REFRESH BUTTON ── */
+async function onRefreshClick() {
+  const btn = document.getElementById('refreshBtn');
+  if (!btn) return;
+  btn.disabled = true;
+  btn.textContent = '⏳ Checking...';
+  try {
+    // Versuche server.py /api/refresh (lokal) — auf GitHub Pages nicht verfügbar
+    const resp = await fetch('/api/refresh', {method:'POST'});
+    if (resp.ok) {
+      await new Promise(r => setTimeout(r, 1500));
+      await loadData();
+      btn.textContent = '✅ Done';
+    } else {
+      // GitHub Pages: kein Backend — lade state.json neu
+      await loadData();
+      btn.textContent = '↻ Refresh';
+    }
+  } catch {
+    // Auch auf GitHub Pages: einfach state.json neu laden
+    await loadData();
+    btn.textContent = '↻ Refresh';
+  }
+  setTimeout(()=>{ btn.disabled=false; btn.textContent='↻ Refresh'; }, 2000);
+}
+
+/* ── LOAD DATA ── */
+async function loadData() {
+  try {
+    const resp = await fetch('state.json?'+Date.now());
+    if (resp.ok) {
+      const raw = await resp.json();
+      render(raw);
+      checkStale(raw.last_updated_full);
+      const ago = raw.last_updated_full
+        ? Math.floor((Date.now()-new Date(raw.last_updated_full).getTime())/60000)+'min ago'
+        : raw.last_updated || '--';
+      document.getElementById('footerInfo').textContent =
+        'Last check: '+ago+' · Auto-refresh every 60s · GitHub Actions';
+      return;
+    }
+  } catch(e) {}
+
+  // Demo mode
+  const demo = {
+    status:'yellow', score:4,
+    last_updated:'--:-- (demo)',
+    last_updated_full: null,
+    indicators:[
+      {name:"VIX Fear Index",      value:24.3,status:"yellow",score:1,message:"VIX=24.3 — elevated volatility"},
+      {name:"S&P 500",             value:5280, status:"yellow",score:1,message:"SPX=5280 | Intraday -1.7% | ATH -2.1%"},
+      {name:"Yield Curve 10Y-2Y",  value:0.18, status:"yellow",score:1,message:"Spread=+0.18% — flat curve"},
+      {name:"Fear & Greed",        value:31,   status:"red",   score:2,message:"F&G=31 — Extreme Fear"},
+      {name:"E-Mini Futures",      value:-0.8, status:"yellow",score:1,message:"Avg -0.8% | S&P:-0.9% | NQ:-0.7%"},
+      {name:"Global Markets",      value:-0.6, status:"green", score:0,message:"Avg -0.6% — DAX:-0.5% | NK:-0.8%"},
+      {name:"Buffett Indicator",   value:162,  status:"yellow",score:1,message:"162% — overvalued"},
+      {name:"Put/Call Ratio",      value:0.87, status:"green", score:0,message:"P/C=0.87 normal [CBOE JSON]"},
+    ],
+    history:[
+      {time:"09:30",score:1,status:"green"},{time:"09:45",score:2,status:"green"},
+      {time:"10:00",score:2,status:"green"},{time:"10:15",score:3,status:"yellow"},
+      {time:"10:30",score:3,status:"yellow"},{time:"10:45",score:4,status:"yellow"},
+      {time:"11:00",score:5,status:"yellow"},{time:"11:15",score:4,status:"yellow"},
+      {time:"11:30",score:4,status:"yellow"},{time:"11:45",score:4,status:"yellow"},
+      {time:"12:00",score:3,status:"yellow"},{time:"12:15",score:4,status:"yellow"},
+    ]
+  };
+  render(demo);
+  checkStale(null);
+  document.getElementById('footerInfo').textContent =
+    'Demo mode — state.json not found · GitHub Actions not yet triggered';
+}
+
+// Initial load + auto-refresh alle 60s
 loadData();
 startProgressBar();
 setInterval(()=>{ loadData(); startProgressBar(); }, 60000);
