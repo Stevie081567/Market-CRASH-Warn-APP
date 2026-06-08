@@ -1,60 +1,60 @@
 {
   "status": "green",
-  "score": 0,
-  "red_count": 0,
+  "score": 2,
+  "red_count": 1,
   "yellow_count": 0,
-  "error_count": 3,
-  "last_updated": "15:20",
-  "last_updated_full": "2026-06-03T15:20:54.686728",
+  "error_count": 1,
+  "last_updated": "2026-06-08T21:56:14.211263",
+  "last_updated_full": "2026-06-08T21:56:14.210239",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 16.239999771118164,
+      "value": 18.920000076293945,
       "status": "green",
       "score": 0,
-      "message": "VIX=16.2 — normal"
+      "message": "VIX=18.9 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7610.509765625,
+      "value": 7405.81005859375,
       "status": "green",
       "score": 0,
-      "message": "SPX=7611 | Intraday +0.2% | ATH-Abstand -0.1%"
+      "message": "SPX=7406 | Intraday -0.5% | ATH-Abstand -2.8%"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": null,
-      "status": "error",
+      "value": 0.3799999999999999,
+      "status": "green",
       "score": 0,
-      "message": "Datenfehler: 400 Client Error: Bad Request for url: https://api.stlouisfed.org/fred/series/observations?series_id=DGS10&api_key=your_fred_api_key_here&file_type=json&sort_order=desc&limit=5&observation_end=9999-12-31"
+      "message": "Spread=+0.38% \u2014 normal (10Y=4.55% / 2Y=4.17%)"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 56.9714285714286,
+      "value": 40.1142857142857,
       "status": "green",
       "score": 0,
-      "message": "F&G=57 (greed) (Stand: 2026-06-03, 7T-Ø)"
+      "message": "F&G=40 (fear) (Stand: 2026-06-08, 7T-\u00d8)"
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.4422040605619338,
+      "value": 0.6073124769818593,
       "status": "green",
       "score": 0,
-      "message": "Ø +0.4% — S&P: +0.1% | Nasdaq: +0.7% | Dow: +0.5%"
+      "message": "\u00d8 +0.6% \u2014 S&P: +0.3% | Nasdaq: +1.5% | Dow: -0.0%"
     },
     {
-      "name": "Globale Märkte",
-      "value": -0.03862002467633444,
+      "name": "Globale M\u00e4rkte",
+      "value": -0.2913822205663025,
       "status": "green",
       "score": 0,
-      "message": "Ø -0.0% — Hang Seng: -1.6% | DAX: -0.9% | Euro Stoxx 50: -0.6%"
+      "message": "\u00d8 -0.3% \u2014 ASX 200: -0.7% | DAX: -0.6% | CAC 40: -0.2%"
     },
     {
       "name": "Buffett Indicator",
-      "value": null,
-      "status": "error",
-      "score": 0,
-      "message": "Datenfehler: 400 Client Error: Bad Request for url: https://api.stlouisfed.org/fred/series/observations?series_id=GDP&api_key=your_fred_api_key_here&file_type=json&sort_order=desc&limit=4"
+      "value": 231.74958749305142,
+      "status": "red",
+      "score": 2,
+      "message": "232% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
     },
     {
       "name": "Put/Call Ratio",
@@ -89,6 +89,12 @@
       "time": "15:20",
       "score": 0,
       "status": "green"
+    },
+    {
+      "time": "21:56",
+      "score": 2,
+      "status": "green"
     }
-  ]
+  ],
+  "last_status": "green"
 }
