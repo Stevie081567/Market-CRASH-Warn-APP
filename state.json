@@ -1,25 +1,25 @@
 {
-  "status": "green",
-  "score": 2,
+  "status": "yellow",
+  "score": 5,
   "red_count": 1,
-  "yellow_count": 0,
+  "yellow_count": 3,
   "error_count": 1,
-  "last_updated": "2026-06-09T10:44:27.617131",
-  "last_updated_full": "2026-06-09T10:44:27.616118",
+  "last_updated": "2026-06-09T19:36:09.708957",
+  "last_updated_full": "2026-06-09T19:36:09.444956",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 18.06999969482422,
-      "status": "green",
-      "score": 0,
-      "message": "VIX=18.1 \u2014 normal"
+      "value": 20.18000030517578,
+      "status": "yellow",
+      "score": 1,
+      "message": "VIX=20.2 \u2014 erh\u00f6hte Volatilit\u00e4t (Schwelle: 20.0)"
     },
     {
       "name": "S&P 500",
-      "value": 7405.81005859375,
+      "value": 7357.990234375,
       "status": "green",
       "score": 0,
-      "message": "SPX=7406 | Intraday -0.5% | ATH-Abstand -2.8%"
+      "message": "SPX=7358 | Intraday -1.1% | ATH-Abstand -3.4%"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
@@ -30,24 +30,24 @@
     },
     {
       "name": "Fear & Greed Index",
-      "value": 39.3714285714286,
-      "status": "green",
-      "score": 0,
-      "message": "F&G=39 (fear) (Stand: 2026-06-09, 7T-\u00d8)"
+      "value": 31.7142857142857,
+      "status": "yellow",
+      "score": 1,
+      "message": "F&G=32 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-09, 7T-\u00d8)"
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.7813916223280071,
-      "status": "green",
-      "score": 0,
-      "message": "\u00d8 +0.8% \u2014 S&P: +0.4% | Nasdaq: +1.6% | Dow: +0.3%"
+      "value": -1.2537243067558308,
+      "status": "yellow",
+      "score": 1,
+      "message": "\u00d8 -1.3% \ud83d\udfe1 \u2014 S&P: -1.1% | Nasdaq: -2.3% | Dow: -0.3%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 0.5790701166977604,
+      "value": -0.5767025519256828,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.6% \u2014 Hang Seng: -0.4% | FTSE 100: -0.2% | ASX 200: -0.2%"
+      "message": "\u00d8 -0.6% \u2014 FTSE 100: -1.4% | DAX: -0.7% | Euro Stoxx 50: -0.2%"
     },
     {
       "name": "Buffett Indicator",
@@ -99,7 +99,12 @@
       "time": "10:44",
       "score": 2,
       "status": "green"
+    },
+    {
+      "time": "19:36",
+      "score": 5,
+      "status": "yellow"
     }
   ],
-  "last_status": "green"
+  "last_status": "yellow"
 }
