@@ -1,53 +1,53 @@
 {
   "status": "yellow",
-  "score": 5,
+  "score": 4,
   "red_count": 1,
-  "yellow_count": 3,
-  "error_count": 1,
-  "last_updated": "2026-06-09T19:36:09.708957",
-  "last_updated_full": "2026-06-09T19:36:09.444956",
+  "yellow_count": 2,
+  "error_count": 2,
+  "last_updated": "2026-06-10T00:02:12.296550",
+  "last_updated_full": "2026-06-10T00:02:11.928904",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 20.18000030517578,
-      "status": "yellow",
-      "score": 1,
-      "message": "VIX=20.2 \u2014 erh\u00f6hte Volatilit\u00e4t (Schwelle: 20.0)"
+      "value": 19.8700008392334,
+      "status": "green",
+      "score": 0,
+      "message": "VIX=19.9 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7357.990234375,
+      "value": 7386.31005859375,
       "status": "green",
       "score": 0,
-      "message": "SPX=7358 | Intraday -1.1% | ATH-Abstand -3.4%"
+      "message": "SPX=7386 | Intraday -0.7% | ATH-Abstand -3.1%"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": 0.3799999999999999,
+      "value": 0.40999999999999925,
       "status": "green",
       "score": 0,
-      "message": "Spread=+0.38% \u2014 normal (10Y=4.55% / 2Y=4.17%)"
+      "message": "Spread=+0.41% \u2014 normal (10Y=4.56% / 2Y=4.15%)"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 31.7142857142857,
+      "value": 33.4285714285714,
       "status": "yellow",
       "score": 1,
-      "message": "F&G=32 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-09, 7T-\u00d8)"
+      "message": "F&G=33 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-09, 7T-\u00d8)"
     },
     {
       "name": "E-Mini Futures",
-      "value": -1.2537243067558308,
+      "value": -0.581864073138222,
       "status": "yellow",
       "score": 1,
-      "message": "\u00d8 -1.3% \ud83d\udfe1 \u2014 S&P: -1.1% | Nasdaq: -2.3% | Dow: -0.3%"
+      "message": "\u00d8 -0.6% \ud83d\udfe1 \u2014 S&P: -0.5% | Nasdaq: -1.2% | Dow: -0.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -0.5767025519256828,
-      "status": "green",
+      "value": null,
+      "status": "error",
       "score": 0,
-      "message": "\u00d8 -0.6% \u2014 FTSE 100: -1.4% | DAX: -0.7% | Euro Stoxx 50: -0.2%"
+      "message": "Keine globalen Marktdaten verf\u00fcgbar"
     },
     {
       "name": "Buffett Indicator",
@@ -103,6 +103,11 @@
     {
       "time": "19:36",
       "score": 5,
+      "status": "yellow"
+    },
+    {
+      "time": "00:02",
+      "score": 4,
       "status": "yellow"
     }
   ],
