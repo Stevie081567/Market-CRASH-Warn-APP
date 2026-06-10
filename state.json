@@ -1,60 +1,60 @@
 {
-  "status": "yellow",
-  "score": 4,
-  "red_count": 1,
+  "status": "red",
+  "score": 6,
+  "red_count": 2,
   "yellow_count": 2,
-  "error_count": 2,
-  "last_updated": "2026-06-10T00:02:12.296550",
-  "last_updated_full": "2026-06-10T00:02:11.928904",
+  "error_count": 1,
+  "last_updated": "2026-06-10T21:23:19.698325",
+  "last_updated_full": "2026-06-10T21:23:19.300496",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 19.8700008392334,
-      "status": "green",
-      "score": 0,
-      "message": "VIX=19.9 \u2014 normal"
+      "value": 22.219999313354492,
+      "status": "yellow",
+      "score": 1,
+      "message": "VIX=22.2 \u2014 erh\u00f6hte Volatilit\u00e4t (Schwelle: 20.0)"
     },
     {
       "name": "S&P 500",
-      "value": 7386.31005859375,
+      "value": 7267.64990234375,
       "status": "green",
       "score": 0,
-      "message": "SPX=7386 | Intraday -0.7% | ATH-Abstand -3.1%"
+      "message": "SPX=7268 | Intraday -1.1% | ATH-Abstand -4.6%"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": 0.40999999999999925,
+      "value": 0.40000000000000036,
       "status": "green",
       "score": 0,
-      "message": "Spread=+0.41% \u2014 normal (10Y=4.56% / 2Y=4.15%)"
+      "message": "Spread=+0.40% \u2014 normal (10Y=4.53% / 2Y=4.13%)"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 33.4285714285714,
+      "value": 27.4571428571429,
       "status": "yellow",
       "score": 1,
-      "message": "F&G=33 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-09, 7T-\u00d8)"
+      "message": "F&G=27 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-10, 7T-\u00d8)"
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.581864073138222,
-      "status": "yellow",
-      "score": 1,
-      "message": "\u00d8 -0.6% \ud83d\udfe1 \u2014 S&P: -0.5% | Nasdaq: -1.2% | Dow: -0.1%"
+      "value": -1.9497708513233276,
+      "status": "red",
+      "score": 2,
+      "message": "\u00d8 -1.9% \ud83d\udd34 \u2014 S&P: -1.7% | Nasdaq: -2.2% | Dow: -1.9%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": null,
-      "status": "error",
+      "value": -0.4672245459967809,
+      "status": "green",
       "score": 0,
-      "message": "Keine globalen Marktdaten verf\u00fcgbar"
+      "message": "\u00d8 -0.5% \u2014 DAX: -1.0% | Euro Stoxx 50: -0.7% | CAC 40: -0.5%"
     },
     {
       "name": "Buffett Indicator",
-      "value": 232.54455099400792,
+      "value": 232.0949441118807,
       "status": "red",
       "score": 2,
-      "message": "233% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
+      "message": "232% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
     },
     {
       "name": "Put/Call Ratio",
@@ -109,7 +109,12 @@
       "time": "00:02",
       "score": 4,
       "status": "yellow"
+    },
+    {
+      "time": "21:23",
+      "score": 6,
+      "status": "red"
     }
   ],
-  "last_status": "yellow"
+  "last_status": "red"
 }
