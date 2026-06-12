@@ -4,15 +4,15 @@
   "red_count": 1,
   "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-06-11T21:30:22.198002",
-  "last_updated_full": "2026-06-11T21:30:21.857383",
+  "last_updated": "2026-06-12T11:52:27.279768",
+  "last_updated_full": "2026-06-12T11:52:26.889793",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 19.450000762939453,
+      "value": 18.920000076293945,
       "status": "green",
       "score": 0,
-      "message": "VIX=19.5 \u2014 normal"
+      "message": "VIX=18.9 \u2014 normal"
     },
     {
       "name": "S&P 500",
@@ -30,31 +30,31 @@
     },
     {
       "name": "Fear & Greed Index",
-      "value": 29.6857142857143,
+      "value": 30.9428571428571,
       "status": "yellow",
       "score": 1,
-      "message": "F&G=30 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-11, 7T-\u00d8)"
+      "message": "F&G=31 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-12, 7T-\u00d8)"
     },
     {
       "name": "E-Mini Futures",
-      "value": 2.2593380307613136,
+      "value": 2.182651218768036,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +2.3% \u2014 S&P: +1.7% | Nasdaq: +3.2% | Dow: +1.9%"
+      "message": "\u00d8 +2.2% \u2014 S&P: +1.5% | Nasdaq: +2.6% | Dow: +2.5%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 0.44944630226500565,
+      "value": 1.867555786676151,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.4% \u2014 DAX: +0.1% | CAC 40: +0.5% | FTSE 100: +0.5%"
+      "message": "\u00d8 +1.9% \u2014 FTSE 100: +1.1% | DAX: +1.6% | Euro Stoxx 50: +1.8%"
     },
     {
       "name": "Buffett Indicator",
-      "value": 228.33007573603376,
+      "value": 232.63475718038492,
       "status": "red",
       "score": 2,
-      "message": "228% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
+      "message": "233% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
     },
     {
       "name": "Put/Call Ratio",
@@ -122,6 +122,11 @@
     },
     {
       "time": "21:30",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "11:52",
       "score": 3,
       "status": "yellow"
     }
