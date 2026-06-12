@@ -3,51 +3,51 @@
   "score": 3,
   "red_count": 1,
   "yellow_count": 1,
-  "error_count": 1,
-  "last_updated": "2026-06-12T18:32:30.005921",
-  "last_updated_full": "2026-06-12T18:32:29.701991",
+  "error_count": 2,
+  "last_updated": "2026-06-12T23:05:17.097421",
+  "last_updated_full": "2026-06-12T23:05:16.704817",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 18.350000381469727,
+      "value": 17.690000534057617,
       "status": "green",
       "score": 0,
-      "message": "VIX=18.4 \u2014 normal"
+      "message": "VIX=17.7 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7427.2099609375,
+      "value": 7430.85986328125,
       "status": "green",
       "score": 0,
-      "message": "SPX=7427 | Intraday +0.2% | ATH-Abstand -2.5%"
+      "message": "SPX=7431 | Intraday +0.3% | ATH-Abstand -2.5%"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": 0.41999999999999993,
+      "value": 0.40000000000000036,
       "status": "green",
       "score": 0,
-      "message": "Spread=+0.42% \u2014 normal (10Y=4.55% / 2Y=4.13%)"
+      "message": "Spread=+0.40% \u2014 normal (10Y=4.45% / 2Y=4.05%)"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 33.7142857142857,
+      "value": 34.0,
       "status": "yellow",
       "score": 1,
       "message": "F&G=34 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-12, 7T-\u00d8)"
     },
     {
       "name": "E-Mini Futures",
-      "value": 2.3251427447429482,
+      "value": 0.9047856742963449,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +2.3% \u2014 S&P: +2.0% | Nasdaq: +3.1% | Dow: +1.9%"
+      "message": "\u00d8 +0.9% \u2014 S&P: +0.6% | Nasdaq: +0.7% | Dow: +1.4%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 1.8434815871510235,
-      "status": "green",
+      "value": null,
+      "status": "error",
       "score": 0,
-      "message": "\u00d8 +1.8% \u2014 FTSE 100: +1.6% | DAX: +1.8% | CAC 40: +1.8%"
+      "message": "Keine globalen Marktdaten verf\u00fcgbar"
     },
     {
       "name": "Buffett Indicator",
@@ -132,6 +132,11 @@
     },
     {
       "time": "18:32",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "23:05",
       "score": 3,
       "status": "yellow"
     }
