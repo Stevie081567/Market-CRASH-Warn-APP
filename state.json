@@ -3,9 +3,9 @@
   "score": 3,
   "red_count": 1,
   "yellow_count": 1,
-  "error_count": 2,
-  "last_updated": "2026-06-12T23:05:17.097421",
-  "last_updated_full": "2026-06-12T23:05:16.704817",
+  "error_count": 1,
+  "last_updated": "2026-06-13T18:03:25.141138",
+  "last_updated_full": "2026-06-13T18:03:24.879639",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -37,24 +37,24 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.9047856742963449,
+      "value": 0.879363852375679,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.9% \u2014 S&P: +0.6% | Nasdaq: +0.7% | Dow: +1.4%"
+      "message": "\u00d8 +0.9% \u2014 S&P: +0.5% | Nasdaq: +0.7% | Dow: +1.4%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": null,
-      "status": "error",
+      "value": 2.0132480782384548,
+      "status": "green",
       "score": 0,
-      "message": "Keine globalen Marktdaten verf\u00fcgbar"
+      "message": "\u00d8 +2.0% \u2014 FTSE 100: +1.6% | DAX: +1.8% | CAC 40: +1.8%"
     },
     {
       "name": "Buffett Indicator",
-      "value": 232.63475718038492,
+      "value": 233.81143967415667,
       "status": "red",
       "score": 2,
-      "message": "233% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
+      "message": "234% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
     },
     {
       "name": "Put/Call Ratio",
@@ -137,6 +137,11 @@
     },
     {
       "time": "23:05",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "18:03",
       "score": 3,
       "status": "yellow"
     }
