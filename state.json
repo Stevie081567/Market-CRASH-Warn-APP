@@ -1,53 +1,53 @@
 {
-  "status": "green",
-  "score": 2,
+  "status": "yellow",
+  "score": 3,
   "red_count": 1,
-  "yellow_count": 0,
+  "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-06-15T21:50:00.077731",
-  "last_updated_full": "2026-06-15T21:50:00.076684",
+  "last_updated": "2026-06-16T21:49:10.235174",
+  "last_updated_full": "2026-06-16T21:49:09.827631",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 16.200000762939453,
+      "value": 16.40999984741211,
       "status": "green",
       "score": 0,
-      "message": "VIX=16.2 \u2014 normal"
+      "message": "VIX=16.4 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7555.259765625,
+      "value": 7512.990234375,
       "status": "green",
       "score": 0,
-      "message": "SPX=7555 | Intraday +0.5% | ATH-Abstand -0.9%"
+      "message": "SPX=7513 | Intraday -0.5% | ATH-Abstand -1.4%"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": 0.39000000000000057,
+      "value": 0.39999999999999947,
       "status": "green",
       "score": 0,
-      "message": "Spread=+0.39% \u2014 normal (10Y=4.48% / 2Y=4.09%)"
+      "message": "Spread=+0.40% \u2014 normal (10Y=4.47% / 2Y=4.07%)"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 40.8571428571429,
+      "value": 39.2,
       "status": "green",
       "score": 0,
-      "message": "F&G=41 (fear) (Stand: 2026-06-15, 7T-\u00d8)"
+      "message": "F&G=39 (fear) (Stand: 2026-06-16, 7T-\u00d8)"
     },
     {
       "name": "E-Mini Futures",
-      "value": 1.5193995180066941,
-      "status": "green",
-      "score": 0,
-      "message": "\u00d8 +1.5% \u2014 S&P: +1.6% | Nasdaq: +2.6% | Dow: +0.4%"
+      "value": -0.6269936617357227,
+      "status": "yellow",
+      "score": 1,
+      "message": "\u00d8 -0.6% \ud83d\udfe1 \u2014 S&P: -0.6% | Nasdaq: -1.9% | Dow: +0.6%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 0.432561546182024,
+      "value": 0.46989200511139123,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.4% \u2014 FTSE 100: -0.4% | CAC 40: +0.4% | Euro Stoxx 50: +0.7%"
+      "message": "\u00d8 +0.5% \u2014 DAX: +0.1% | Euro Stoxx 50: +0.4% | FTSE 100: +0.6%"
     },
     {
       "name": "Buffett Indicator",
@@ -149,7 +149,12 @@
       "time": "21:50",
       "score": 2,
       "status": "green"
+    },
+    {
+      "time": "21:49",
+      "score": 3,
+      "status": "yellow"
     }
   ],
-  "last_status": "green"
+  "last_status": "yellow"
 }
