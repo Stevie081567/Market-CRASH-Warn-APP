@@ -1,53 +1,53 @@
 {
   "status": "yellow",
-  "score": 4,
+  "score": 3,
   "red_count": 1,
-  "yellow_count": 2,
+  "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-06-18T11:38:47.601804",
-  "last_updated_full": "2026-06-18T11:38:47.255760",
+  "last_updated": "2026-06-18T20:42:34.340898",
+  "last_updated_full": "2026-06-18T20:42:34.073613",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 17.520000457763672,
+      "value": 16.399999618530273,
       "status": "green",
       "score": 0,
-      "message": "VIX=17.5 \u2014 normal"
+      "message": "VIX=16.4 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7421.759765625,
+      "value": 7497.85986328125,
       "status": "green",
       "score": 0,
-      "message": "SPX=7422 | Intraday -1.4% | ATH-Abstand -2.6%"
+      "message": "SPX=7498 | Intraday +0.1% | ATH-Abstand -1.6%"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": 0.3799999999999999,
-      "status": "green",
-      "score": 0,
-      "message": "Spread=+0.38% \u2014 normal (10Y=4.43% / 2Y=4.05%)"
+      "value": 0.29000000000000004,
+      "status": "yellow",
+      "score": 1,
+      "message": "Spread=+0.29% \u2014 flache Kurve (10Y=4.49% / 2Y=4.20%)"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 32.0285714285714,
-      "status": "yellow",
-      "score": 1,
-      "message": "F&G=32 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-18, 7T-\u00d8)"
+      "value": 37.5142857142857,
+      "status": "green",
+      "score": 0,
+      "message": "F&G=38 (fear) (Stand: 2026-06-18, 7T-\u00d8)"
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.5368634346280131,
-      "status": "yellow",
-      "score": 1,
-      "message": "\u00d8 -0.5% \ud83d\udfe1 \u2014 S&P: -0.7% | Nasdaq: -0.2% | Dow: -0.7%"
+      "value": 1.2963752821406906,
+      "status": "green",
+      "score": 0,
+      "message": "\u00d8 +1.3% \u2014 S&P: +1.2% | Nasdaq: +2.3% | Dow: +0.4%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -0.30673857744976823,
+      "value": 0.03564492482586848,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 -0.3% \u2014 Hang Seng: -1.6% | FTSE 100: -1.1% | ASX 200: -0.6%"
+      "message": "\u00d8 +0.0% \u2014 FTSE 100: -1.0% | Euro Stoxx 50: +0.4% | DAX: +0.4%"
     },
     {
       "name": "Buffett Indicator",
@@ -65,11 +65,6 @@
     }
   ],
   "history": [
-    {
-      "time": "11:43",
-      "score": 2,
-      "status": "green"
-    },
     {
       "time": "11:47",
       "score": 2,
@@ -163,6 +158,11 @@
     {
       "time": "11:38",
       "score": 4,
+      "status": "yellow"
+    },
+    {
+      "time": "20:42",
+      "score": 3,
       "status": "yellow"
     }
   ],
