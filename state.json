@@ -3,9 +3,9 @@
   "score": 3,
   "red_count": 1,
   "yellow_count": 1,
-  "error_count": 2,
-  "last_updated": "2026-06-19T19:43:44.902768",
-  "last_updated_full": "2026-06-19T19:43:44.668491",
+  "error_count": 1,
+  "last_updated": "2026-06-19T20:57:12.112549",
+  "last_updated_full": "2026-06-19T20:57:11.712573",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -44,10 +44,10 @@
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": null,
-      "status": "error",
+      "value": -0.6274183567214717,
+      "status": "green",
       "score": 0,
-      "message": "Keine globalen Marktdaten verf\u00fcgbar"
+      "message": "\u00d8 -0.6% \u2014 Hang Seng: -1.6% | CAC 40: -0.6% | Euro Stoxx 50: -0.5%"
     },
     {
       "name": "Buffett Indicator",
@@ -65,11 +65,6 @@
     }
   ],
   "history": [
-    {
-      "time": "21:56",
-      "score": 2,
-      "status": "green"
-    },
     {
       "time": "10:44",
       "score": 2,
@@ -162,6 +157,11 @@
     },
     {
       "time": "19:43",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "20:57",
       "score": 3,
       "status": "yellow"
     }
