@@ -4,15 +4,15 @@
   "red_count": 1,
   "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-06-19T12:31:09.898222",
-  "last_updated_full": "2026-06-19T12:31:09.510955",
+  "last_updated": "2026-06-19T15:53:12.004083",
+  "last_updated_full": "2026-06-19T15:53:11.674032",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 17.1299991607666,
+      "value": 16.780000686645508,
       "status": "green",
       "score": 0,
-      "message": "VIX=17.1 \u2014 normal"
+      "message": "VIX=16.8 \u2014 normal"
     },
     {
       "name": "S&P 500",
@@ -44,10 +44,10 @@
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -0.5006842263663808,
+      "value": -0.6396670571751075,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 -0.5% \u2014 Hang Seng: -1.6% | ASX 200: -0.9% | CAC 40: -0.4%"
+      "message": "\u00d8 -0.6% \u2014 Hang Seng: -1.6% | CAC 40: -0.6% | Euro Stoxx 50: -0.5%"
     },
     {
       "name": "Buffett Indicator",
@@ -65,11 +65,6 @@
     }
   ],
   "history": [
-    {
-      "time": "11:54",
-      "score": 2,
-      "status": "green"
-    },
     {
       "time": "12:20",
       "score": 2,
@@ -162,6 +157,11 @@
     },
     {
       "time": "12:31",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "15:53",
       "score": 3,
       "status": "yellow"
     }
