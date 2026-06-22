@@ -4,22 +4,22 @@
   "red_count": 1,
   "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-06-20T18:57:44.250309",
-  "last_updated_full": "2026-06-20T18:57:43.902277",
+  "last_updated": "2026-06-22T16:47:19.198385",
+  "last_updated_full": "2026-06-22T16:47:18.679007",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 16.780000686645508,
+      "value": 17.360000610351562,
       "status": "green",
       "score": 0,
-      "message": "VIX=16.8 \u2014 normal"
+      "message": "VIX=17.4 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7497.85986328125,
+      "value": 7474.68017578125,
       "status": "green",
       "score": 0,
-      "message": "SPX=7498 | Intraday +0.1% | ATH-Abstand -1.6%"
+      "message": "SPX=7475 | Intraday -0.3% | ATH-Abstand -1.9%"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
@@ -30,31 +30,31 @@
     },
     {
       "name": "Fear & Greed Index",
-      "value": 37.2571428571429,
+      "value": 35.5142857142857,
       "status": "green",
       "score": 0,
-      "message": "F&G=37 (fear) (Stand: 2026-06-19, 7T-\u00d8)"
+      "message": "F&G=36 (fear) (Stand: 2026-06-22, 7T-\u00d8)"
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.2096877539520565,
+      "value": 0.05746619391791541,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 -0.2% \u2014 S&P: -0.3% | Nasdaq: +0.3% | Dow: -0.7%"
+      "message": "\u00d8 +0.1% \u2014 S&P: -0.1% | Nasdaq: -0.2% | Dow: +0.5%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -0.540690345557633,
+      "value": 0.3436283858412282,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 -0.5% \u2014 Hang Seng: -1.6% | ASX 200: -0.9% | CAC 40: -0.6%"
+      "message": "\u00d8 +0.3% \u2014 CAC 40: -0.2% | Euro Stoxx 50: +0.3% | DAX: +0.6%"
     },
     {
       "name": "Buffett Indicator",
-      "value": 233.81143967415667,
+      "value": 235.94812812528835,
       "status": "red",
       "score": 2,
-      "message": "234% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
+      "message": "236% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
     },
     {
       "name": "Put/Call Ratio",
@@ -65,11 +65,6 @@
     }
   ],
   "history": [
-    {
-      "time": "00:02",
-      "score": 4,
-      "status": "yellow"
-    },
     {
       "time": "21:23",
       "score": 6,
@@ -162,6 +157,11 @@
     },
     {
       "time": "18:57",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "16:47",
       "score": 3,
       "status": "yellow"
     }
