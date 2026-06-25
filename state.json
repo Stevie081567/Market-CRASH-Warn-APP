@@ -4,22 +4,22 @@
   "red_count": 1,
   "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-06-25T14:21:44.128831",
-  "last_updated_full": "2026-06-25T14:21:43.872618",
+  "last_updated": "2026-06-25T16:40:19.488575",
+  "last_updated_full": "2026-06-25T16:40:19.176108",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 19.100000381469727,
+      "value": 18.8700008392334,
       "status": "green",
       "score": 0,
-      "message": "VIX=19.1 \u2014 normal"
+      "message": "VIX=18.9 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7392.009765625,
+      "value": 7355.22021484375,
       "status": "green",
       "score": 0,
-      "message": "SPX=7392 | Intraday -0.2% | ATH-Abstand -3.0%"
+      "message": "SPX=7355 | Intraday -0.7% | ATH-Abstand -3.5%"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
@@ -30,24 +30,24 @@
     },
     {
       "name": "Fear & Greed Index",
-      "value": 25.2857142857143,
+      "value": 26.3428571428571,
       "status": "yellow",
       "score": 1,
-      "message": "F&G=25 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-25, 7T-\u00d8)"
+      "message": "F&G=26 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-25, 7T-\u00d8)"
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.5042383644743409,
+      "value": -0.3085992061699571,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.5% \u2014 S&P: +0.1% | Nasdaq: -0.2% | Dow: +1.6%"
+      "message": "\u00d8 -0.3% \u2014 S&P: -0.7% | Nasdaq: -0.1% | Dow: -0.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 1.0519645412241234,
+      "value": 0.7703518524689733,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +1.1% \u2014 Hang Seng: -1.4% | CAC 40: +0.6% | Euro Stoxx 50: +0.7%"
+      "message": "\u00d8 +0.8% \u2014 CAC 40: +0.5% | FTSE 100: +0.7% | Euro Stoxx 50: +0.9%"
     },
     {
       "name": "Buffett Indicator",
@@ -65,11 +65,6 @@
     }
   ],
   "history": [
-    {
-      "time": "15:53",
-      "score": 3,
-      "status": "yellow"
-    },
     {
       "time": "17:52",
       "score": 3,
@@ -162,6 +157,11 @@
     },
     {
       "time": "14:21",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "16:40",
       "score": 3,
       "status": "yellow"
     }
