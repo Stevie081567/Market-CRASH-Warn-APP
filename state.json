@@ -4,22 +4,22 @@
   "red_count": 1,
   "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-06-24T21:52:52.226992",
-  "last_updated_full": "2026-06-24T21:52:51.945869",
+  "last_updated": "2026-06-25T14:21:44.128831",
+  "last_updated_full": "2026-06-25T14:21:43.872618",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 18.649999618530273,
+      "value": 19.100000381469727,
       "status": "green",
       "score": 0,
-      "message": "VIX=18.6 \u2014 normal"
+      "message": "VIX=19.1 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7359.89990234375,
+      "value": 7392.009765625,
       "status": "green",
       "score": 0,
-      "message": "SPX=7360 | Intraday -0.1% | ATH-Abstand -3.4%"
+      "message": "SPX=7392 | Intraday -0.2% | ATH-Abstand -3.0%"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
@@ -30,28 +30,28 @@
     },
     {
       "name": "Fear & Greed Index",
-      "value": 25.9142857142857,
+      "value": 25.2857142857143,
       "status": "yellow",
       "score": 1,
-      "message": "F&G=26 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-24, 7T-\u00d8)"
+      "message": "F&G=25 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-25, 7T-\u00d8)"
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.8862673144370897,
+      "value": 0.5042383644743409,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.9% \u2014 S&P: +0.6% | Nasdaq: +1.5% | Dow: +0.6%"
+      "message": "\u00d8 +0.5% \u2014 S&P: +0.1% | Nasdaq: -0.2% | Dow: +1.6%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -0.004791428039593468,
+      "value": 1.0519645412241234,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 -0.0% \u2014 DAX: -0.6% | Euro Stoxx 50: -0.3% | FTSE 100: +0.3%"
+      "message": "\u00d8 +1.1% \u2014 Hang Seng: -1.4% | CAC 40: +0.6% | Euro Stoxx 50: +0.7%"
     },
     {
       "name": "Buffett Indicator",
-      "value": 235.94812812528835,
+      "value": 235.60562049576723,
       "status": "red",
       "score": 2,
       "message": "236% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
@@ -65,11 +65,6 @@
     }
   ],
   "history": [
-    {
-      "time": "12:31",
-      "score": 3,
-      "status": "yellow"
-    },
     {
       "time": "15:53",
       "score": 3,
@@ -162,6 +157,11 @@
     },
     {
       "time": "21:52",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "14:21",
       "score": 3,
       "status": "yellow"
     }
