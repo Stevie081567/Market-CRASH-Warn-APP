@@ -1,25 +1,25 @@
 {
-  "status": "green",
-  "score": 2,
+  "status": "yellow",
+  "score": 3,
   "red_count": 0,
-  "yellow_count": 2,
+  "yellow_count": 3,
   "error_count": 2,
-  "last_updated": "2026-06-26T18:11:40.135257",
-  "last_updated_full": "2026-06-26T18:11:40.134113",
+  "last_updated": "2026-06-26T20:09:06.323982",
+  "last_updated_full": "2026-06-26T20:09:06.100265",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 18.889999389648438,
+      "value": 18.3700008392334,
       "status": "green",
       "score": 0,
-      "message": "VIX=18.9 \u2014 normal"
+      "message": "VIX=18.4 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7367.18994140625,
+      "value": 7337.81005859375,
       "status": "green",
       "score": 0,
-      "message": "SPX=7367 | Intraday +0.7% | ATH-Abstand -3.3%"
+      "message": "SPX=7338 | Intraday +0.3% | ATH-Abstand -3.7%"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
@@ -30,17 +30,17 @@
     },
     {
       "name": "Fear & Greed Index",
-      "value": 25.2285714285714,
+      "value": 24.6571428571429,
       "status": "yellow",
       "score": 1,
-      "message": "F&G=25 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-26, 7T-\u00d8)"
+      "message": "F&G=25 (extreme fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-26, 7T-\u00d8)"
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.16587159393659687,
-      "status": "green",
-      "score": 0,
-      "message": "\u00d8 -0.2% \u2014 S&P: +0.2% | Nasdaq: -0.4% | Dow: -0.2%"
+      "value": -0.5013600176254381,
+      "status": "yellow",
+      "score": 1,
+      "message": "\u00d8 -0.5% \ud83d\udfe1 \u2014 S&P: -0.2% | Nasdaq: -1.1% | Dow: -0.2%"
     },
     {
       "name": "Globale M\u00e4rkte",
@@ -65,11 +65,6 @@
     }
   ],
   "history": [
-    {
-      "time": "20:08",
-      "score": 4,
-      "status": "yellow"
-    },
     {
       "time": "22:16",
       "score": 4,
@@ -164,7 +159,12 @@
       "time": "18:11",
       "score": 2,
       "status": "green"
+    },
+    {
+      "time": "20:09",
+      "score": 3,
+      "status": "yellow"
     }
   ],
-  "last_status": "green"
+  "last_status": "yellow"
 }
