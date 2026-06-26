@@ -1,25 +1,25 @@
 {
   "status": "yellow",
   "score": 4,
-  "red_count": 1,
-  "yellow_count": 2,
-  "error_count": 1,
-  "last_updated": "2026-06-25T22:22:06.566729",
-  "last_updated_full": "2026-06-25T22:22:06.366839",
+  "red_count": 0,
+  "yellow_count": 4,
+  "error_count": 2,
+  "last_updated": "2026-06-26T14:13:58.634540",
+  "last_updated_full": "2026-06-26T14:13:58.328031",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 18.899999618530273,
+      "value": 19.719999313354492,
       "status": "green",
       "score": 0,
-      "message": "VIX=18.9 \u2014 normal"
+      "message": "VIX=19.7 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7357.169921875,
+      "value": 7360.47021484375,
       "status": "green",
       "score": 0,
-      "message": "SPX=7357 | Intraday -0.6% | ATH-Abstand -3.5%"
+      "message": "SPX=7360 | Intraday +0.7% | ATH-Abstand -3.4%"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
@@ -30,31 +30,31 @@
     },
     {
       "name": "Fear & Greed Index",
-      "value": 25.4571428571429,
+      "value": 24.8571428571429,
       "status": "yellow",
       "score": 1,
-      "message": "F&G=25 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-25, 7T-\u00d8)"
+      "message": "F&G=25 (extreme fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-26, 7T-\u00d8)"
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.42732502921004545,
-      "status": "green",
-      "score": 0,
-      "message": "\u00d8 -0.4% \u2014 S&P: -0.6% | Nasdaq: -0.8% | Dow: +0.1%"
+      "value": -1.19096116314566,
+      "status": "yellow",
+      "score": 1,
+      "message": "\u00d8 -1.2% \ud83d\udfe1 \u2014 S&P: -1.0% | Nasdaq: -2.3% | Dow: -0.3%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 0.652768616773509,
-      "status": "green",
-      "score": 0,
-      "message": "\u00d8 +0.7% \u2014 FTSE 100: +0.7%"
+      "value": -1.6207670011903892,
+      "status": "yellow",
+      "score": 1,
+      "message": "\u00d8 -1.6% \ud83d\udfe1 | Schlimmste: Nikkei 225: -4.2% | Hang Seng: -1.8% | DAX: -1.4%"
     },
     {
       "name": "Buffett Indicator",
-      "value": 235.60562049576723,
-      "status": "red",
-      "score": 2,
-      "message": "236% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
+      "value": null,
+      "status": "error",
+      "score": 0,
+      "message": "Datenfehler: Keine Wilshire 5000 Daten"
     },
     {
       "name": "Put/Call Ratio",
@@ -65,11 +65,6 @@
     }
   ],
   "history": [
-    {
-      "time": "22:04",
-      "score": 3,
-      "status": "yellow"
-    },
     {
       "time": "18:57",
       "score": 3,
@@ -162,6 +157,11 @@
     },
     {
       "time": "22:22",
+      "score": 4,
+      "status": "yellow"
+    },
+    {
+      "time": "14:13",
       "score": 4,
       "status": "yellow"
     }
