@@ -1,15 +1,15 @@
 {
-  "status": "yellow",
-  "score": 3,
+  "status": "green",
+  "score": 2,
   "red_count": 0,
-  "yellow_count": 3,
+  "yellow_count": 2,
   "error_count": 2,
-  "last_updated": "2026-06-26T20:09:06.323982",
-  "last_updated_full": "2026-06-26T20:09:06.100265",
+  "last_updated": "2026-06-26T21:40:04.576994",
+  "last_updated_full": "2026-06-26T21:40:04.575983",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 18.3700008392334,
+      "value": 18.3799991607666,
       "status": "green",
       "score": 0,
       "message": "VIX=18.4 \u2014 normal"
@@ -23,24 +23,24 @@
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": 0.2999999999999998,
-      "status": "yellow",
-      "score": 1,
-      "message": "Spread=+0.30% \u2014 flache Kurve (10Y=4.41% / 2Y=4.11%)"
+      "value": 0.3100000000000005,
+      "status": "green",
+      "score": 0,
+      "message": "Spread=+0.31% \u2014 normal (10Y=4.40% / 2Y=4.09%)"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 24.6571428571429,
+      "value": 24.7714285714286,
       "status": "yellow",
       "score": 1,
       "message": "F&G=25 (extreme fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-26, 7T-\u00d8)"
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.5013600176254381,
+      "value": -0.8398458491759827,
       "status": "yellow",
       "score": 1,
-      "message": "\u00d8 -0.5% \ud83d\udfe1 \u2014 S&P: -0.2% | Nasdaq: -1.1% | Dow: -0.2%"
+      "message": "\u00d8 -0.8% \ud83d\udfe1 \u2014 S&P: -0.4% | Nasdaq: -1.6% | Dow: -0.5%"
     },
     {
       "name": "Globale M\u00e4rkte",
@@ -65,11 +65,6 @@
     }
   ],
   "history": [
-    {
-      "time": "22:16",
-      "score": 4,
-      "status": "yellow"
-    },
     {
       "time": "14:38",
       "score": 6,
@@ -164,7 +159,12 @@
       "time": "20:09",
       "score": 3,
       "status": "yellow"
+    },
+    {
+      "time": "21:40",
+      "score": 2,
+      "status": "green"
     }
   ],
-  "last_status": "yellow"
+  "last_status": "green"
 }
