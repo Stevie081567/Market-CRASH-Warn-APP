@@ -150,3 +150,27 @@ STATE_FILE = "state.json"
 LOG_FILE         = "logs/crashwarn.log"
 LOG_MAX_BYTES    = 5 * 1024 * 1024
 LOG_BACKUP_COUNT = 7
+
+# ---------------------------------------------------------------------------
+# VVIX (Volatility of VIX)
+# ---------------------------------------------------------------------------
+VVIX_YELLOW = 100.0   # > 100 = erhöhte Unsicherheit
+VVIX_RED    = 120.0   # > 120 = Panik-Regime
+
+# ---------------------------------------------------------------------------
+# MOVE Index (Bond Market Volatility)
+# ---------------------------------------------------------------------------
+MOVE_YELLOW = 100.0   # > 100 = erhöhter Bond-Stress
+MOVE_RED    = 130.0   # > 130 = Bond-Markt unter starkem Druck
+
+# ---------------------------------------------------------------------------
+# SKEW Index (Tail Risk / Black Swan)
+# ---------------------------------------------------------------------------
+SKEW_YELLOW = 140.0   # > 140 = erhöhtes Tail-Risk
+SKEW_RED    = 150.0   # > 150 = stark erhöhtes Black-Swan-Risiko
+
+# ---------------------------------------------------------------------------
+# SQQQ Volume Spike (vs. 20-Tage-Durchschnitt)
+# ---------------------------------------------------------------------------
+SQQQ_VOL_YELLOW = 2.0   # > 2.0x Durchschnitt = erhöhte Absicherung
+SQQQ_VOL_RED    = 3.5   # > 3.5x Durchschnitt = institutionelle Absicherung
