@@ -1,25 +1,39 @@
 {
   "status": "yellow",
   "score": 3,
-  "red_count": 0,
-  "yellow_count": 3,
-  "error_count": 2,
-  "last_updated": "2026-06-27T15:09:25.123261",
-  "last_updated_full": "2026-06-27T15:09:24.806779",
+  "red_count": 1,
+  "yellow_count": 1,
+  "error_count": 1,
+  "last_updated": "2026-06-29T15:39:12.417774",
+  "last_updated_full": "2026-06-29T15:39:12.218401",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 18.3799991607666,
+      "value": 18.329999923706055,
       "status": "green",
       "score": 0,
-      "message": "VIX=18.4 \u2014 normal"
+      "message": "VIX=18.3 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7337.81005859375,
+      "value": 7406.89990234375,
       "status": "green",
       "score": 0,
-      "message": "SPX=7338 | Intraday +0.3% | ATH-Abstand -3.7%"
+      "message": "SPX=7407 | Intraday +0.2% | ATH-Abstand -2.8%"
+    },
+    {
+      "name": "Fear & Greed Index",
+      "value": 26.1142857142857,
+      "status": "yellow",
+      "score": 1,
+      "message": "F&G=26 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-29, 7T-\u00d8)"
+    },
+    {
+      "name": "VVIX (Vol of VIX)",
+      "value": 89.83000183105469,
+      "status": "green",
+      "score": 0,
+      "message": "VVIX=89.8 \u2014 Normal vol regime"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
@@ -29,47 +43,56 @@
       "message": "Spread=+0.31% \u2014 normal (10Y=4.40% / 2Y=4.09%)"
     },
     {
-      "name": "Fear & Greed Index",
-      "value": 24.7714285714286,
-      "status": "yellow",
-      "score": 1,
-      "message": "F&G=25 (extreme fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-06-26, 7T-\u00d8)"
-    },
-    {
-      "name": "E-Mini Futures",
-      "value": -0.6936211875386417,
-      "status": "yellow",
-      "score": 1,
-      "message": "\u00d8 -0.7% \ud83d\udfe1 \u2014 S&P: -0.4% | Nasdaq: -1.3% | Dow: -0.4%"
-    },
-    {
-      "name": "Globale M\u00e4rkte",
-      "value": -1.2174038715573,
-      "status": "yellow",
-      "score": 1,
-      "message": "\u00d8 -1.2% \ud83d\udfe1 | Schlimmste: Nikkei 225: -4.2% | Hang Seng: -1.8% | DAX: -1.3%"
-    },
-    {
-      "name": "Buffett Indicator",
-      "value": null,
-      "status": "error",
-      "score": 0,
-      "message": "Datenfehler: Keine Wilshire 5000 Daten"
-    },
-    {
       "name": "Put/Call Ratio",
       "value": null,
       "status": "error",
       "score": 0,
       "message": "Datenfehler: alle Quellen nicht erreichbar"
+    },
+    {
+      "name": "E-Mini Futures",
+      "value": 0.45064303519119936,
+      "status": "green",
+      "score": 0,
+      "message": "\u00d8 +0.5% \u2014 S&P: +0.4% | Nasdaq: +0.7% | Dow: +0.3%"
+    },
+    {
+      "name": "Globale M\u00e4rkte",
+      "value": 0.2657993638420738,
+      "status": "green",
+      "score": 0,
+      "message": "\u00d8 +0.3% \u2014 DAX: -0.2% | CAC 40: -0.1% | FTSE 100: -0.1%"
+    },
+    {
+      "name": "Buffett Indicator",
+      "value": 231.79132385706885,
+      "status": "red",
+      "score": 2,
+      "message": "232% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
+    },
+    {
+      "name": "MOVE Index (Bond Vol)",
+      "value": 66.79000091552734,
+      "status": "green",
+      "score": 0,
+      "message": "MOVE=66.8 \u2014 Bond market calm"
+    },
+    {
+      "name": "SKEW Index (Tail Risk)",
+      "value": 139.39999389648438,
+      "status": "green",
+      "score": 0,
+      "message": "SKEW=139.4 \u2014 Normal tail risk distribution"
+    },
+    {
+      "name": "SQQQ Volume Spike",
+      "value": 0.5700997087032931,
+      "status": "green",
+      "score": 0,
+      "message": "Vol=44M (0.6x avg) \u2014 Normal | SQQQ -4.9%"
     }
   ],
   "history": [
-    {
-      "time": "19:18",
-      "score": 6,
-      "status": "red"
-    },
     {
       "time": "21:13",
       "score": 5,
@@ -162,6 +185,11 @@
     },
     {
       "time": "15:09",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "15:39",
       "score": 3,
       "status": "yellow"
     }
