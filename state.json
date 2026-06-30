@@ -4,12 +4,12 @@
   "red_count": 1,
   "yellow_count": 3,
   "error_count": 1,
-  "last_updated": "2026-06-30T20:28:14.251586",
-  "last_updated_full": "2026-06-30T20:28:13.982260",
+  "last_updated": "2026-06-30T21:57:13.101175",
+  "last_updated_full": "2026-06-30T21:57:12.633392",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 16.459999084472656,
+      "value": 16.450000762939453,
       "status": "green",
       "score": 0,
       "message": "VIX=16.5 \u2014 normal"
@@ -51,10 +51,10 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.8052900506395261,
+      "value": 0.719238909147334,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.8% \u2014 S&P: +0.7% | Nasdaq: +1.6% | Dow: +0.1%"
+      "message": "\u00d8 +0.7% \u2014 S&P: +0.6% | Nasdaq: +1.5% | Dow: +0.0%"
     },
     {
       "name": "Globale M\u00e4rkte",
@@ -72,32 +72,27 @@
     },
     {
       "name": "MOVE Index (Bond Vol)",
-      "value": 68.14109802246094,
+      "value": 71.95890045166016,
       "status": "green",
       "score": 0,
-      "message": "MOVE=68.1 \u2014 Bond market calm"
+      "message": "MOVE=72.0 \u2014 Bond market calm"
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 144.4600067138672,
+      "value": 149.60000610351562,
       "status": "yellow",
       "score": 1,
-      "message": "SKEW=144.5 \ud83d\udfe1 \u2014 Elevated tail risk (threshold: 140.0)"
+      "message": "SKEW=149.6 \ud83d\udfe1 \u2014 Elevated tail risk (threshold: 140.0)"
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.7102084301664763,
+      "value": 0.716322661903152,
       "status": "green",
       "score": 0,
       "message": "Vol=56M (0.7x avg) \u2014 Normal | SQQQ -4.8%"
     }
   ],
   "history": [
-    {
-      "time": "14:21",
-      "score": 3,
-      "status": "yellow"
-    },
     {
       "time": "16:40",
       "score": 3,
@@ -190,6 +185,11 @@
     },
     {
       "time": "20:28",
+      "score": 5,
+      "status": "yellow"
+    },
+    {
+      "time": "21:57",
       "score": 5,
       "status": "yellow"
     }
