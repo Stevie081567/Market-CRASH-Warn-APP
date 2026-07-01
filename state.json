@@ -1,11 +1,11 @@
 {
-  "status": "yellow",
-  "score": 5,
-  "red_count": 1,
-  "yellow_count": 3,
+  "status": "red",
+  "score": 6,
+  "red_count": 2,
+  "yellow_count": 2,
   "error_count": 1,
-  "last_updated": "2026-07-01T20:29:28.116730",
-  "last_updated_full": "2026-07-01T20:29:27.719397",
+  "last_updated": "2026-07-01T22:05:02.957790",
+  "last_updated_full": "2026-07-01T22:05:02.637882",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.8109399729289217,
+      "value": -0.6036208037318632,
       "status": "yellow",
       "score": 1,
-      "message": "\u00d8 -0.8% \ud83d\udfe1 \u2014 S&P: -0.4% | Nasdaq: -1.8% | Dow: -0.2%"
+      "message": "\u00d8 -0.6% \ud83d\udfe1 \u2014 S&P: -0.2% | Nasdaq: -1.5% | Dow: -0.2%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -0.4294978537962481,
+      "value": -0.40564252666849565,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 -0.4% \u2014 CAC 40: -0.8% | Euro Stoxx 50: -0.7% | Hang Seng: -0.6%"
+      "message": "\u00d8 -0.4% \u2014 Hang Seng: -0.6% | FTSE 100: -0.2%"
     },
     {
       "name": "Buffett Indicator",
@@ -72,32 +72,27 @@
     },
     {
       "name": "MOVE Index (Bond Vol)",
-      "value": 71.95890045166016,
+      "value": 68.56169891357422,
       "status": "green",
       "score": 0,
-      "message": "MOVE=72.0 \u2014 Bond market calm"
+      "message": "MOVE=68.6 \u2014 Bond market calm"
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 149.60000610351562,
-      "status": "yellow",
-      "score": 1,
-      "message": "SKEW=149.6 \ud83d\udfe1 \u2014 Elevated tail risk (threshold: 140.0)"
+      "value": 154.82000732421875,
+      "status": "red",
+      "score": 2,
+      "message": "SKEW=154.8 \ud83d\udd34 \u2014 High black swan risk (threshold: 150.0)"
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.5932610464887177,
+      "value": 0.603317559850535,
       "status": "green",
       "score": 0,
-      "message": "Vol=46M (0.6x avg) \u2014 Normal | SQQQ +4.3%"
+      "message": "Vol=47M (0.6x avg) \u2014 Normal | SQQQ +4.3%"
     }
   ],
   "history": [
-    {
-      "time": "14:13",
-      "score": 4,
-      "status": "yellow"
-    },
     {
       "time": "16:29",
       "score": 2,
@@ -192,7 +187,12 @@
       "time": "20:29",
       "score": 5,
       "status": "yellow"
+    },
+    {
+      "time": "22:05",
+      "score": 6,
+      "status": "red"
     }
   ],
-  "last_status": "yellow"
+  "last_status": "red"
 }
