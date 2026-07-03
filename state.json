@@ -4,8 +4,8 @@
   "red_count": 2,
   "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-07-03T21:31:48.163441",
-  "last_updated_full": "2026-07-03T21:31:47.985204",
+  "last_updated": "2026-07-03T22:41:27.373278",
+  "last_updated_full": "2026-07-03T22:41:27.058060",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -58,10 +58,10 @@
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 0.5584236377757016,
+      "value": 0.2452842123211383,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.6% \u2014 FTSE 100: +0.2% | CAC 40: +0.4% | DAX: +0.8%"
+      "message": "\u00d8 +0.2% \u2014 FTSE 100: +0.2%"
     },
     {
       "name": "Buffett Indicator",
@@ -93,11 +93,6 @@
     }
   ],
   "history": [
-    {
-      "time": "18:23",
-      "score": 4,
-      "status": "yellow"
-    },
     {
       "time": "20:28",
       "score": 5,
@@ -190,6 +185,11 @@
     },
     {
       "time": "21:31",
+      "score": 5,
+      "status": "yellow"
+    },
+    {
+      "time": "22:41",
       "score": 5,
       "status": "yellow"
     }
