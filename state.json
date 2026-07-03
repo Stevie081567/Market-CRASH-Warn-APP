@@ -4,8 +4,8 @@
   "red_count": 2,
   "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-07-03T18:45:42.935403",
-  "last_updated_full": "2026-07-03T18:45:42.659730",
+  "last_updated": "2026-07-03T20:12:18.783844",
+  "last_updated_full": "2026-07-03T20:12:18.566425",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.9101605653790452,
+      "value": 0.9138260581804423,
       "status": "green",
       "score": 0,
       "message": "Vol=72M (0.9x avg) \u2014 Normal | SQQQ +5.5%"
     }
   ],
   "history": [
-    {
-      "time": "14:09",
-      "score": 4,
-      "status": "yellow"
-    },
     {
       "time": "16:31",
       "score": 4,
@@ -190,6 +185,11 @@
     },
     {
       "time": "18:45",
+      "score": 5,
+      "status": "yellow"
+    },
+    {
+      "time": "20:12",
       "score": 5,
       "status": "yellow"
     }
