@@ -4,8 +4,8 @@
   "red_count": 1,
   "yellow_count": 2,
   "error_count": 1,
-  "last_updated": "2026-07-13T21:12:26.126171",
-  "last_updated_full": "2026-07-13T21:12:25.843185",
+  "last_updated": "2026-07-13T22:10:13.596749",
+  "last_updated_full": "2026-07-13T22:10:13.327852",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.6806707519045085,
+      "value": -0.6277568676590588,
       "status": "yellow",
       "score": 1,
-      "message": "\u00d8 -0.7% \ud83d\udfe1 \u2014 S&P: -0.5% | Nasdaq: -1.5% | Dow: -0.1%"
+      "message": "\u00d8 -0.6% \ud83d\udfe1 \u2014 S&P: -0.5% | Nasdaq: -1.4% | Dow: -0.0%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 0.1305680063612698,
+      "value": 0.009433229434466733,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.1% \u2014 FTSE 100: +0.0% | Euro Stoxx 50: +0.0% | DAX: +0.2%"
+      "message": "\u00d8 +0.0% \u2014 FTSE 100: +0.0%"
     },
     {
       "name": "Buffett Indicator",
@@ -79,25 +79,20 @@
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 144.27000427246094,
+      "value": 145.69000244140625,
       "status": "yellow",
       "score": 1,
-      "message": "SKEW=144.3 \ud83d\udfe1 \u2014 Elevated tail risk (threshold: 140.0)"
+      "message": "SKEW=145.7 \ud83d\udfe1 \u2014 Elevated tail risk (threshold: 140.0)"
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.7520862573315551,
+      "value": 0.7519672897807419,
       "status": "green",
       "score": 0,
       "message": "Vol=49M (0.8x avg) \u2014 Normal | SQQQ +5.7%"
     }
   ],
   "history": [
-    {
-      "time": "19:18",
-      "score": 5,
-      "status": "yellow"
-    },
     {
       "time": "20:42",
       "score": 4,
@@ -190,6 +185,11 @@
     },
     {
       "time": "21:12",
+      "score": 4,
+      "status": "yellow"
+    },
+    {
+      "time": "22:10",
       "score": 4,
       "status": "yellow"
     }
