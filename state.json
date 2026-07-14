@@ -4,8 +4,8 @@
   "red_count": 1,
   "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-07-14T20:32:13.205801",
-  "last_updated_full": "2026-07-14T20:32:12.628864",
+  "last_updated": "2026-07-14T21:37:04.712667",
+  "last_updated_full": "2026-07-14T21:37:04.335516",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -51,10 +51,10 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.5493961980539726,
+      "value": 0.5299681978766873,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.5% \u2014 S&P: +0.3% | Nasdaq: +1.2% | Dow: +0.1%"
+      "message": "\u00d8 +0.5% \u2014 S&P: +0.4% | Nasdaq: +1.1% | Dow: +0.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
@@ -72,17 +72,17 @@
     },
     {
       "name": "MOVE Index (Bond Vol)",
-      "value": 77.77459716796875,
+      "value": 75.03260040283203,
       "status": "green",
       "score": 0,
-      "message": "MOVE=77.8 \u2014 Bond market calm"
+      "message": "MOVE=75.0 \u2014 Bond market calm"
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 145.69000244140625,
+      "value": 145.1300048828125,
       "status": "yellow",
       "score": 1,
-      "message": "SKEW=145.7 \ud83d\udfe1 \u2014 Elevated tail risk (threshold: 140.0)"
+      "message": "SKEW=145.1 \ud83d\udfe1 \u2014 Elevated tail risk (threshold: 140.0)"
     },
     {
       "name": "SQQQ Volume Spike",
@@ -93,11 +93,6 @@
     }
   ],
   "history": [
-    {
-      "time": "22:19",
-      "score": 3,
-      "status": "yellow"
-    },
     {
       "time": "14:11",
       "score": 1,
@@ -190,6 +185,11 @@
     },
     {
       "time": "20:32",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "21:37",
       "score": 3,
       "status": "yellow"
     }
