@@ -4,36 +4,36 @@
   "red_count": 1,
   "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-07-14T16:37:49.295411",
-  "last_updated_full": "2026-07-14T16:37:49.012222",
+  "last_updated": "2026-07-14T17:46:53.642922",
+  "last_updated_full": "2026-07-14T17:46:53.034962",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 16.760000228881836,
+      "value": 16.399999618530273,
       "status": "green",
       "score": 0,
-      "message": "VIX=16.8 \u2014 normal"
+      "message": "VIX=16.4 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7538.25,
+      "value": 7545.330078125,
       "status": "green",
       "score": 0,
-      "message": "SPX=7538 | Intraday +0.0% | ATH-Abstand -1.1%"
+      "message": "SPX=7545 | Intraday +0.1% | ATH-Abstand -1.0%"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 42.6571428571429,
+      "value": 43.6571428571429,
       "status": "green",
       "score": 0,
-      "message": "F&G=43 (fear) (Stand: 2026-07-14, 7T-\u00d8)"
+      "message": "F&G=44 (fear) (Stand: 2026-07-14, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
-      "value": 93.79000091552734,
+      "value": 93.13999938964844,
       "status": "green",
       "score": 0,
-      "message": "VVIX=93.8 \u2014 Normal vol regime"
+      "message": "VVIX=93.1 \u2014 Normal vol regime"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
@@ -51,10 +51,10 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.10321238436691822,
+      "value": 0.39862320384151256,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 -0.1% \u2014 S&P: -0.2% | Nasdaq: +0.2% | Dow: -0.3%"
+      "message": "\u00d8 +0.4% \u2014 S&P: +0.2% | Nasdaq: +1.1% | Dow: -0.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.600154571097172,
+      "value": 0.6473508531942603,
       "status": "green",
       "score": 0,
-      "message": "Vol=37M (0.6x avg) \u2014 Normal | SQQQ -3.2%"
+      "message": "Vol=39M (0.6x avg) \u2014 Normal | SQQQ -3.8%"
     }
   ],
   "history": [
-    {
-      "time": "17:19",
-      "score": 3,
-      "status": "yellow"
-    },
     {
       "time": "19:06",
       "score": 3,
@@ -190,6 +185,11 @@
     },
     {
       "time": "16:37",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "17:46",
       "score": 3,
       "status": "yellow"
     }
