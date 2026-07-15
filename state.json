@@ -4,8 +4,8 @@
   "red_count": 1,
   "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-07-15T21:28:52.374815",
-  "last_updated_full": "2026-07-15T21:28:52.037282",
+  "last_updated": "2026-07-15T22:31:19.110944",
+  "last_updated_full": "2026-07-15T22:31:18.789792",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.08926682375077227,
+      "value": 0.16480770399559105,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.1% \u2014 S&P: +0.3% | Nasdaq: -0.3% | Dow: +0.2%"
+      "message": "\u00d8 +0.2% \u2014 S&P: +0.4% | Nasdaq: -0.2% | Dow: +0.3%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -0.19024985753966064,
+      "value": -0.1280269364816113,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 -0.2% \u2014 DAX: -0.6% | Euro Stoxx 50: -0.2% | FTSE 100: -0.1%"
+      "message": "\u00d8 -0.1% \u2014 FTSE 100: -0.1%"
     },
     {
       "name": "Buffett Indicator",
@@ -93,11 +93,6 @@
     }
   ],
   "history": [
-    {
-      "time": "16:55",
-      "score": 3,
-      "status": "yellow"
-    },
     {
       "time": "18:40",
       "score": 4,
@@ -190,6 +185,11 @@
     },
     {
       "time": "21:28",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "22:31",
       "score": 3,
       "status": "yellow"
     }
