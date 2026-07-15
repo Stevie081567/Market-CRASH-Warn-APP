@@ -3,37 +3,37 @@
   "score": 3,
   "red_count": 1,
   "yellow_count": 1,
-  "error_count": 2,
-  "last_updated": "2026-07-15T15:07:20.010888",
-  "last_updated_full": "2026-07-15T15:07:19.681192",
+  "error_count": 1,
+  "last_updated": "2026-07-15T16:44:05.390408",
+  "last_updated_full": "2026-07-15T16:44:04.991954",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 16.190000534057617,
+      "value": 16.530000686645508,
       "status": "green",
       "score": 0,
-      "message": "VIX=16.2 \u2014 normal"
+      "message": "VIX=16.5 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7560.0,
+      "value": 7530.0498046875,
       "status": "green",
       "score": 0,
-      "message": "SPX=7560 | Intraday -0.2% | ATH-Abstand -0.8%"
+      "message": "SPX=7530 | Intraday -0.6% | ATH-Abstand -1.2%"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 47.3714285714286,
+      "value": 44.9714285714286,
       "status": "green",
       "score": 0,
-      "message": "F&G=47 (neutral) (Stand: 2026-07-15, 7T-\u00d8)"
+      "message": "F&G=45 (fear) (Stand: 2026-07-15, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
-      "value": 94.8499984741211,
+      "value": 95.98999786376953,
       "status": "green",
       "score": 0,
-      "message": "VVIX=94.8 \u2014 Normal vol regime"
+      "message": "VVIX=96.0 \u2014 Normal vol regime"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.016901000222748912,
+      "value": -0.48037368495030613,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 -0.0% \u2014 S&P: +0.3% | Nasdaq: -0.5% | Dow: +0.2%"
+      "message": "\u00d8 -0.5% \u2014 S&P: -0.2% | Nasdaq: -1.3% | Dow: +0.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": null,
-      "status": "error",
+      "value": -0.19024985753966064,
+      "status": "green",
       "score": 0,
-      "message": "Keine globalen Marktdaten verf\u00fcgbar"
+      "message": "\u00d8 -0.2% \u2014 DAX: -0.6% | Euro Stoxx 50: -0.2% | FTSE 100: -0.1%"
     },
     {
       "name": "Buffett Indicator",
@@ -79,25 +79,20 @@
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 145.69000244140625,
+      "value": 145.1300048828125,
       "status": "yellow",
       "score": 1,
-      "message": "SKEW=145.7 \ud83d\udfe1 \u2014 Elevated tail risk (threshold: 140.0)"
+      "message": "SKEW=145.1 \ud83d\udfe1 \u2014 Elevated tail risk (threshold: 140.0)"
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.4169486135728687,
+      "value": 0.5753816690503152,
       "status": "green",
       "score": 0,
-      "message": "Vol=25M (0.4x avg) \u2014 Normal | SQQQ -1.6%"
+      "message": "Vol=35M (0.6x avg) \u2014 Normal | SQQQ +3.6%"
     }
   ],
   "history": [
-    {
-      "time": "19:50",
-      "score": 1,
-      "status": "green"
-    },
     {
       "time": "21:02",
       "score": 1,
@@ -190,6 +185,11 @@
     },
     {
       "time": "15:07",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "16:44",
       "score": 3,
       "status": "yellow"
     }
