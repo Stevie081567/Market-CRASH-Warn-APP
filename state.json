@@ -1,11 +1,11 @@
 {
   "status": "yellow",
-  "score": 3,
+  "score": 4,
   "red_count": 0,
-  "yellow_count": 3,
+  "yellow_count": 4,
   "error_count": 2,
-  "last_updated": "2026-07-17T21:47:39.819881",
-  "last_updated_full": "2026-07-17T21:47:39.530579",
+  "last_updated": "2026-07-18T14:44:15.647260",
+  "last_updated_full": "2026-07-18T14:44:15.385366",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -1.113123741357648,
+      "value": -1.0942218997673352,
       "status": "yellow",
       "score": 1,
-      "message": "\u00d8 -1.1% \ud83d\udfe1 \u2014 S&P: -1.1% | Nasdaq: -1.5% | Dow: -0.7%"
+      "message": "\u00d8 -1.1% \ud83d\udfe1 \u2014 S&P: -1.0% | Nasdaq: -1.5% | Dow: -0.7%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -0.3445435155864484,
-      "status": "green",
-      "score": 0,
-      "message": "\u00d8 -0.3% \u2014 Euro Stoxx 50: -0.8% | CAC 40: -0.5% | DAX: -0.3%"
+      "value": -1.0988320612795046,
+      "status": "yellow",
+      "score": 1,
+      "message": "\u00d8 -1.1% \ud83d\udfe1 | Schlimmste: Nikkei 225: -4.0% | Hang Seng: -1.8% | Euro Stoxx 50: -0.8%"
     },
     {
       "name": "Buffett Indicator",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.932621842487802,
+      "value": 0.9473705529703762,
       "status": "green",
       "score": 0,
-      "message": "Vol=56M (0.9x avg) \u2014 Normal | SQQQ +4.6%"
+      "message": "Vol=57M (0.9x avg) \u2014 Normal | SQQQ +4.6%"
     }
   ],
   "history": [
-    {
-      "time": "19:05",
-      "score": 3,
-      "status": "yellow"
-    },
     {
       "time": "20:18",
       "score": 3,
@@ -191,6 +186,11 @@
     {
       "time": "21:47",
       "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "14:44",
+      "score": 4,
       "status": "yellow"
     }
   ],
