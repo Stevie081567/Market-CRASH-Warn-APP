@@ -4,36 +4,36 @@
   "red_count": 2,
   "yellow_count": 0,
   "error_count": 1,
-  "last_updated": "2026-07-22T16:55:24.431180",
-  "last_updated_full": "2026-07-22T16:55:24.077651",
+  "last_updated": "2026-07-22T18:05:35.457252",
+  "last_updated_full": "2026-07-22T18:05:35.114170",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 16.799999237060547,
+      "value": 16.81999969482422,
       "status": "green",
       "score": 0,
       "message": "VIX=16.8 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7521.10009765625,
+      "value": 7509.47021484375,
       "status": "green",
       "score": 0,
-      "message": "SPX=7521 | Intraday +0.3% | ATH-Abstand -1.3%"
+      "message": "SPX=7509 | Intraday +0.2% | ATH-Abstand -1.5%"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 44.0,
+      "value": 43.6285714285714,
       "status": "green",
       "score": 0,
       "message": "F&G=44 (fear) (Stand: 2026-07-22, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
-      "value": 95.91999816894531,
+      "value": 96.55000305175781,
       "status": "green",
       "score": 0,
-      "message": "VVIX=95.9 \u2014 Normal vol regime"
+      "message": "VVIX=96.6 \u2014 Normal vol regime"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
@@ -51,10 +51,10 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.23304362134915466,
+      "value": -0.12472767653050026,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.2% \u2014 S&P: +0.3% | Nasdaq: +0.0% | Dow: +0.4%"
+      "message": "\u00d8 -0.1% \u2014 S&P: -0.0% | Nasdaq: -0.3% | Dow: -0.0%"
     },
     {
       "name": "Globale M\u00e4rkte",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.4487273292372313,
+      "value": 0.48809431205778975,
       "status": "green",
       "score": 0,
-      "message": "Vol=26M (0.4x avg) \u2014 Normal | SQQQ +0.1%"
+      "message": "Vol=28M (0.5x avg) \u2014 Normal | SQQQ +0.6%"
     }
   ],
   "history": [
-    {
-      "time": "19:46",
-      "score": 3,
-      "status": "yellow"
-    },
     {
       "time": "20:49",
       "score": 3,
@@ -190,6 +185,11 @@
     },
     {
       "time": "16:55",
+      "score": 4,
+      "status": "yellow"
+    },
+    {
+      "time": "18:05",
       "score": 4,
       "status": "yellow"
     }
