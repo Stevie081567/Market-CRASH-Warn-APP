@@ -3,9 +3,9 @@
   "score": 3,
   "red_count": 0,
   "yellow_count": 3,
-  "error_count": 3,
-  "last_updated": "2026-07-27T21:06:00.781888",
-  "last_updated_full": "2026-07-27T21:06:00.448647",
+  "error_count": 2,
+  "last_updated": "2026-07-27T22:16:43.185686",
+  "last_updated_full": "2026-07-27T22:16:42.794476",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.6417570526199675,
+      "value": -0.6617401281411769,
       "status": "yellow",
       "score": 1,
-      "message": "\u00d8 -0.6% \ud83d\udfe1 \u2014 S&P: -0.6% | Nasdaq: -1.4% | Dow: +0.1%"
+      "message": "\u00d8 -0.7% \ud83d\udfe1 \u2014 S&P: -0.6% | Nasdaq: -1.5% | Dow: +0.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": null,
-      "status": "error",
+      "value": 0.42426374190924054,
+      "status": "green",
       "score": 0,
-      "message": "Keine globalen Marktdaten verf\u00fcgbar"
+      "message": "\u00d8 +0.4% \u2014 FTSE 100: +0.4%"
     },
     {
       "name": "Buffett Indicator",
@@ -79,25 +79,20 @@
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 145.9499969482422,
+      "value": 146.60000610351562,
       "status": "yellow",
       "score": 1,
-      "message": "SKEW=145.9 \ud83d\udfe1 \u2014 Elevated tail risk (threshold: 140.0)"
+      "message": "SKEW=146.6 \ud83d\udfe1 \u2014 Elevated tail risk (threshold: 140.0)"
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.8771912254947802,
+      "value": 0.8917377628441381,
       "status": "green",
       "score": 0,
-      "message": "Vol=49M (0.9x avg) \u2014 Normal | SQQQ +4.5%"
+      "message": "Vol=49M (0.9x avg) \u2014 Normal | SQQQ +1.0%"
     }
   ],
   "history": [
-    {
-      "time": "13:45",
-      "score": 5,
-      "status": "yellow"
-    },
     {
       "time": "15:52",
       "score": 7,
@@ -190,6 +185,11 @@
     },
     {
       "time": "21:06",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "22:16",
       "score": 3,
       "status": "yellow"
     }
