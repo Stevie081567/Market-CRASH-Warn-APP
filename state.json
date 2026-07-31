@@ -1,18 +1,18 @@
 {
   "status": "green",
-  "score": 0,
+  "score": 1,
   "red_count": 0,
-  "yellow_count": 0,
+  "yellow_count": 1,
   "error_count": 2,
-  "last_updated": "2026-07-31T20:21:54.826035",
-  "last_updated_full": "2026-07-31T20:21:54.825204",
+  "last_updated": "2026-07-31T21:36:22.980111",
+  "last_updated_full": "2026-07-31T21:36:22.978966",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 16.139999389648438,
+      "value": 15.989999771118164,
       "status": "green",
       "score": 0,
-      "message": "VIX=16.1 \u2014 normal"
+      "message": "VIX=16.0 \u2014 normal"
     },
     {
       "name": "S&P 500",
@@ -51,10 +51,10 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.5361556640188488,
+      "value": 0.23597958594019444,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.5% \u2014 S&P: +0.6% | Nasdaq: +0.4% | Dow: +0.5%"
+      "message": "\u00d8 +0.2% \u2014 S&P: +0.4% | Nasdaq: +0.2% | Dow: +0.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
@@ -72,32 +72,27 @@
     },
     {
       "name": "MOVE Index (Bond Vol)",
-      "value": 77.09329986572266,
+      "value": 83.02439880371094,
       "status": "green",
       "score": 0,
-      "message": "MOVE=77.1 \u2014 Bond market calm"
+      "message": "MOVE=83.0 \u2014 Bond market calm"
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 139.89999389648438,
-      "status": "green",
-      "score": 0,
-      "message": "SKEW=139.9 \u2014 Normal tail risk distribution"
+      "value": 141.22999572753906,
+      "status": "yellow",
+      "score": 1,
+      "message": "SKEW=141.2 \ud83d\udfe1 \u2014 Elevated tail risk (threshold: 140.0)"
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 1.0739735221657902,
+      "value": 1.093548410218051,
       "status": "green",
       "score": 0,
-      "message": "Vol=58M (1.1x avg) \u2014 Normal | SQQQ -2.0%"
+      "message": "Vol=60M (1.1x avg) \u2014 Normal | SQQQ -2.0%"
     }
   ],
   "history": [
-    {
-      "time": "22:41",
-      "score": 1,
-      "status": "green"
-    },
     {
       "time": "13:58",
       "score": 3,
@@ -191,6 +186,11 @@
     {
       "time": "20:21",
       "score": 0,
+      "status": "green"
+    },
+    {
+      "time": "21:36",
+      "score": 1,
       "status": "green"
     }
   ],
