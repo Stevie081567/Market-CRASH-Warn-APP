@@ -4,36 +4,36 @@
   "red_count": 0,
   "yellow_count": 2,
   "error_count": 2,
-  "last_updated": "2026-08-03T16:56:42.985401",
-  "last_updated_full": "2026-08-03T16:56:42.984516",
+  "last_updated": "2026-08-03T18:49:43.208303",
+  "last_updated_full": "2026-08-03T18:49:43.206838",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 15.579999923706055,
+      "value": 15.75,
       "status": "green",
       "score": 0,
-      "message": "VIX=15.6 \u2014 normal"
+      "message": "VIX=15.8 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7585.22998046875,
+      "value": 7605.22998046875,
       "status": "green",
       "score": 0,
-      "message": "SPX=7585 | Intraday +1.1% | ATH-Abstand -0.5%"
+      "message": "SPX=7605 | Intraday +1.3% | ATH-Abstand -0.2%"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 45.3142857142857,
+      "value": 45.7428571428571,
       "status": "green",
       "score": 0,
-      "message": "F&G=45 (neutral) (Stand: 2026-08-03, 7T-\u00d8)"
+      "message": "F&G=46 (neutral) (Stand: 2026-08-03, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
-      "value": 90.0999984741211,
+      "value": 90.4800033569336,
       "status": "green",
       "score": 0,
-      "message": "VVIX=90.1 \u2014 Normal vol regime"
+      "message": "VVIX=90.5 \u2014 Normal vol regime"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
@@ -51,10 +51,10 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.7034225811201313,
+      "value": 0.9090632293470282,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.7% \u2014 S&P: +0.8% | Nasdaq: +0.8% | Dow: +0.5%"
+      "message": "\u00d8 +0.9% \u2014 S&P: +1.0% | Nasdaq: +0.9% | Dow: +0.8%"
     },
     {
       "name": "Globale M\u00e4rkte",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 2.2027725343424756,
+      "value": 2.3947192803404787,
       "status": "yellow",
       "score": 1,
-      "message": "Vol=119M (2.2x avg) \ud83d\udfe1 \u2014 Elevated hedging | SQQQ -4.4%"
+      "message": "Vol=129M (2.4x avg) \ud83d\udfe1 \u2014 Elevated hedging | SQQQ -5.5%"
     }
   ],
   "history": [
-    {
-      "time": "19:46",
-      "score": 3,
-      "status": "yellow"
-    },
     {
       "time": "20:50",
       "score": 6,
@@ -190,6 +185,11 @@
     },
     {
       "time": "16:56",
+      "score": 2,
+      "status": "green"
+    },
+    {
+      "time": "18:49",
       "score": 2,
       "status": "green"
     }
