@@ -4,8 +4,8 @@
   "red_count": 0,
   "yellow_count": 0,
   "error_count": 2,
-  "last_updated": "2026-08-04T21:06:48.926069",
-  "last_updated_full": "2026-08-04T21:06:48.924795",
+  "last_updated": "2026-08-04T22:21:12.890200",
+  "last_updated_full": "2026-08-04T22:21:12.888901",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 2.293914461875146,
+      "value": 2.2843507268750787,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +2.3% \u2014 S&P: +1.9% | Nasdaq: +3.1% | Dow: +1.8%"
+      "message": "\u00d8 +2.3% \u2014 S&P: +1.9% | Nasdaq: +3.2% | Dow: +1.8%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 0.6306720352726187,
+      "value": 0.19967108236567058,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.6% \u2014 FTSE 100: +0.2% | CAC 40: +0.6% | DAX: +0.8%"
+      "message": "\u00d8 +0.2% \u2014 FTSE 100: +0.2%"
     },
     {
       "name": "Buffett Indicator",
@@ -79,10 +79,10 @@
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 139.9600067138672,
+      "value": 126.41000366210938,
       "status": "green",
       "score": 0,
-      "message": "SKEW=140.0 \u2014 Normal tail risk distribution"
+      "message": "SKEW=126.4 \u2014 Normal tail risk distribution"
     },
     {
       "name": "SQQQ Volume Spike",
@@ -93,11 +93,6 @@
     }
   ],
   "history": [
-    {
-      "time": "22:45",
-      "score": 0,
-      "status": "green"
-    },
     {
       "time": "13:52",
       "score": 0,
@@ -190,6 +185,11 @@
     },
     {
       "time": "21:06",
+      "score": 0,
+      "status": "green"
+    },
+    {
+      "time": "22:21",
       "score": 0,
       "status": "green"
     }
