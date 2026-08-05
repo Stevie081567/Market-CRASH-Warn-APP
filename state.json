@@ -4,36 +4,36 @@
   "red_count": 0,
   "yellow_count": 0,
   "error_count": 2,
-  "last_updated": "2026-08-05T16:01:04.739378",
-  "last_updated_full": "2026-08-05T16:01:04.737961",
+  "last_updated": "2026-08-05T17:52:58.000835",
+  "last_updated_full": "2026-08-05T17:52:57.999475",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 16.309999465942383,
+      "value": 15.890000343322754,
       "status": "green",
       "score": 0,
-      "message": "VIX=16.3 \u2014 normal"
+      "message": "VIX=15.9 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7730.1298828125,
+      "value": 7741.39013671875,
       "status": "green",
       "score": 0,
-      "message": "SPX=7730 | Intraday -0.5% | ATH-Abstand -0.8%"
+      "message": "SPX=7741 | Intraday -0.4% | ATH-Abstand -0.7%"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 60.5714285714286,
+      "value": 60.0,
       "status": "green",
       "score": 0,
-      "message": "F&G=61 (greed) (Stand: 2026-08-05, 7T-\u00d8)"
+      "message": "F&G=60 (greed) (Stand: 2026-08-05, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
-      "value": 90.69000244140625,
+      "value": 89.77999877929688,
       "status": "green",
       "score": 0,
-      "message": "VVIX=90.7 \u2014 Normal vol regime"
+      "message": "VVIX=89.8 \u2014 Normal vol regime"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
@@ -51,10 +51,10 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.8431600781492953,
+      "value": 0.36742309292160025,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.8% \u2014 S&P: +0.7% | Nasdaq: +0.9% | Dow: +1.0%"
+      "message": "\u00d8 +0.4% \u2014 S&P: +0.2% | Nasdaq: +0.1% | Dow: +0.8%"
     },
     {
       "name": "Globale M\u00e4rkte",
@@ -68,7 +68,7 @@
       "value": null,
       "status": "error",
       "score": 0,
-      "message": "Datenfehler: HTTPSConnectionPool(host='api.stlouisfed.org', port=443): Read timed out. (read timeout=10)"
+      "message": "Datenfehler: Keine Wilshire 5000 Daten"
     },
     {
       "name": "MOVE Index (Bond Vol)",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.5704193408298444,
+      "value": 0.7399548185532324,
       "status": "green",
       "score": 0,
-      "message": "Vol=34M (0.6x avg) \u2014 Normal | SQQQ +1.4%"
+      "message": "Vol=44M (0.7x avg) \u2014 Normal | SQQQ +1.2%"
     }
   ],
   "history": [
-    {
-      "time": "17:44",
-      "score": 0,
-      "status": "green"
-    },
     {
       "time": "18:58",
       "score": 0,
@@ -190,6 +185,11 @@
     },
     {
       "time": "16:01",
+      "score": 0,
+      "status": "green"
+    },
+    {
+      "time": "17:52",
       "score": 0,
       "status": "green"
     }
