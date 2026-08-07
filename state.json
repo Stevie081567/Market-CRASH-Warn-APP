@@ -3,27 +3,27 @@
   "score": 0,
   "red_count": 0,
   "yellow_count": 0,
-  "error_count": 2,
-  "last_updated": "2026-08-07T17:06:04.842163",
-  "last_updated_full": "2026-08-07T17:06:04.840971",
+  "error_count": 3,
+  "last_updated": "2026-08-07T18:00:48.863294",
+  "last_updated_full": "2026-08-07T18:00:48.861950",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 14.949999809265137,
+      "value": 14.930000305175781,
       "status": "green",
       "score": 0,
       "message": "VIX=14.9 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7745.919921875,
+      "value": 7745.080078125,
       "status": "green",
       "score": 0,
-      "message": "SPX=7746 | Intraday +0.1% | ATH-Abstand -0.6%"
+      "message": "SPX=7745 | Intraday +0.1% | ATH-Abstand -0.6%"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 63.8,
+      "value": 63.7142857142857,
       "status": "green",
       "score": 0,
       "message": "F&G=64 (greed) (Stand: 2026-08-07, 7T-\u00d8)"
@@ -37,10 +37,10 @@
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": 0.4500000000000002,
-      "status": "green",
+      "value": null,
+      "status": "error",
       "score": 0,
-      "message": "Spread=+0.45% \u2014 normal (10Y=4.63% / 2Y=4.18%)"
+      "message": "Datenfehler: HTTPSConnectionPool(host='api.stlouisfed.org', port=443): Read timed out. (read timeout=10)"
     },
     {
       "name": "Put/Call Ratio",
@@ -51,7 +51,7 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.40351293501250624,
+      "value": 0.4086011785524238,
       "status": "green",
       "score": 0,
       "message": "\u00d8 +0.4% \u2014 S&P: +0.5% | Nasdaq: +0.8% | Dow: -0.1%"
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.6625108837927584,
+      "value": 0.6973899725174708,
       "status": "green",
       "score": 0,
-      "message": "Vol=39M (0.7x avg) \u2014 Normal | SQQQ -2.5%"
+      "message": "Vol=41M (0.7x avg) \u2014 Normal | SQQQ -2.5%"
     }
   ],
   "history": [
-    {
-      "time": "22:39",
-      "score": 1,
-      "status": "green"
-    },
     {
       "time": "13:59",
       "score": 0,
@@ -190,6 +185,11 @@
     },
     {
       "time": "17:06",
+      "score": 0,
+      "status": "green"
+    },
+    {
+      "time": "18:00",
       "score": 0,
       "status": "green"
     }
