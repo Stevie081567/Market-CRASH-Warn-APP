@@ -4,26 +4,26 @@
   "red_count": 0,
   "yellow_count": 0,
   "error_count": 2,
-  "last_updated": "2026-08-07T16:07:48.872434",
-  "last_updated_full": "2026-08-07T16:07:48.871358",
+  "last_updated": "2026-08-07T17:06:04.842163",
+  "last_updated_full": "2026-08-07T17:06:04.840971",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 14.930000305175781,
+      "value": 14.949999809265137,
       "status": "green",
       "score": 0,
       "message": "VIX=14.9 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7756.91015625,
+      "value": 7745.919921875,
       "status": "green",
       "score": 0,
-      "message": "SPX=7757 | Intraday +0.3% | ATH-Abstand -0.5%"
+      "message": "SPX=7746 | Intraday +0.1% | ATH-Abstand -0.6%"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 64.2285714285714,
+      "value": 63.8,
       "status": "green",
       "score": 0,
       "message": "F&G=64 (greed) (Stand: 2026-08-07, 7T-\u00d8)"
@@ -51,10 +51,10 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.10618200744744404,
+      "value": 0.40351293501250624,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.1% \u2014 S&P: +0.2% | Nasdaq: +0.5% | Dow: -0.4%"
+      "message": "\u00d8 +0.4% \u2014 S&P: +0.5% | Nasdaq: +0.8% | Dow: -0.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.5808839112905274,
+      "value": 0.6625108837927584,
       "status": "green",
       "score": 0,
-      "message": "Vol=34M (0.6x avg) \u2014 Normal | SQQQ -3.3%"
+      "message": "Vol=39M (0.7x avg) \u2014 Normal | SQQQ -2.5%"
     }
   ],
   "history": [
-    {
-      "time": "21:38",
-      "score": 1,
-      "status": "green"
-    },
     {
       "time": "22:39",
       "score": 1,
@@ -190,6 +185,11 @@
     },
     {
       "time": "16:07",
+      "score": 0,
+      "status": "green"
+    },
+    {
+      "time": "17:06",
       "score": 0,
       "status": "green"
     }
