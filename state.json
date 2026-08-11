@@ -4,8 +4,8 @@
   "red_count": 0,
   "yellow_count": 0,
   "error_count": 2,
-  "last_updated": "2026-08-11T21:13:30.261014",
-  "last_updated_full": "2026-08-11T21:13:30.259779",
+  "last_updated": "2026-08-11T22:05:36.446320",
+  "last_updated_full": "2026-08-11T22:05:36.445182",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -58,10 +58,10 @@
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 0.45558431462194404,
+      "value": 0.9548738925375826,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.5% \u2014 FTSE 100: -0.2% | CAC 40: -0.1% | Euro Stoxx 50: +0.2%"
+      "message": "\u00d8 +1.0% \u2014 FTSE 100: -0.2% | Nikkei 225: +2.1%"
     },
     {
       "name": "Buffett Indicator",
@@ -79,10 +79,10 @@
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 137.1300048828125,
+      "value": 135.58999633789062,
       "status": "green",
       "score": 0,
-      "message": "SKEW=137.1 \u2014 Normal tail risk distribution"
+      "message": "SKEW=135.6 \u2014 Normal tail risk distribution"
     },
     {
       "name": "SQQQ Volume Spike",
@@ -93,11 +93,6 @@
     }
   ],
   "history": [
-    {
-      "time": "14:23",
-      "score": 0,
-      "status": "green"
-    },
     {
       "time": "12:56",
       "score": 0,
@@ -190,6 +185,11 @@
     },
     {
       "time": "21:13",
+      "score": 0,
+      "status": "green"
+    },
+    {
+      "time": "22:05",
       "score": 0,
       "status": "green"
     }
