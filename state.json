@@ -4,22 +4,22 @@
   "red_count": 0,
   "yellow_count": 0,
   "error_count": 2,
-  "last_updated": "2026-08-11T17:25:27.019546",
-  "last_updated_full": "2026-08-11T17:25:27.018246",
+  "last_updated": "2026-08-11T18:23:41.702952",
+  "last_updated_full": "2026-08-11T18:23:41.695387",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 15.420000076293945,
+      "value": 15.289999961853027,
       "status": "green",
       "score": 0,
-      "message": "VIX=15.4 \u2014 normal"
+      "message": "VIX=15.3 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7731.64990234375,
+      "value": 7725.580078125,
       "status": "green",
       "score": 0,
-      "message": "SPX=7732 | Intraday -0.5% | ATH-Abstand -0.8%"
+      "message": "SPX=7726 | Intraday -0.5% | ATH-Abstand -0.9%"
     },
     {
       "name": "Fear & Greed Index",
@@ -30,10 +30,10 @@
     },
     {
       "name": "VVIX (Vol of VIX)",
-      "value": 92.13999938964844,
+      "value": 91.58000183105469,
       "status": "green",
       "score": 0,
-      "message": "VVIX=92.1 \u2014 Normal vol regime"
+      "message": "VVIX=91.6 \u2014 Normal vol regime"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
@@ -51,10 +51,10 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.46309632259624606,
+      "value": -0.3479174398381169,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 -0.5% \u2014 S&P: -0.4% | Nasdaq: -0.8% | Dow: -0.2%"
+      "message": "\u00d8 -0.3% \u2014 S&P: -0.3% | Nasdaq: -0.6% | Dow: -0.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.43603514229608853,
+      "value": 0.4851045498277859,
       "status": "green",
       "score": 0,
-      "message": "Vol=26M (0.4x avg) \u2014 Normal | SQQQ +1.4%"
+      "message": "Vol=29M (0.5x avg) \u2014 Normal | SQQQ +1.7%"
     }
   ],
   "history": [
-    {
-      "time": "19:59",
-      "score": 0,
-      "status": "green"
-    },
     {
       "time": "20:50",
       "score": 0,
@@ -190,6 +185,11 @@
     },
     {
       "time": "17:25",
+      "score": 0,
+      "status": "green"
+    },
+    {
+      "time": "18:23",
       "score": 0,
       "status": "green"
     }
