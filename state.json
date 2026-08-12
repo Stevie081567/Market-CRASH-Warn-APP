@@ -3,9 +3,9 @@
   "score": 2,
   "red_count": 1,
   "yellow_count": 0,
-  "error_count": 1,
-  "last_updated": "2026-08-12T21:12:20.724601",
-  "last_updated_full": "2026-08-12T21:12:20.723166",
+  "error_count": 2,
+  "last_updated": "2026-08-12T22:02:49.120116",
+  "last_updated_full": "2026-08-12T22:02:49.118713",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -37,10 +37,10 @@
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": 0.4800000000000004,
-      "status": "green",
+      "value": null,
+      "status": "error",
       "score": 0,
-      "message": "Spread=+0.48% \u2014 normal (10Y=4.70% / 2Y=4.22%)"
+      "message": "Datenfehler: HTTPSConnectionPool(host='api.stlouisfed.org', port=443): Read timed out. (read timeout=10)"
     },
     {
       "name": "Put/Call Ratio",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.2467143593744684,
+      "value": 0.24778962819167272,
       "status": "green",
       "score": 0,
       "message": "\u00d8 +0.2% \u2014 S&P: +0.2% | Nasdaq: +0.6% | Dow: -0.0%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -0.26313834016199356,
+      "value": -0.10189598576644107,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 -0.3% \u2014 CAC 40: -0.5% | Euro Stoxx 50: -0.3% | DAX: -0.2%"
+      "message": "\u00d8 -0.1% \u2014 FTSE 100: -0.1%"
     },
     {
       "name": "Buffett Indicator",
@@ -79,10 +79,10 @@
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 135.58999633789062,
+      "value": 136.5399932861328,
       "status": "green",
       "score": 0,
-      "message": "SKEW=135.6 \u2014 Normal tail risk distribution"
+      "message": "SKEW=136.5 \u2014 Normal tail risk distribution"
     },
     {
       "name": "SQQQ Volume Spike",
@@ -93,11 +93,6 @@
     }
   ],
   "history": [
-    {
-      "time": "21:56",
-      "score": 0,
-      "status": "green"
-    },
     {
       "time": "12:52",
       "score": 0,
@@ -190,6 +185,11 @@
     },
     {
       "time": "21:12",
+      "score": 2,
+      "status": "green"
+    },
+    {
+      "time": "22:02",
       "score": 2,
       "status": "green"
     }
