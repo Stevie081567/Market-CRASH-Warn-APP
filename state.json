@@ -3,16 +3,16 @@
   "score": 2,
   "red_count": 1,
   "yellow_count": 0,
-  "error_count": 2,
-  "last_updated": "2026-08-12T22:02:49.120116",
-  "last_updated_full": "2026-08-12T22:02:49.118713",
+  "error_count": 1,
+  "last_updated": "2026-08-13T12:58:17.081215",
+  "last_updated_full": "2026-08-13T12:58:17.079954",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 14.550000190734863,
+      "value": 14.5,
       "status": "green",
       "score": 0,
-      "message": "VIX=14.6 \u2014 normal"
+      "message": "VIX=14.5 \u2014 normal"
     },
     {
       "name": "S&P 500",
@@ -23,10 +23,10 @@
     },
     {
       "name": "Fear & Greed Index",
-      "value": 62.1428571428571,
+      "value": 62.0,
       "status": "green",
       "score": 0,
-      "message": "F&G=62 (greed) (Stand: 2026-08-12, 7T-\u00d8)"
+      "message": "F&G=62 (greed) (Stand: 2026-08-13, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
@@ -37,10 +37,10 @@
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": null,
-      "status": "error",
+      "value": 0.4800000000000004,
+      "status": "green",
       "score": 0,
-      "message": "Datenfehler: HTTPSConnectionPool(host='api.stlouisfed.org', port=443): Read timed out. (read timeout=10)"
+      "message": "Spread=+0.48% \u2014 normal (10Y=4.70% / 2Y=4.22%)"
     },
     {
       "name": "Put/Call Ratio",
@@ -51,24 +51,24 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.24778962819167272,
+      "value": 0.14542751126921796,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.2% \u2014 S&P: +0.2% | Nasdaq: +0.6% | Dow: -0.0%"
+      "message": "\u00d8 +0.1% \u2014 S&P: +0.2% | Nasdaq: +0.1% | Dow: +0.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -0.10189598576644107,
+      "value": 0.15867997075719606,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 -0.1% \u2014 FTSE 100: -0.1%"
+      "message": "\u00d8 +0.2% \u2014 FTSE 100: -0.4% | ASX 200: -0.2% | Hang Seng: -0.2%"
     },
     {
       "name": "Buffett Indicator",
-      "value": 238.09894628087088,
+      "value": 238.79370699219496,
       "status": "red",
       "score": 2,
-      "message": "238% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
+      "message": "239% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
     },
     {
       "name": "MOVE Index (Bond Vol)",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.7043401019862899,
+      "value": 0.7144328756778099,
       "status": "green",
       "score": 0,
       "message": "Vol=41M (0.7x avg) \u2014 Normal | SQQQ -2.1%"
     }
   ],
   "history": [
-    {
-      "time": "12:52",
-      "score": 0,
-      "status": "green"
-    },
     {
       "time": "14:16",
       "score": 0,
@@ -190,6 +185,11 @@
     },
     {
       "time": "22:02",
+      "score": 2,
+      "status": "green"
+    },
+    {
+      "time": "12:58",
       "score": 2,
       "status": "green"
     }
