@@ -4,12 +4,12 @@
   "red_count": 1,
   "yellow_count": 0,
   "error_count": 1,
-  "last_updated": "2026-08-13T20:19:41.561815",
-  "last_updated_full": "2026-08-13T20:19:41.560571",
+  "last_updated": "2026-08-13T21:12:18.939858",
+  "last_updated_full": "2026-08-13T21:12:18.938504",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 14.5600004196167,
+      "value": 14.630000114440918,
       "status": "green",
       "score": 0,
       "message": "VIX=14.6 \u2014 normal"
@@ -23,7 +23,7 @@
     },
     {
       "name": "Fear & Greed Index",
-      "value": 66.1714285714286,
+      "value": 66.1428571428571,
       "status": "green",
       "score": 0,
       "message": "F&G=66 (greed) (Stand: 2026-08-13, 7T-\u00d8)"
@@ -51,10 +51,10 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.5454574257993209,
+      "value": 0.6811750683072743,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.5% \u2014 S&P: +0.6% | Nasdaq: +1.0% | Dow: +0.0%"
+      "message": "\u00d8 +0.7% \u2014 S&P: +0.7% | Nasdaq: +1.2% | Dow: +0.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
@@ -72,10 +72,10 @@
     },
     {
       "name": "MOVE Index (Bond Vol)",
-      "value": 72.08869934082031,
+      "value": 69.22830200195312,
       "status": "green",
       "score": 0,
-      "message": "MOVE=72.1 \u2014 Bond market calm"
+      "message": "MOVE=69.2 \u2014 Bond market calm"
     },
     {
       "name": "SKEW Index (Tail Risk)",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.8103536073608496,
+      "value": 0.8111247288951009,
       "status": "green",
       "score": 0,
       "message": "Vol=47M (0.8x avg) \u2014 Normal | SQQQ -3.4%"
     }
   ],
   "history": [
-    {
-      "time": "21:13",
-      "score": 0,
-      "status": "green"
-    },
     {
       "time": "22:05",
       "score": 0,
@@ -190,6 +185,11 @@
     },
     {
       "time": "20:19",
+      "score": 2,
+      "status": "green"
+    },
+    {
+      "time": "21:12",
       "score": 2,
       "status": "green"
     }
