@@ -4,12 +4,12 @@
   "red_count": 1,
   "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-08-17T20:20:31.097349",
-  "last_updated_full": "2026-08-17T20:20:30.799509",
+  "last_updated": "2026-08-17T20:52:52.086022",
+  "last_updated_full": "2026-08-17T20:52:51.918664",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 15.199999809265137,
+      "value": 15.1899995803833,
       "status": "green",
       "score": 0,
       "message": "VIX=15.2 \u2014 normal"
@@ -23,7 +23,7 @@
     },
     {
       "name": "Fear & Greed Index",
-      "value": 60.0,
+      "value": 59.9714285714286,
       "status": "green",
       "score": 0,
       "message": "F&G=60 (greed) (Stand: 2026-08-17, 7T-\u00d8)"
@@ -51,7 +51,7 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.5014346480548911,
+      "value": -0.5260435138911079,
       "status": "yellow",
       "score": 1,
       "message": "\u00d8 -0.5% \ud83d\udfe1 \u2014 S&P: -0.6% | Nasdaq: -0.4% | Dow: -0.6%"
@@ -72,10 +72,10 @@
     },
     {
       "name": "MOVE Index (Bond Vol)",
-      "value": 69.57959747314453,
+      "value": 75.63020324707031,
       "status": "green",
       "score": 0,
-      "message": "MOVE=69.6 \u2014 Bond market calm"
+      "message": "MOVE=75.6 \u2014 Bond market calm"
     },
     {
       "name": "SKEW Index (Tail Risk)",
@@ -93,11 +93,6 @@
     }
   ],
   "history": [
-    {
-      "time": "20:27",
-      "score": 2,
-      "status": "green"
-    },
     {
       "time": "20:55",
       "score": 2,
@@ -190,6 +185,11 @@
     },
     {
       "time": "20:20",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "20:52",
       "score": 3,
       "status": "yellow"
     }
