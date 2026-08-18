@@ -1,18 +1,18 @@
 {
   "status": "yellow",
-  "score": 4,
+  "score": 3,
   "red_count": 1,
-  "yellow_count": 2,
-  "error_count": 1,
-  "last_updated": "2026-08-17T21:49:07.679306",
-  "last_updated_full": "2026-08-17T21:49:07.277194",
+  "yellow_count": 1,
+  "error_count": 2,
+  "last_updated": "2026-08-18T12:35:13.671456",
+  "last_updated_full": "2026-08-18T12:35:13.471262",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 15.1899995803833,
+      "value": 15.699999809265137,
       "status": "green",
       "score": 0,
-      "message": "VIX=15.2 \u2014 normal"
+      "message": "VIX=15.7 \u2014 normal"
     },
     {
       "name": "S&P 500",
@@ -23,10 +23,10 @@
     },
     {
       "name": "Fear & Greed Index",
-      "value": 59.9714285714286,
+      "value": 59.4857142857143,
       "status": "green",
       "score": 0,
-      "message": "F&G=60 (greed) (Stand: 2026-08-17, 7T-\u00d8)"
+      "message": "F&G=59 (greed) (Stand: 2026-08-18, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.5193397433487016,
+      "value": -1.1215243309889675,
       "status": "yellow",
       "score": 1,
-      "message": "\u00d8 -0.5% \ud83d\udfe1 \u2014 S&P: -0.6% | Nasdaq: -0.4% | Dow: -0.6%"
+      "message": "\u00d8 -1.1% \ud83d\udfe1 \u2014 S&P: -1.0% | Nasdaq: -1.9% | Dow: -0.4%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -0.3659731634051024,
-      "status": "green",
+      "value": null,
+      "status": "error",
       "score": 0,
-      "message": "\u00d8 -0.4% \u2014 CAC 40: -0.7% | DAX: -0.4% | FTSE 100: -0.3%"
+      "message": "Keine globalen Marktdaten verf\u00fcgbar"
     },
     {
       "name": "Buffett Indicator",
@@ -79,25 +79,20 @@
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 142.91000366210938,
-      "status": "yellow",
-      "score": 1,
-      "message": "SKEW=142.9 \ud83d\udfe1 \u2014 Elevated tail risk (threshold: 140.0)"
+      "value": 138.36000061035156,
+      "status": "green",
+      "score": 0,
+      "message": "SKEW=138.4 \u2014 Normal tail risk distribution"
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.6712229869867894,
+      "value": 0.6711548447764435,
       "status": "green",
       "score": 0,
-      "message": "Vol=38M (0.7x avg) \u2014 Normal | SQQQ +0.5%"
+      "message": "Vol=38M (0.7x avg) \u2014 Normal | SQQQ +nan%"
     }
   ],
   "history": [
-    {
-      "time": "21:48",
-      "score": 2,
-      "status": "green"
-    },
     {
       "time": "14:13",
       "score": 2,
@@ -191,6 +186,11 @@
     {
       "time": "21:49",
       "score": 4,
+      "status": "yellow"
+    },
+    {
+      "time": "12:35",
+      "score": 3,
       "status": "yellow"
     }
   ],
