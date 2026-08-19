@@ -1,18 +1,18 @@
 {
   "status": "yellow",
-  "score": 4,
+  "score": 3,
   "red_count": 1,
-  "yellow_count": 2,
+  "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-08-18T21:46:13.352789",
-  "last_updated_full": "2026-08-18T21:46:12.996582",
+  "last_updated": "2026-08-19T12:36:20.959685",
+  "last_updated_full": "2026-08-19T12:36:20.679056",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 15.84000015258789,
+      "value": 15.680000305175781,
       "status": "green",
       "score": 0,
-      "message": "VIX=15.8 \u2014 normal"
+      "message": "VIX=15.7 \u2014 normal"
     },
     {
       "name": "S&P 500",
@@ -23,10 +23,10 @@
     },
     {
       "name": "Fear & Greed Index",
-      "value": 54.4,
+      "value": 53.5714285714286,
       "status": "green",
       "score": 0,
-      "message": "F&G=54 (neutral) (Stand: 2026-08-18, 7T-\u00d8)"
+      "message": "F&G=54 (neutral) (Stand: 2026-08-19, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
@@ -51,24 +51,24 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.8962955175936376,
-      "status": "yellow",
-      "score": 1,
-      "message": "\u00d8 -0.9% \ud83d\udfe1 \u2014 S&P: -0.7% | Nasdaq: -1.8% | Dow: -0.2%"
+      "value": -0.3126339540069018,
+      "status": "green",
+      "score": 0,
+      "message": "\u00d8 -0.3% \u2014 S&P: -0.2% | Nasdaq: -0.6% | Dow: -0.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -0.6246060125977781,
+      "value": -0.43339031977620784,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 -0.6% \u2014 Euro Stoxx 50: -1.0% | CAC 40: -0.8% | DAX: -0.8%"
+      "message": "\u00d8 -0.4% \u2014 Nikkei 225: -3.2% | ASX 200: -0.2% | DAX: -0.1%"
     },
     {
       "name": "Buffett Indicator",
-      "value": 238.82769926660984,
+      "value": 237.00568448980007,
       "status": "red",
       "score": 2,
-      "message": "239% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
+      "message": "237% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
     },
     {
       "name": "MOVE Index (Bond Vol)",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.7476594979114368,
+      "value": 0.7562585122237175,
       "status": "green",
       "score": 0,
-      "message": "Vol=42M (0.7x avg) \u2014 Normal | SQQQ +5.1%"
+      "message": "Vol=42M (0.8x avg) \u2014 Normal | SQQQ +5.1%"
     }
   ],
   "history": [
-    {
-      "time": "20:52",
-      "score": 3,
-      "status": "yellow"
-    },
     {
       "time": "21:20",
       "score": 4,
@@ -191,6 +186,11 @@
     {
       "time": "21:46",
       "score": 4,
+      "status": "yellow"
+    },
+    {
+      "time": "12:36",
+      "score": 3,
       "status": "yellow"
     }
   ],
