@@ -4,33 +4,33 @@
   "red_count": 1,
   "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-08-19T16:56:31.875693",
-  "last_updated_full": "2026-08-19T16:56:31.631692",
+  "last_updated": "2026-08-19T17:24:32.175740",
+  "last_updated_full": "2026-08-19T17:24:31.857582",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 15.170000076293945,
+      "value": 15.180000305175781,
       "status": "green",
       "score": 0,
       "message": "VIX=15.2 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7717.68994140625,
+      "value": 7713.1298828125,
       "status": "green",
       "score": 0,
-      "message": "SPX=7718 | Intraday +0.0% | ATH-Abstand -1.3%"
+      "message": "SPX=7713 | Intraday -0.0% | ATH-Abstand -1.3%"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 58.0571428571429,
+      "value": 57.9142857142857,
       "status": "green",
       "score": 0,
       "message": "F&G=58 (greed) (Stand: 2026-08-19, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
-      "value": 88.8499984741211,
+      "value": 88.81999969482422,
       "status": "green",
       "score": 0,
       "message": "VVIX=88.8 \u2014 Normal vol regime"
@@ -51,10 +51,10 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.12566111267444252,
+      "value": 0.02400632926252717,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.1% \u2014 S&P: +0.2% | Nasdaq: -0.1% | Dow: +0.2%"
+      "message": "\u00d8 +0.0% \u2014 S&P: +0.2% | Nasdaq: -0.3% | Dow: +0.2%"
     },
     {
       "name": "Globale M\u00e4rkte",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.5854034505866206,
+      "value": 0.6071858436659254,
       "status": "green",
       "score": 0,
-      "message": "Vol=33M (0.6x avg) \u2014 Normal | SQQQ +0.2%"
+      "message": "Vol=34M (0.6x avg) \u2014 Normal | SQQQ +0.6%"
     }
   ],
   "history": [
-    {
-      "time": "15:56",
-      "score": 4,
-      "status": "yellow"
-    },
     {
       "time": "16:27",
       "score": 4,
@@ -190,6 +185,11 @@
     },
     {
       "time": "16:56",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "17:24",
       "score": 3,
       "status": "yellow"
     }
