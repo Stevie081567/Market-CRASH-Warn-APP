@@ -4,8 +4,8 @@
   "red_count": 1,
   "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-08-19T21:38:43.986234",
-  "last_updated_full": "2026-08-19T21:38:43.802725",
+  "last_updated": "2026-08-19T21:59:32.188885",
+  "last_updated_full": "2026-08-19T21:59:31.891063",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -93,11 +93,6 @@
     }
   ],
   "history": [
-    {
-      "time": "20:47",
-      "score": 4,
-      "status": "yellow"
-    },
     {
       "time": "21:18",
       "score": 4,
@@ -190,6 +185,11 @@
     },
     {
       "time": "21:38",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "21:59",
       "score": 3,
       "status": "yellow"
     }
