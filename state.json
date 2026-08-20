@@ -4,36 +4,36 @@
   "red_count": 1,
   "yellow_count": 2,
   "error_count": 1,
-  "last_updated": "2026-08-20T15:47:39.870350",
-  "last_updated_full": "2026-08-20T15:47:39.590162",
+  "last_updated": "2026-08-20T16:28:45.644169",
+  "last_updated_full": "2026-08-20T16:28:45.280811",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 15.760000228881836,
+      "value": 15.890000343322754,
       "status": "green",
       "score": 0,
-      "message": "VIX=15.8 \u2014 normal"
+      "message": "VIX=15.9 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7673.58984375,
+      "value": 7676.43017578125,
       "status": "green",
       "score": 0,
-      "message": "SPX=7674 | Intraday -0.2% | ATH-Abstand -1.8%"
+      "message": "SPX=7676 | Intraday -0.2% | ATH-Abstand -1.8%"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 55.2285714285714,
+      "value": 54.8857142857143,
       "status": "green",
       "score": 0,
-      "message": "F&G=55 (greed) (Stand: 2026-08-20, 7T-\u00d8)"
+      "message": "F&G=55 (neutral) (Stand: 2026-08-20, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
-      "value": 89.7300033569336,
+      "value": 89.87000274658203,
       "status": "green",
       "score": 0,
-      "message": "VVIX=89.7 \u2014 Normal vol regime"
+      "message": "VVIX=89.9 \u2014 Normal vol regime"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.8964602846069681,
+      "value": -0.9628653307693374,
       "status": "yellow",
       "score": 1,
-      "message": "\u00d8 -0.9% \ud83d\udfe1 \u2014 S&P: -0.7% | Nasdaq: -0.9% | Dow: -1.1%"
+      "message": "\u00d8 -1.0% \ud83d\udfe1 \u2014 S&P: -0.8% | Nasdaq: -1.0% | Dow: -1.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 0.012774559804430569,
+      "value": -0.32313832926251357,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.0% \u2014 CAC 40: -0.4% | DAX: -0.3% | Euro Stoxx 50: -0.2%"
+      "message": "\u00d8 -0.3% \u2014 CAC 40: -0.6% | DAX: -0.4% | Euro Stoxx 50: -0.3%"
     },
     {
       "name": "Buffett Indicator",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.5489353178312375,
+      "value": 0.5890994407835131,
       "status": "green",
       "score": 0,
-      "message": "Vol=31M (0.5x avg) \u2014 Normal | SQQQ +2.3%"
+      "message": "Vol=33M (0.6x avg) \u2014 Normal | SQQQ +1.8%"
     }
   ],
   "history": [
-    {
-      "time": "14:52",
-      "score": 3,
-      "status": "yellow"
-    },
     {
       "time": "15:25",
       "score": 3,
@@ -190,6 +185,11 @@
     },
     {
       "time": "15:47",
+      "score": 4,
+      "status": "yellow"
+    },
+    {
+      "time": "16:28",
       "score": 4,
       "status": "yellow"
     }
