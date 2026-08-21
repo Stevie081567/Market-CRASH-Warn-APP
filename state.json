@@ -1,25 +1,25 @@
 {
-  "status": "yellow",
-  "score": 3,
-  "red_count": 1,
+  "status": "green",
+  "score": 1,
+  "red_count": 0,
   "yellow_count": 1,
-  "error_count": 1,
-  "last_updated": "2026-08-21T12:36:17.227261",
-  "last_updated_full": "2026-08-21T12:36:16.968521",
+  "error_count": 4,
+  "last_updated": "2026-08-21T13:31:07.538530",
+  "last_updated_full": "2026-08-21T13:31:07.537434",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 15.5,
-      "status": "green",
+      "value": null,
+      "status": "error",
       "score": 0,
-      "message": "VIX=15.5 \u2014 normal"
+      "message": "Datenfehler: Keine VIX-Daten erhalten"
     },
     {
       "name": "S&P 500",
-      "value": 7642.2099609375,
+      "value": 7673.35986328125,
       "status": "green",
       "score": 0,
-      "message": "SPX=7642 | Intraday -0.6% | ATH-Abstand -2.2%"
+      "message": "SPX=7673 | Intraday +0.0% | ATH-Abstand -1.8%"
     },
     {
       "name": "Fear & Greed Index",
@@ -30,17 +30,17 @@
     },
     {
       "name": "VVIX (Vol of VIX)",
-      "value": 89.94999694824219,
+      "value": 89.86000061035156,
       "status": "green",
       "score": 0,
       "message": "VVIX=89.9 \u2014 Normal vol regime"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": 0.45999999999999996,
-      "status": "green",
+      "value": null,
+      "status": "error",
       "score": 0,
-      "message": "Spread=+0.46% \u2014 normal (10Y=4.65% / 2Y=4.19%)"
+      "message": "Datenfehler: 502 Server Error: Bad Gateway for url: https://api.stlouisfed.org/fred/series/observations?series_id=DGS10&api_key=bf7b46f4db20553710c214f3499e6416&file_type=json&sort_order=desc&limit=5&observation_end=9999-12-31"
     },
     {
       "name": "Put/Call Ratio",
@@ -51,24 +51,24 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.09603915264013507,
+      "value": 0.16729600870756312,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 -0.1% \u2014 S&P: -0.2% | Nasdaq: +0.3% | Dow: -0.3%"
+      "message": "\u00d8 +0.2% \u2014 S&P: -0.0% | Nasdaq: +0.5% | Dow: +0.0%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 0.2524445570430303,
+      "value": 0.298966032032657,
       "status": "green",
       "score": 0,
       "message": "\u00d8 +0.3% \u2014 Nikkei 225: -0.3% | ASX 200: -0.3% | CAC 40: +0.2%"
     },
     {
       "name": "Buffett Indicator",
-      "value": 235.52931797823632,
-      "status": "red",
-      "score": 2,
-      "message": "236% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
+      "value": null,
+      "status": "error",
+      "score": 0,
+      "message": "Datenfehler: HTTPSConnectionPool(host='api.stlouisfed.org', port=443): Read timed out. (read timeout=10)"
     },
     {
       "name": "MOVE Index (Bond Vol)",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.8504981804150403,
+      "value": 0.08486579776026186,
       "status": "green",
       "score": 0,
-      "message": "Vol=47M (0.9x avg) \u2014 Normal | SQQQ +2.2%"
+      "message": "Vol=5M (0.1x avg) \u2014 Normal | SQQQ -1.2%"
     }
   ],
   "history": [
-    {
-      "time": "21:01",
-      "score": 3,
-      "status": "yellow"
-    },
     {
       "time": "21:38",
       "score": 3,
@@ -192,7 +187,12 @@
       "time": "12:36",
       "score": 3,
       "status": "yellow"
+    },
+    {
+      "time": "13:31",
+      "score": 1,
+      "status": "green"
     }
   ],
-  "last_status": "yellow"
+  "last_status": "green"
 }
