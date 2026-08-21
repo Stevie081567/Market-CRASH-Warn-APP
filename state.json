@@ -3,44 +3,44 @@
   "score": 3,
   "red_count": 1,
   "yellow_count": 1,
-  "error_count": 1,
-  "last_updated": "2026-08-21T16:26:51.207912",
-  "last_updated_full": "2026-08-21T16:26:50.854444",
+  "error_count": 2,
+  "last_updated": "2026-08-21T17:01:33.061022",
+  "last_updated_full": "2026-08-21T17:01:32.664812",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 15.350000381469727,
+      "value": 15.3100004196167,
       "status": "green",
       "score": 0,
-      "message": "VIX=15.4 \u2014 normal"
+      "message": "VIX=15.3 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7680.85986328125,
+      "value": 7682.27001953125,
       "status": "green",
       "score": 0,
-      "message": "SPX=7681 | Intraday +0.2% | ATH-Abstand -1.7%"
+      "message": "SPX=7682 | Intraday +0.2% | ATH-Abstand -1.7%"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 55.8,
+      "value": 55.8857142857143,
       "status": "green",
       "score": 0,
       "message": "F&G=56 (greed) (Stand: 2026-08-21, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
-      "value": 86.37000274658203,
+      "value": 86.41999816894531,
       "status": "green",
       "score": 0,
       "message": "VVIX=86.4 \u2014 Normal vol regime"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": 0.45999999999999996,
-      "status": "green",
+      "value": null,
+      "status": "error",
       "score": 0,
-      "message": "Spread=+0.46% \u2014 normal (10Y=4.65% / 2Y=4.19%)"
+      "message": "Datenfehler: HTTPSConnectionPool(host='api.stlouisfed.org', port=443): Read timed out. (read timeout=10)"
     },
     {
       "name": "Put/Call Ratio",
@@ -51,10 +51,10 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.062063398678963495,
+      "value": 0.15834280721819016,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.1% \u2014 S&P: -0.1% | Nasdaq: +0.2% | Dow: +0.1%"
+      "message": "\u00d8 +0.2% \u2014 S&P: -0.0% | Nasdaq: +0.2% | Dow: +0.3%"
     },
     {
       "name": "Globale M\u00e4rkte",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.4799326961032594,
+      "value": 0.5133340843587835,
       "status": "green",
       "score": 0,
-      "message": "Vol=27M (0.5x avg) \u2014 Normal | SQQQ -0.9%"
+      "message": "Vol=28M (0.5x avg) \u2014 Normal | SQQQ -1.1%"
     }
   ],
   "history": [
-    {
-      "time": "14:19",
-      "score": 4,
-      "status": "yellow"
-    },
     {
       "time": "15:03",
       "score": 3,
@@ -190,6 +185,11 @@
     },
     {
       "time": "16:26",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "17:01",
       "score": 3,
       "status": "yellow"
     }
