@@ -4,8 +4,8 @@
   "red_count": 1,
   "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-08-25T21:22:09.936233",
-  "last_updated_full": "2026-08-25T21:22:09.540594",
+  "last_updated": "2026-08-25T21:52:00.284729",
+  "last_updated_full": "2026-08-25T21:51:59.858559",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -51,7 +51,7 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.36778767214128943,
+      "value": 0.36670150663138906,
       "status": "green",
       "score": 0,
       "message": "\u00d8 +0.4% \u2014 S&P: +0.2% | Nasdaq: +0.6% | Dow: +0.3%"
@@ -93,11 +93,6 @@
     }
   ],
   "history": [
-    {
-      "time": "19:16",
-      "score": 3,
-      "status": "yellow"
-    },
     {
       "time": "19:53",
       "score": 3,
@@ -190,6 +185,11 @@
     },
     {
       "time": "21:22",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "21:51",
       "score": 3,
       "status": "yellow"
     }
