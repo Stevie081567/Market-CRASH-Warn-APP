@@ -3,13 +3,13 @@ main.py — StockCRASH_WarnAPP Einstiegspunkt
 Startet den APScheduler mit allen Markt-Überwachungs-Jobs.
 
 Alle Zeiten in Eastern Time (ET) — NYSE-zentriert.
-Läuft korrekt auf jedem Server weltweit (Tokyo, Frankfurt, Sydney...).
 
-Zeitfenster (ET):
-  Pre-Market:     Mo-Fr 08:00 & 09:00 ET  (Futures + Global)
-  Intraday:       Mo-Fr 09:30–16:00 ET    (alle 15 Min)
-  Daily Summary:  Mo-Fr 16:30 ET          (nach Börsenschluss)
-  Weekend Check:  Sa 10:00 ET
+Notification-Filter (Spam-Schutz):
+  ROT    → sofort, immer
+  GELB   → nur wenn Score >= NOTIFY_YELLOW_MIN_SCORE (5)
+             UND 2x hintereinander bestätigt
+  Cooldown → min. NOTIFY_COOLDOWN_MINUTES (120) zwischen Notifications
+  Daily Summary → deaktiviert (nur echte Alarme)
 """
 
 import logging
@@ -27,7 +27,7 @@ from core import alert_engine, notifier, state_manager
 from dashboard_export import update_dashboard
 
 # ---------------------------------------------------------------------------
-# Logging einrichten
+# Logging
 # ---------------------------------------------------------------------------
 os.makedirs("logs", exist_ok=True)
 
@@ -63,7 +63,6 @@ def validate_config() -> bool:
         missing.append("PUSHOVER_USER_KEY")
     if not config.FRED_API_KEY:
         logger.warning("FRED_API_KEY fehlt — Yield Curve & Buffett Indicator deaktiviert")
-
     if missing:
         logger.error(f"Fehlende .env-Variablen: {', '.join(missing)}")
         return False
@@ -71,86 +70,68 @@ def validate_config() -> bool:
 
 
 # ---------------------------------------------------------------------------
+# Gemeinsame Notification-Logik
+# ---------------------------------------------------------------------------
+def _handle_notification(alert, job_name: str) -> None:
+    """
+    Zentrale Entscheidung ob eine Pushover-Notification gesendet wird.
+    Verwendet should_notify() aus state_manager mit allen Filtern.
+    """
+    # Status immer aktualisieren (für Streak + Dashboard)
+    state_manager.set_status(alert.status)
+    update_dashboard(alert)
+
+    send, reason = state_manager.should_notify(alert.status, alert.total_score)
+
+    if send:
+        logger.info(f"[{job_name}] Notification senden: {reason}")
+        notifier.send_alert(alert)
+        state_manager.mark_notified(alert.status)
+    else:
+        logger.info(f"[{job_name}] Notification unterdrückt: {reason}")
+
+
+# ---------------------------------------------------------------------------
 # Job-Funktionen
 # ---------------------------------------------------------------------------
 def job_premarket_check():
-    """Pre-Market: Futures + globale Märkte vor NYSE-Öffnung (ET)."""
+    """Pre-Market: Futures + globale Märkte vor NYSE-Öffnung."""
     tz  = pytz.timezone(config.TIMEZONE)
     now = datetime.now(tz)
     logger.info(f"=== PRE-MARKET CHECK {now.strftime('%H:%M ET')} ===")
-    alert = alert_engine.run_all_checks(include_futures=True)
-    update_dashboard(alert)
-    logger.info(f"Status: {alert.status.upper()} | Score: {alert.total_score}")
 
-    if alert.status in ("yellow", "red") or state_manager.status_changed(alert.status):
-        notifier.send_alert(alert)
-        state_manager.set_status(alert.status)
-    else:
-        logger.info("Status unverändert GRÜN — keine Notification")
+    alert = alert_engine.run_all_checks(include_futures=True)
+    logger.info(
+        f"Status: {alert.status.upper()} | Score: {alert.total_score} | "
+        f"🔴{alert.red_count} 🟡{alert.yellow_count} 🟢{alert.green_count}"
+    )
+    _handle_notification(alert, "PRE-MARKET")
 
 
 def job_intraday_check():
-    """Intraday: alle 15 Minuten — nur bei Statuswechsel Notification."""
+    """Intraday: alle 15 Minuten."""
     tz  = pytz.timezone(config.TIMEZONE)
     now = datetime.now(tz)
     logger.info(f"=== INTRADAY CHECK {now.strftime('%H:%M ET')} ===")
 
     alert = alert_engine.run_all_checks(include_futures=True)
-    update_dashboard(alert)
-    logger.info(f"Status: {alert.status.upper()} | Score: {alert.total_score}")
-
-    if state_manager.status_changed(alert.status):
-        old_status = state_manager.get_last_status()
-        logger.info(f"Statuswechsel: {old_status.upper()} → {alert.status.upper()}")
-        notifier.send_alert(alert)
-        state_manager.set_status(alert.status)
-    else:
-        logger.info(f"Status unverändert: {alert.status.upper()} — keine Notification")
-
-
-def job_daily_summary():
-    """Tägliche Zusammenfassung 16:30 ET — wird IMMER gesendet."""
-    tz  = pytz.timezone(config.TIMEZONE)
-    now = datetime.now(tz)
-    logger.info("=== DAILY SUMMARY ===")
-    alert = alert_engine.run_all_checks(include_futures=False)
-    update_dashboard(alert)
-
-    title   = f"📊 Tages-Report: {alert.status_emoji()} {alert.status.upper()}"
-    message = f"Tagesabschluss — {now.strftime('%d.%m.%Y %H:%M ET')}\n\n"
-    message += alert.to_pushover_message()
-
-    notifier.send_notification(
-        title=title,
-        message=message,
-        status=alert.status,
+    logger.info(
+        f"Status: {alert.status.upper()} | Score: {alert.total_score} | "
+        f"🔴{alert.red_count} 🟡{alert.yellow_count} 🟢{alert.green_count}"
     )
-    state_manager.set_status(alert.status)
-    logger.info("Daily Summary gesendet")
+    _handle_notification(alert, "INTRADAY")
 
 
 def job_weekend_check():
-    """Samstags 10:00 ET: Wochenzusammenfassung."""
-    tz  = pytz.timezone(config.TIMEZONE)
-    now = datetime.now(tz)
+    """Samstags 10:00 ET — nur bei echtem Alarm."""
     logger.info("=== WEEKEND CHECK ===")
     alert = alert_engine.run_all_checks(include_futures=False)
-    update_dashboard(alert)
-
-    title   = f"📅 Wochen-Report: {alert.status_emoji()} {alert.status.upper()}"
-    message = f"Wochenabschluss — {now.strftime('%d.%m.%Y %H:%M ET')}\n\n"
-    message += alert.to_pushover_message()
-
-    notifier.send_notification(
-        title=title,
-        message=message,
-        status=alert.status,
-    )
-    logger.info("Weekend Summary gesendet")
+    logger.info(f"Status: {alert.status.upper()} | Score: {alert.total_score}")
+    _handle_notification(alert, "WEEKEND")
 
 
 # ---------------------------------------------------------------------------
-# Scheduler einrichten — alle Zeiten in ET
+# Scheduler
 # ---------------------------------------------------------------------------
 def setup_scheduler() -> BlockingScheduler:
     tz        = pytz.timezone(config.TIMEZONE)
@@ -160,64 +141,32 @@ def setup_scheduler() -> BlockingScheduler:
     scheduler.add_job(
         job_premarket_check,
         CronTrigger(day_of_week="mon-fri", hour=8, minute=0, timezone=tz),
-        id="premarket_0800",
-        name="Pre-Market 08:00 ET",
+        id="premarket_0800", name="Pre-Market 08:00 ET",
     )
     scheduler.add_job(
         job_premarket_check,
         CronTrigger(day_of_week="mon-fri", hour=9, minute=0, timezone=tz),
-        id="premarket_0900",
-        name="Pre-Market 09:00 ET",
+        id="premarket_0900", name="Pre-Market 09:00 ET",
     )
 
     # Intraday: alle 15 Min Mo-Fr 09:30–15:45 ET
     scheduler.add_job(
         job_intraday_check,
-        CronTrigger(
-            day_of_week="mon-fri",
-            hour="9-15",
-            minute="30,45",
-            timezone=tz,
-        ),
-        id="intraday_half",
-        name="Intraday :30/:45 ET",
+        CronTrigger(day_of_week="mon-fri", hour="9-15", minute="30,45", timezone=tz),
+        id="intraday_half", name="Intraday :30/:45 ET",
     )
     scheduler.add_job(
         job_intraday_check,
-        CronTrigger(
-            day_of_week="mon-fri",
-            hour="10-15",
-            minute="0,15",
-            timezone=tz,
-        ),
-        id="intraday_full",
-        name="Intraday :00/:15 ET",
+        CronTrigger(day_of_week="mon-fri", hour="10-15", minute="0,15", timezone=tz),
+        id="intraday_full", name="Intraday :00/:15 ET",
     )
 
-    # Daily Summary: 16:30 ET Mo-Fr
-    scheduler.add_job(
-        job_daily_summary,
-        CronTrigger(
-            day_of_week="mon-fri",
-            hour=config.DAILY_SUMMARY_HOUR,
-            minute=config.DAILY_SUMMARY_MINUTE,
-            timezone=tz,
-        ),
-        id="daily_summary",
-        name="Daily Summary 16:30 ET",
-    )
-
-    # Weekend Check: Sa 10:00 ET
+    # Weekend: Sa 10:00 ET
     scheduler.add_job(
         job_weekend_check,
-        CronTrigger(
-            day_of_week="sat",
-            hour=config.WEEKEND_CHECK_HOUR,
-            minute=config.WEEKEND_CHECK_MINUTE,
-            timezone=tz,
-        ),
-        id="weekend_check",
-        name="Weekend Check 10:00 ET",
+        CronTrigger(day_of_week="sat", hour=config.WEEKEND_CHECK_HOUR,
+                    minute=config.WEEKEND_CHECK_MINUTE, timezone=tz),
+        id="weekend_check", name="Weekend Check 10:00 ET",
     )
 
     return scheduler
@@ -229,11 +178,15 @@ def setup_scheduler() -> BlockingScheduler:
 def main():
     tz  = pytz.timezone(config.TIMEZONE)
     now = datetime.now(tz)
-    logger.info("=" * 50)
+    logger.info("=" * 55)
     logger.info("StockCRASH_WarnAPP gestartet")
-    logger.info(f"Serverzeit: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} lokal")
-    logger.info(f"NYSE-Zeit:  {now.strftime('%Y-%m-%d %H:%M:%S ET')}")
-    logger.info("=" * 50)
+    logger.info(f"NYSE-Zeit: {now.strftime('%Y-%m-%d %H:%M ET')}")
+    logger.info(f"Notification-Filter:")
+    logger.info(f"  ROT    → sofort")
+    logger.info(f"  GELB   → Score >= {config.NOTIFY_YELLOW_MIN_SCORE} + {config.NOTIFY_YELLOW_CONFIRM}x bestätigt")
+    logger.info(f"  Cooldown → {config.NOTIFY_COOLDOWN_MINUTES} Min")
+    logger.info(f"  Daily Summary → deaktiviert")
+    logger.info("=" * 55)
 
     if not validate_config():
         logger.error("Konfiguration unvollständig — App beendet.")
@@ -241,23 +194,21 @@ def main():
 
     logger.info("Sende Test-Notification...")
     if notifier.send_test_notification():
-        logger.info("✅ Pushover Verbindung OK")
+        logger.info("✅ Pushover OK")
     else:
-        logger.error("❌ Pushover Verbindung fehlgeschlagen")
+        logger.error("❌ Pushover fehlgeschlagen")
 
     scheduler = setup_scheduler()
-    logger.info("Scheduler Jobs (alle Zeiten ET):")
+    logger.info("Scheduler Jobs (ET):")
     for job in scheduler.get_jobs():
-        logger.info(f"  • {job.name}: {job.trigger}")
-
-    logger.info("Scheduler läuft — warte auf nächsten Job... (Ctrl+C zum Beenden)")
+        logger.info(f"  • {job.name}")
 
     try:
         scheduler.start()
     except KeyboardInterrupt:
         logger.info("App manuell gestoppt")
     except Exception as e:
-        logger.error(f"Unerwarteter Fehler: {e}", exc_info=True)
+        logger.error(f"Fehler: {e}", exc_info=True)
         sys.exit(1)
 
 
@@ -269,17 +220,36 @@ if __name__ == "__main__":
             logger.info("=== MANUELLER TEST-CHECK ===")
             alert = alert_engine.run_all_checks(include_futures=True)
             update_dashboard(alert)
+            state_manager.set_status(alert.status)
             for line in alert.summary_lines():
                 print(line)
-            print(f"\nGesamtpunktzahl: {alert.total_score}")
-            print("✅ state.json aktualisiert — dashboard.html im Browser öffnen")
+            print(f"\nTotal Score: {alert.total_score}")
+
+            # Notification-Entscheidung anzeigen
+            send, reason = state_manager.should_notify(alert.status, alert.total_score)
+            print(f"Notification: {'✅ würde senden' if send else '🔕 unterdrückt'} — {reason}")
+            print("✅ state.json aktualisiert")
+
         elif cmd == "--notify-test":
             logging.basicConfig(level=logging.INFO, handlers=[console_handler])
             validate_config()
             success = notifier.send_test_notification()
-            print("✅ Test-Notification gesendet!" if success else "❌ Fehler beim Senden")
+            print("✅ Test-Notification gesendet!" if success else "❌ Fehler")
+
+        elif cmd == "--filter-status":
+            # Zeigt aktuellen Filter-Status an
+            logging.basicConfig(level=logging.INFO, handlers=[console_handler])
+            last_notify = state_manager.get_last_notification_time()
+            streak      = state_manager.get_yellow_streak()
+            print(f"Letzter Status:       {state_manager.get_last_status().upper()}")
+            print(f"Letzte Notification:  {last_notify.strftime('%Y-%m-%d %H:%M') if last_notify else 'nie'}")
+            print(f"Yellow Streak:        {streak}")
+            if last_notify:
+                elapsed = (datetime.now() - last_notify).total_seconds() / 60
+                remaining = max(0, config.NOTIFY_COOLDOWN_MINUTES - elapsed)
+                print(f"Cooldown verbleibend: {remaining:.0f} Min")
         else:
             print(f"Unbekanntes Argument: {cmd}")
-            print("Verwendung: python main.py [--test | --notify-test]")
+            print("Verwendung: python main.py [--test | --notify-test | --filter-status]")
     else:
         main()

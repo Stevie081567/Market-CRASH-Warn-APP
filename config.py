@@ -174,3 +174,15 @@ SKEW_RED    = 150.0   # > 150 = stark erhöhtes Black-Swan-Risiko
 # ---------------------------------------------------------------------------
 SQQQ_VOL_YELLOW = 2.0   # > 2.0x Durchschnitt = erhöhte Absicherung
 SQQQ_VOL_RED    = 3.5   # > 3.5x Durchschnitt = institutionelle Absicherung
+
+# ---------------------------------------------------------------------------
+# Notification Filter (Spam-Schutz)
+# ---------------------------------------------------------------------------
+# Cooldown: Minimum Minuten zwischen zwei Notifications
+NOTIFY_COOLDOWN_MINUTES = 120   # 2 Stunden
+
+# Gelb: Minimum Score für Notification (Standard-Schwelle ist 3)
+NOTIFY_YELLOW_MIN_SCORE = 5     # Gelb erst ab Score 5
+
+# Gelb: Wie viele aufeinanderfolgende Checks müssen Gelb sein
+NOTIFY_YELLOW_CONFIRM   = 2     # 2x hintereinander bestätigt (~30 Min)
