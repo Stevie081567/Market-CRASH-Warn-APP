@@ -3,9 +3,9 @@
   "score": 3,
   "red_count": 1,
   "yellow_count": 1,
-  "error_count": 1,
-  "last_updated": "2026-08-28T21:40:23.407720",
-  "last_updated_full": "2026-08-28T21:40:22.947440",
+  "error_count": 2,
+  "last_updated": "2026-08-29T03:22:33.615165",
+  "last_updated_full": "2026-08-29T03:22:33.302376",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.3013741195401171,
+      "value": -0.2944683542006567,
       "status": "green",
       "score": 0,
       "message": "\u00d8 -0.3% \u2014 S&P: -0.2% | Nasdaq: -0.6% | Dow: -0.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 0.7472595149309964,
-      "status": "green",
+      "value": null,
+      "status": "error",
       "score": 0,
-      "message": "\u00d8 +0.7% \u2014 FTSE 100: +0.3% | DAX: +0.8% | Euro Stoxx 50: +0.9%"
+      "message": "Keine globalen Marktdaten verf\u00fcgbar"
     },
     {
       "name": "Buffett Indicator",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.9411341285074445,
+      "value": 0.94092652864045,
       "status": "green",
       "score": 0,
       "message": "Vol=47M (0.9x avg) \u2014 Normal | SQQQ +2.0%"
     }
   ],
   "history": [
-    {
-      "time": "17:26",
-      "score": 3,
-      "status": "yellow"
-    },
     {
       "time": "17:55",
       "score": 3,
@@ -190,6 +185,11 @@
     },
     {
       "time": "21:40",
+      "score": 3,
+      "status": "yellow"
+    },
+    {
+      "time": "03:22",
       "score": 3,
       "status": "yellow"
     }
