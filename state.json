@@ -3,9 +3,9 @@
   "score": 4,
   "red_count": 2,
   "yellow_count": 0,
-  "error_count": 2,
-  "last_updated": "2026-09-04T23:02:27.050077",
-  "last_updated_full": "2026-09-04T23:02:26.666104",
+  "error_count": 1,
+  "last_updated": "2026-09-05T16:24:31.328202",
+  "last_updated_full": "2026-09-05T16:24:30.877780",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -51,28 +51,28 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.4795292541210408,
+      "value": -0.29942903505248314,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 -0.5% \u2014 S&P: -0.5% | Nasdaq: -0.0% | Dow: -0.9%"
+      "message": "\u00d8 -0.3% \u2014 S&P: -0.4% | Nasdaq: +0.1% | Dow: -0.6%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": null,
-      "status": "error",
+      "value": 0.43797003177094584,
+      "status": "green",
       "score": 0,
-      "message": "Keine globalen Marktdaten verf\u00fcgbar"
+      "message": "\u00d8 +0.4% \u2014 ASX 200: -0.2% | CAC 40: -0.1% | FTSE 100: -0.0%"
     },
     {
       "name": "Buffett Indicator",
-      "value": 238.21446343333784,
+      "value": 237.36421909319523,
       "status": "red",
       "score": 2,
-      "message": "238% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
+      "message": "237% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
     },
     {
       "name": "MOVE Index (Bond Vol)",
-      "value": 73.10449981689453,
+      "value": 73.0999984741211,
       "status": "green",
       "score": 0,
       "message": "MOVE=73.1 \u2014 Bond market calm"
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.8741517834436108,
+      "value": 0.8762579362512303,
       "status": "green",
       "score": 0,
       "message": "Vol=35M (0.9x avg) \u2014 Normal | SQQQ -0.4%"
     }
   ],
   "history": [
-    {
-      "time": "05:49",
-      "score": 3,
-      "status": "yellow"
-    },
     {
       "time": "21:40",
       "score": 3,
@@ -190,6 +185,11 @@
     },
     {
       "time": "23:02",
+      "score": 4,
+      "status": "yellow"
+    },
+    {
+      "time": "16:24",
       "score": 4,
       "status": "yellow"
     }
