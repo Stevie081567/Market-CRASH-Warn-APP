@@ -3,9 +3,9 @@
   "score": 5,
   "red_count": 2,
   "yellow_count": 1,
-  "error_count": 1,
-  "last_updated": "2026-09-14T21:02:13.799001",
-  "last_updated_full": "2026-09-14T21:02:13.298916",
+  "error_count": 2,
+  "last_updated": "2026-09-14T23:52:00.550913",
+  "last_updated_full": "2026-09-14T23:52:00.259369",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 1.2093964831013861,
+      "value": 1.064533102565095,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +1.2% \u2014 S&P: +1.1% | Nasdaq: +1.6% | Dow: +0.9%"
+      "message": "\u00d8 +1.1% \u2014 S&P: +1.0% | Nasdaq: +1.3% | Dow: +0.9%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -0.4595715390905544,
-      "status": "green",
+      "value": null,
+      "status": "error",
       "score": 0,
-      "message": "\u00d8 -0.5% \u2014 Euro Stoxx 50: -1.0% | CAC 40: -0.8% | DAX: -0.5%"
+      "message": "Keine globalen Marktdaten verf\u00fcgbar"
     },
     {
       "name": "Buffett Indicator",
@@ -79,10 +79,10 @@
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 154.49000549316406,
+      "value": 152.08999633789062,
       "status": "red",
       "score": 2,
-      "message": "SKEW=154.5 \ud83d\udd34 \u2014 High black swan risk (threshold: 150.0)"
+      "message": "SKEW=152.1 \ud83d\udd34 \u2014 High black swan risk (threshold: 150.0)"
     },
     {
       "name": "SQQQ Volume Spike",
@@ -93,11 +93,6 @@
     }
   ],
   "history": [
-    {
-      "time": "20:33",
-      "score": 4,
-      "status": "yellow"
-    },
     {
       "time": "22:59",
       "score": 4,
@@ -190,6 +185,11 @@
     },
     {
       "time": "21:02",
+      "score": 5,
+      "status": "yellow"
+    },
+    {
+      "time": "23:52",
       "score": 5,
       "status": "yellow"
     }
