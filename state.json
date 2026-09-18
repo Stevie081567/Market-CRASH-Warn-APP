@@ -4,43 +4,43 @@
   "red_count": 1,
   "yellow_count": 4,
   "error_count": 1,
-  "last_updated": "2026-09-18T18:38:42.309334",
-  "last_updated_full": "2026-09-18T18:38:41.957229",
+  "last_updated": "2026-09-18T21:15:14.224100",
+  "last_updated_full": "2026-09-18T21:15:13.787977",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 15.149999618530273,
+      "value": 14.8100004196167,
       "status": "green",
       "score": 0,
-      "message": "VIX=15.1 \u2014 normal"
+      "message": "VIX=14.8 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7633.31005859375,
+      "value": 7646.0400390625,
       "status": "green",
       "score": 0,
-      "message": "SPX=7633 | Intraday -0.3% | ATH-Abstand -2.3%"
+      "message": "SPX=7646 | Intraday -0.1% | ATH-Abstand -2.2%"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 28.8571428571429,
+      "value": 29.1142857142857,
       "status": "yellow",
       "score": 1,
       "message": "F&G=29 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-09-18, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
-      "value": 87.9000015258789,
+      "value": 87.61000061035156,
       "status": "green",
       "score": 0,
-      "message": "VVIX=87.9 \u2014 Normal vol regime"
+      "message": "VVIX=87.6 \u2014 Normal vol regime"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": 0.2699999999999996,
+      "value": 0.27000000000000046,
       "status": "yellow",
       "score": 1,
-      "message": "Spread=+0.27% \u2014 flache Kurve (10Y=5.01% / 2Y=4.74%)"
+      "message": "Spread=+0.27% \u2014 flache Kurve (10Y=4.94% / 2Y=4.67%)"
     },
     {
       "name": "Put/Call Ratio",
@@ -51,10 +51,10 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.0598105383563326,
+      "value": 0.26478470286176076,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 -0.1% \u2014 S&P: -0.0% | Nasdaq: +0.2% | Dow: -0.3%"
+      "message": "\u00d8 +0.3% \u2014 S&P: +0.2% | Nasdaq: +0.7% | Dow: -0.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
@@ -72,10 +72,10 @@
     },
     {
       "name": "MOVE Index (Bond Vol)",
-      "value": 76.22000122070312,
+      "value": 80.63500213623047,
       "status": "green",
       "score": 0,
-      "message": "MOVE=76.2 \u2014 Bond market calm"
+      "message": "MOVE=80.6 \u2014 Bond market calm"
     },
     {
       "name": "SKEW Index (Tail Risk)",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.5835467914389723,
+      "value": 0.7834911455888848,
       "status": "green",
       "score": 0,
-      "message": "Vol=24M (0.6x avg) \u2014 Normal | SQQQ -0.3%"
+      "message": "Vol=32M (0.8x avg) \u2014 Normal | SQQQ -1.7%"
     }
   ],
   "history": [
-    {
-      "time": "23:11",
-      "score": 6,
-      "status": "red"
-    },
     {
       "time": "15:44",
       "score": 4,
@@ -190,6 +185,11 @@
     },
     {
       "time": "18:38",
+      "score": 6,
+      "status": "red"
+    },
+    {
+      "time": "21:15",
       "score": 6,
       "status": "red"
     }
