@@ -3,9 +3,9 @@
   "score": 5,
   "red_count": 1,
   "yellow_count": 3,
-  "error_count": 1,
-  "last_updated": "2026-09-30T21:30:50.404708",
-  "last_updated_full": "2026-09-30T21:30:50.206761",
+  "error_count": 2,
+  "last_updated": "2026-10-01T00:50:31.577619",
+  "last_updated_full": "2026-10-01T00:50:31.367737",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.22061763790886801,
+      "value": -0.31886424387248574,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 -0.2% \u2014 S&P: -0.2% | Nasdaq: +0.4% | Dow: -0.8%"
+      "message": "\u00d8 -0.3% \u2014 S&P: -0.2% | Nasdaq: +0.2% | Dow: -0.9%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -0.6937201672271859,
-      "status": "green",
+      "value": null,
+      "status": "error",
       "score": 0,
-      "message": "\u00d8 -0.7% \u2014 CAC 40: -0.9% | Euro Stoxx 50: -0.8% | DAX: -0.8%"
+      "message": "Keine globalen Marktdaten verf\u00fcgbar"
     },
     {
       "name": "Buffett Indicator",
@@ -89,15 +89,10 @@
       "value": 0.9772222862010531,
       "status": "green",
       "score": 0,
-      "message": "Vol=44M (1.0x avg) \u2014 Normal | SQQQ -0.7%"
+      "message": "Vol=44M (1.0x avg) \u2014 Normal | SQQQ +nan%"
     }
   ],
   "history": [
-    {
-      "time": "16:08",
-      "score": 4,
-      "status": "yellow"
-    },
     {
       "time": "19:44",
       "score": 4,
@@ -190,6 +185,11 @@
     },
     {
       "time": "21:30",
+      "score": 5,
+      "status": "yellow"
+    },
+    {
+      "time": "00:50",
       "score": 5,
       "status": "yellow"
     }
