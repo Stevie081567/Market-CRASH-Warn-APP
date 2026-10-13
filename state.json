@@ -1,11 +1,11 @@
 {
   "status": "yellow",
-  "score": 4,
+  "score": 5,
   "red_count": 2,
-  "yellow_count": 0,
+  "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-10-12T20:48:33.732917",
-  "last_updated_full": "2026-10-12T20:48:33.403483",
+  "last_updated": "2026-10-13T02:23:26.502964",
+  "last_updated_full": "2026-10-13T02:23:26.080571",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -51,21 +51,21 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.29253700935557375,
-      "status": "green",
-      "score": 0,
-      "message": "\u00d8 -0.3% \u2014 S&P: -0.2% | Nasdaq: -1.0% | Dow: +0.3%"
+      "value": -0.6989047170187158,
+      "status": "yellow",
+      "score": 1,
+      "message": "\u00d8 -0.7% \ud83d\udfe1 \u2014 S&P: -0.5% | Nasdaq: -1.7% | Dow: +0.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 0.5539666753263234,
+      "value": -0.13802875655188224,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.6% \u2014 Nikkei 225: -0.0% | CAC 40: +0.4% | Euro Stoxx 50: +0.5%"
+      "message": "\u00d8 -0.1% \u2014 Nikkei 225: -2.7% | Hang Seng: -0.7% | ASX 200: -0.2%"
     },
     {
       "name": "Buffett Indicator",
-      "value": 238.28738833579064,
+      "value": 238.08324098678776,
       "status": "red",
       "score": 2,
       "message": "238% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
@@ -79,25 +79,20 @@
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 154.33999633789062,
+      "value": 155.05999755859375,
       "status": "red",
       "score": 2,
-      "message": "SKEW=154.3 \ud83d\udd34 \u2014 High black swan risk (threshold: 150.0)"
+      "message": "SKEW=155.1 \ud83d\udd34 \u2014 High black swan risk (threshold: 150.0)"
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.5245572720291226,
+      "value": 0.5326434248183854,
       "status": "green",
       "score": 0,
       "message": "Vol=25M (0.5x avg) \u2014 Normal | SQQQ +2.1%"
     }
   ],
   "history": [
-    {
-      "time": "17:29",
-      "score": 5,
-      "status": "yellow"
-    },
     {
       "time": "21:30",
       "score": 5,
@@ -191,6 +186,11 @@
     {
       "time": "20:48",
       "score": 4,
+      "status": "yellow"
+    },
+    {
+      "time": "02:23",
+      "score": 5,
       "status": "yellow"
     }
   ],
