@@ -3,37 +3,37 @@
   "score": 5,
   "red_count": 2,
   "yellow_count": 1,
-  "error_count": 2,
-  "last_updated": "2026-10-13T23:10:30.348995",
-  "last_updated_full": "2026-10-13T23:10:29.948991",
+  "error_count": 1,
+  "last_updated": "2026-10-14T16:22:41.637488",
+  "last_updated_full": "2026-10-14T16:22:41.257114",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 15.270000457763672,
+      "value": 16.329999923706055,
       "status": "green",
       "score": 0,
-      "message": "VIX=15.3 \u2014 normal"
+      "message": "VIX=16.3 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7805.58984375,
+      "value": 7719.58984375,
       "status": "green",
       "score": 0,
-      "message": "SPX=7806 | Intraday +0.1% | ATH-Abstand -0.5%"
+      "message": "SPX=7720 | Intraday -0.7% | ATH-Abstand -1.6%"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 44.7428571428571,
+      "value": 35.0571428571429,
       "status": "green",
       "score": 0,
-      "message": "F&G=45 (fear) (Stand: 2026-10-13, 7T-\u00d8)"
+      "message": "F&G=35 (fear) (Stand: 2026-10-14, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
-      "value": 85.55000305175781,
+      "value": 92.06999969482422,
       "status": "green",
       "score": 0,
-      "message": "VVIX=85.6 \u2014 Normal vol regime"
+      "message": "VVIX=92.1 \u2014 Normal vol regime"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
@@ -51,53 +51,48 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.21878733020643204,
-      "status": "green",
-      "score": 0,
-      "message": "\u00d8 -0.2% \u2014 S&P: +0.0% | Nasdaq: -0.3% | Dow: -0.4%"
+      "value": -0.9242500165558316,
+      "status": "yellow",
+      "score": 1,
+      "message": "\u00d8 -0.9% \ud83d\udfe1 \u2014 S&P: -0.9% | Nasdaq: -1.4% | Dow: -0.4%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": null,
-      "status": "error",
+      "value": 0.2351212240079455,
+      "status": "green",
       "score": 0,
-      "message": "Keine globalen Marktdaten verf\u00fcgbar"
+      "message": "\u00d8 +0.2% \u2014 ASX 200: -0.6% | DAX: +0.2% | Euro Stoxx 50: +0.4%"
     },
     {
       "name": "Buffett Indicator",
-      "value": 238.08324098678776,
+      "value": 237.9653446331622,
       "status": "red",
       "score": 2,
       "message": "238% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
     },
     {
       "name": "MOVE Index (Bond Vol)",
-      "value": 101.091796875,
-      "status": "yellow",
-      "score": 1,
-      "message": "MOVE=101.1 \ud83d\udfe1 \u2014 Elevated bond volatility (threshold: 100.0)"
+      "value": 99.9386978149414,
+      "status": "green",
+      "score": 0,
+      "message": "MOVE=99.9 \u2014 Bond market calm"
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 155.05999755859375,
+      "value": 154.74000549316406,
       "status": "red",
       "score": 2,
-      "message": "SKEW=155.1 \ud83d\udd34 \u2014 High black swan risk (threshold: 150.0)"
+      "message": "SKEW=154.7 \ud83d\udd34 \u2014 High black swan risk (threshold: 150.0)"
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.810867741382675,
+      "value": 0.7434519061046649,
       "status": "green",
       "score": 0,
-      "message": "Vol=37M (0.8x avg) \u2014 Normal | SQQQ +1.1%"
+      "message": "Vol=34M (0.7x avg) \u2014 Normal | SQQQ +5.4%"
     }
   ],
   "history": [
-    {
-      "time": "17:54",
-      "score": 6,
-      "status": "red"
-    },
     {
       "time": "22:15",
       "score": 5,
@@ -190,6 +185,11 @@
     },
     {
       "time": "23:10",
+      "score": 5,
+      "status": "yellow"
+    },
+    {
+      "time": "16:22",
       "score": 5,
       "status": "yellow"
     }
