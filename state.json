@@ -1,46 +1,46 @@
 {
   "status": "red",
-  "score": 10,
+  "score": 9,
   "red_count": 3,
-  "yellow_count": 4,
+  "yellow_count": 3,
   "error_count": 1,
-  "last_updated": "2026-10-16T19:24:29.336152",
-  "last_updated_full": "2026-10-16T19:24:29.013744",
+  "last_updated": "2026-10-16T22:09:22.715935",
+  "last_updated_full": "2026-10-16T22:09:22.428445",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 21.329999923706055,
-      "status": "yellow",
-      "score": 1,
-      "message": "VIX=21.3 \u2014 erh\u00f6hte Volatilit\u00e4t (Schwelle: 20.0)"
+      "value": 19.979999542236328,
+      "status": "green",
+      "score": 0,
+      "message": "VIX=20.0 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7655.64990234375,
+      "value": 7658.740234375,
       "status": "green",
       "score": 0,
-      "message": "SPX=7656 | Intraday -1.2% | ATH-Abstand -2.4%"
+      "message": "SPX=7659 | Intraday -1.1% | ATH-Abstand -2.4%"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 17.5115646258503,
+      "value": 17.9383219954649,
       "status": "red",
       "score": 2,
       "message": "F&G=18 (extreme fear) \u2014 EXTREME FEAR \ud83d\udd34 (Stand: 2026-10-16, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
-      "value": 115.5199966430664,
+      "value": 110.8499984741211,
       "status": "yellow",
       "score": 1,
-      "message": "VVIX=115.5 \ud83d\udfe1 \u2014 Elevated uncertainty (threshold: 100.0)"
+      "message": "VVIX=110.8 \ud83d\udfe1 \u2014 Elevated uncertainty (threshold: 100.0)"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": 0.3700000000000001,
+      "value": 0.33000000000000007,
       "status": "green",
       "score": 0,
-      "message": "Spread=+0.37% \u2014 normal (10Y=5.19% / 2Y=4.82%)"
+      "message": "Spread=+0.33% \u2014 normal (10Y=5.10% / 2Y=4.77%)"
     },
     {
       "name": "Put/Call Ratio",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -1.0875540746135377,
+      "value": -1.3645427873548384,
       "status": "yellow",
       "score": 1,
-      "message": "\u00d8 -1.1% \ud83d\udfe1 \u2014 S&P: -0.9% | Nasdaq: -1.9% | Dow: -0.4%"
+      "message": "\u00d8 -1.4% \ud83d\udfe1 \u2014 S&P: -1.1% | Nasdaq: -2.5% | Dow: -0.5%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 0.6372943251231318,
+      "value": 0.690283956883263,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.6% \u2014 CAC 40: +0.3% | FTSE 100: +0.4% | Euro Stoxx 50: +0.6%"
+      "message": "\u00d8 +0.7% \u2014 FTSE 100: +0.4% | ASX 200: +1.0%"
     },
     {
       "name": "Buffett Indicator",
@@ -72,32 +72,27 @@
     },
     {
       "name": "MOVE Index (Bond Vol)",
-      "value": 101.04660034179688,
+      "value": 101.10289764404297,
       "status": "yellow",
       "score": 1,
-      "message": "MOVE=101.0 \ud83d\udfe1 \u2014 Elevated bond volatility (threshold: 100.0)"
+      "message": "MOVE=101.1 \ud83d\udfe1 \u2014 Elevated bond volatility (threshold: 100.0)"
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 160.4499969482422,
+      "value": 168.58999633789062,
       "status": "red",
       "score": 2,
-      "message": "SKEW=160.4 \ud83d\udd34 \u2014 High black swan risk (threshold: 150.0)"
+      "message": "SKEW=168.6 \ud83d\udd34 \u2014 High black swan risk (threshold: 150.0)"
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 1.1137119728557572,
+      "value": 1.2778967292409757,
       "status": "green",
       "score": 0,
-      "message": "Vol=52M (1.1x avg) \u2014 Normal | SQQQ +7.4%"
+      "message": "Vol=60M (1.3x avg) \u2014 Normal | SQQQ +7.6%"
     }
   ],
   "history": [
-    {
-      "time": "22:12",
-      "score": 4,
-      "status": "yellow"
-    },
     {
       "time": "18:20",
       "score": 4,
@@ -191,6 +186,11 @@
     {
       "time": "19:24",
       "score": 10,
+      "status": "red"
+    },
+    {
+      "time": "22:09",
+      "score": 9,
       "status": "red"
     }
   ],
