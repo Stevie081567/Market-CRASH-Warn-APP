@@ -3,9 +3,9 @@
   "score": 4,
   "red_count": 1,
   "yellow_count": 2,
-  "error_count": 1,
-  "last_updated": "2026-10-27T21:25:47.115290",
-  "last_updated_full": "2026-10-27T21:25:46.810544",
+  "error_count": 2,
+  "last_updated": "2026-10-28T00:37:52.604133",
+  "last_updated_full": "2026-10-28T00:37:52.274991",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -23,10 +23,10 @@
     },
     {
       "name": "Fear & Greed Index",
-      "value": 32.6857142857143,
+      "value": 33.6,
       "status": "yellow",
       "score": 1,
-      "message": "F&G=33 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-10-27, 7T-\u00d8)"
+      "message": "F&G=34 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-10-27, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.6106280627967109,
+      "value": 0.5671377175347069,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.6% \u2014 S&P: +0.5% | Nasdaq: +1.2% | Dow: +0.0%"
+      "message": "\u00d8 +0.6% \u2014 S&P: +0.5% | Nasdaq: +1.1% | Dow: +0.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 0.3428175305770805,
-      "status": "green",
+      "value": null,
+      "status": "error",
       "score": 0,
-      "message": "\u00d8 +0.3% \u2014 FTSE 100: -0.8% | ASX 200: +0.5% | CAC 40: +0.5%"
+      "message": "Keine globalen Marktdaten verf\u00fcgbar"
     },
     {
       "name": "Buffett Indicator",
@@ -89,15 +89,10 @@
       "value": 0.8008208993758311,
       "status": "green",
       "score": 0,
-      "message": "Vol=38M (0.8x avg) \u2014 Normal | SQQQ -3.8%"
+      "message": "Vol=38M (0.8x avg) \u2014 Normal | SQQQ +nan%"
     }
   ],
   "history": [
-    {
-      "time": "16:45",
-      "score": 9,
-      "status": "red"
-    },
     {
       "time": "18:14",
       "score": 7,
@@ -190,6 +185,11 @@
     },
     {
       "time": "21:25",
+      "score": 4,
+      "status": "yellow"
+    },
+    {
+      "time": "00:37",
       "score": 4,
       "status": "yellow"
     }
