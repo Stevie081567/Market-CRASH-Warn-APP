@@ -4,8 +4,8 @@
   "red_count": 2,
   "yellow_count": 4,
   "error_count": 1,
-  "last_updated": "2026-10-31T01:03:54.839534",
-  "last_updated_full": "2026-10-31T01:03:54.582898",
+  "last_updated": "2026-10-31T18:04:25.724337",
+  "last_updated_full": "2026-10-31T18:04:25.495192",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -51,28 +51,28 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -2.0767156785932945,
+      "value": -2.145960661945267,
       "status": "red",
       "score": 2,
-      "message": "\u00d8 -2.1% \ud83d\udd34 \u2014 S&P: -1.7% | Nasdaq: -3.4% | Dow: -1.1%"
+      "message": "\u00d8 -2.1% \ud83d\udd34 \u2014 S&P: -1.8% | Nasdaq: -3.5% | Dow: -1.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 0.18331277182946937,
+      "value": -0.3540713087503298,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.2% \u2014 ASX 200: +0.2%"
+      "message": "\u00d8 -0.4% \u2014 Nikkei 225: -2.1% | Euro Stoxx 50: -1.2% | DAX: -0.9%"
     },
     {
       "name": "Buffett Indicator",
-      "value": 232.9110560118747,
+      "value": 228.7683764946515,
       "status": "red",
       "score": 2,
-      "message": "233% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
+      "message": "229% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
     },
     {
       "name": "MOVE Index (Bond Vol)",
-      "value": 100.19760131835938,
+      "value": 100.19999694824219,
       "status": "yellow",
       "score": 1,
       "message": "MOVE=100.2 \ud83d\udfe1 \u2014 Elevated bond volatility (threshold: 100.0)"
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 1.402727177274113,
+      "value": 1.4073590859313427,
       "status": "green",
       "score": 0,
-      "message": "Vol=67M (1.4x avg) \u2014 Normal | SQQQ +nan%"
+      "message": "Vol=67M (1.4x avg) \u2014 Normal | SQQQ +10.6%"
     }
   ],
   "history": [
-    {
-      "time": "23:30",
-      "score": 3,
-      "status": "yellow"
-    },
     {
       "time": "16:30",
       "score": 9,
@@ -190,6 +185,11 @@
     },
     {
       "time": "01:03",
+      "score": 8,
+      "status": "red"
+    },
+    {
+      "time": "18:04",
       "score": 8,
       "status": "red"
     }
