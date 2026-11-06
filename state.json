@@ -1,46 +1,46 @@
 {
   "status": "red",
-  "score": 8,
-  "red_count": 1,
-  "yellow_count": 6,
+  "score": 9,
+  "red_count": 3,
+  "yellow_count": 3,
   "error_count": 1,
-  "last_updated": "2026-11-06T18:47:41.657999",
-  "last_updated_full": "2026-11-06T18:47:41.369327",
+  "last_updated": "2026-11-06T23:36:44.542508",
+  "last_updated_full": "2026-11-06T23:36:44.210814",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 24.90999984741211,
+      "value": 25.6299991607666,
       "status": "yellow",
       "score": 1,
-      "message": "VIX=24.9 \u2014 erh\u00f6hte Volatilit\u00e4t (Schwelle: 20.0)"
+      "message": "VIX=25.6 \u2014 erh\u00f6hte Volatilit\u00e4t (Schwelle: 20.0)"
     },
     {
       "name": "S&P 500",
-      "value": 7407.669921875,
+      "value": 7374.85009765625,
       "status": "yellow",
       "score": 1,
-      "message": "SPX=7408 | Intraday +0.4% | ATH-Abstand -5.6% \ud83d\udfe1"
+      "message": "SPX=7375 | Intraday -0.0% | ATH-Abstand -6.0% \ud83d\udfe1"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 22.7090543259557,
+      "value": 22.0792756539235,
       "status": "yellow",
       "score": 1,
-      "message": "F&G=23 (extreme fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-11-06, 7T-\u00d8)"
+      "message": "F&G=22 (extreme fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-11-06, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
-      "value": 119.55999755859375,
-      "status": "yellow",
-      "score": 1,
-      "message": "VVIX=119.6 \ud83d\udfe1 \u2014 Elevated uncertainty (threshold: 100.0)"
+      "value": 125.0199966430664,
+      "status": "red",
+      "score": 2,
+      "message": "VVIX=125.0 \ud83d\udd34 \u2014 Panic regime (threshold: 120.0)"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": 0.3200000000000003,
+      "value": 0.3799999999999999,
       "status": "green",
       "score": 0,
-      "message": "Spread=+0.32% \u2014 normal (10Y=4.90% / 2Y=4.58%)"
+      "message": "Spread=+0.38% \u2014 normal (10Y=4.84% / 2Y=4.46%)"
     },
     {
       "name": "Put/Call Ratio",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.05099955396917836,
+      "value": 0.4688469400179347,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 -0.1% \u2014 S&P: -0.1% | Nasdaq: +0.6% | Dow: -0.7%"
+      "message": "\u00d8 +0.5% \u2014 S&P: +0.3% | Nasdaq: +1.4% | Dow: -0.3%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -1.0405776137324654,
-      "status": "yellow",
-      "score": 1,
-      "message": "\u00d8 -1.0% \ud83d\udfe1 | Schlimmste: DAX: -1.9% | FTSE 100: -1.0% | Euro Stoxx 50: -1.0%"
+      "value": -0.7486679037029473,
+      "status": "green",
+      "score": 0,
+      "message": "\u00d8 -0.7% \u2014 FTSE 100: -1.0% | ASX 200: -0.5%"
     },
     {
       "name": "Buffett Indicator",
@@ -72,32 +72,27 @@
     },
     {
       "name": "MOVE Index (Bond Vol)",
-      "value": 93.06780242919922,
+      "value": 92.77210235595703,
       "status": "green",
       "score": 0,
-      "message": "MOVE=93.1 \u2014 Bond market calm"
+      "message": "MOVE=92.8 \u2014 Bond market calm"
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 149.3699951171875,
-      "status": "yellow",
-      "score": 1,
-      "message": "SKEW=149.4 \ud83d\udfe1 \u2014 Elevated tail risk (threshold: 140.0)"
+      "value": 153.5500030517578,
+      "status": "red",
+      "score": 2,
+      "message": "SKEW=153.6 \ud83d\udd34 \u2014 High black swan risk (threshold: 150.0)"
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 1.1771917644413865,
+      "value": 1.4521458319195821,
       "status": "green",
       "score": 0,
-      "message": "Vol=62M (1.2x avg) \u2014 Normal | SQQQ -4.8%"
+      "message": "Vol=77M (1.5x avg) \u2014 Normal | SQQQ -3.7%"
     }
   ],
   "history": [
-    {
-      "time": "17:19",
-      "score": 5,
-      "status": "yellow"
-    },
     {
       "time": "21:25",
       "score": 4,
@@ -191,6 +186,11 @@
     {
       "time": "18:47",
       "score": 8,
+      "status": "red"
+    },
+    {
+      "time": "23:36",
+      "score": 9,
       "status": "red"
     }
   ],
