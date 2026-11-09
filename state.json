@@ -1,46 +1,46 @@
 {
-  "status": "red",
-  "score": 10,
-  "red_count": 3,
-  "yellow_count": 4,
+  "status": "yellow",
+  "score": 5,
+  "red_count": 2,
+  "yellow_count": 1,
   "error_count": 1,
-  "last_updated": "2026-11-07T18:24:37.964403",
-  "last_updated_full": "2026-11-07T18:24:37.682590",
+  "last_updated": "2026-11-09T21:52:06.425847",
+  "last_updated_full": "2026-11-09T21:52:06.098274",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 25.6299991607666,
-      "status": "yellow",
-      "score": 1,
-      "message": "VIX=25.6 \u2014 erh\u00f6hte Volatilit\u00e4t (Schwelle: 20.0)"
+      "value": 19.920000076293945,
+      "status": "green",
+      "score": 0,
+      "message": "VIX=19.9 \u2014 normal"
     },
     {
       "name": "S&P 500",
-      "value": 7374.85009765625,
-      "status": "yellow",
-      "score": 1,
-      "message": "SPX=7375 | Intraday -0.0% | ATH-Abstand -6.0% \ud83d\udfe1"
+      "value": 7549.009765625,
+      "status": "green",
+      "score": 0,
+      "message": "SPX=7549 | Intraday +1.7% | ATH-Abstand -3.8%"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 22.0792756539235,
+      "value": 31.7142857142857,
       "status": "yellow",
       "score": 1,
-      "message": "F&G=22 (extreme fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-11-06, 7T-\u00d8)"
+      "message": "F&G=32 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-11-09, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
-      "value": 125.0199966430664,
-      "status": "red",
-      "score": 2,
-      "message": "VVIX=125.0 \ud83d\udd34 \u2014 Panic regime (threshold: 120.0)"
+      "value": 98.18000030517578,
+      "status": "green",
+      "score": 0,
+      "message": "VVIX=98.2 \u2014 Normal vol regime"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": 0.3799999999999999,
+      "value": 0.35000000000000053,
       "status": "green",
       "score": 0,
-      "message": "Spread=+0.38% \u2014 normal (10Y=4.84% / 2Y=4.46%)"
+      "message": "Spread=+0.35% \u2014 normal (10Y=4.86% / 2Y=4.51%)"
     },
     {
       "name": "Put/Call Ratio",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.42853479619070783,
+      "value": 2.5216245362670966,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.4% \u2014 S&P: +0.3% | Nasdaq: +1.3% | Dow: -0.3%"
+      "message": "\u00d8 +2.5% \u2014 S&P: +2.2% | Nasdaq: +3.4% | Dow: +2.0%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -1.7769698669492733,
-      "status": "yellow",
-      "score": 1,
-      "message": "\u00d8 -1.8% \ud83d\udfe1 | Schlimmste: Nikkei 225: -6.0% | DAX: -1.9% | Hang Seng: -1.3%"
+      "value": 1.1905611658367437,
+      "status": "green",
+      "score": 0,
+      "message": "\u00d8 +1.2% \u2014 ASX 200: +0.1% | FTSE 100: +1.0% | CAC 40: +1.2%"
     },
     {
       "name": "Buffett Indicator",
@@ -72,10 +72,10 @@
     },
     {
       "name": "MOVE Index (Bond Vol)",
-      "value": 92.7699966430664,
+      "value": 85.98380279541016,
       "status": "green",
       "score": 0,
-      "message": "MOVE=92.8 \u2014 Bond market calm"
+      "message": "MOVE=86.0 \u2014 Bond market calm"
     },
     {
       "name": "SKEW Index (Tail Risk)",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 1.4554203196349826,
+      "value": 1.0973382935256697,
       "status": "green",
       "score": 0,
-      "message": "Vol=77M (1.5x avg) \u2014 Normal | SQQQ -3.7%"
+      "message": "Vol=61M (1.1x avg) \u2014 Normal | SQQQ -10.3%"
     }
   ],
   "history": [
-    {
-      "time": "00:37",
-      "score": 4,
-      "status": "yellow"
-    },
     {
       "time": "17:48",
       "score": 4,
@@ -192,8 +187,13 @@
       "time": "18:24",
       "score": 10,
       "status": "red"
+    },
+    {
+      "time": "21:52",
+      "score": 5,
+      "status": "yellow"
     }
   ],
-  "last_status": "red",
-  "yellow_streak": 0
+  "last_status": "yellow",
+  "yellow_streak": 1
 }
