@@ -1,39 +1,39 @@
 {
-  "status": "yellow",
-  "score": 5,
+  "status": "red",
+  "score": 8,
   "red_count": 2,
-  "yellow_count": 1,
+  "yellow_count": 4,
   "error_count": 1,
-  "last_updated": "2026-11-09T21:52:06.425847",
-  "last_updated_full": "2026-11-09T21:52:06.098274",
+  "last_updated": "2026-11-10T19:13:49.248263",
+  "last_updated_full": "2026-11-10T19:13:48.860491",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 19.920000076293945,
-      "status": "green",
-      "score": 0,
-      "message": "VIX=19.9 \u2014 normal"
+      "value": 20.139999389648438,
+      "status": "yellow",
+      "score": 1,
+      "message": "VIX=20.1 \u2014 erh\u00f6hte Volatilit\u00e4t (Schwelle: 20.0)"
     },
     {
       "name": "S&P 500",
-      "value": 7549.009765625,
+      "value": 7503.2998046875,
       "status": "green",
       "score": 0,
-      "message": "SPX=7549 | Intraday +1.7% | ATH-Abstand -3.8%"
+      "message": "SPX=7503 | Intraday -0.1% | ATH-Abstand -4.3%"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 31.7142857142857,
+      "value": 33.5428571428571,
       "status": "yellow",
       "score": 1,
-      "message": "F&G=32 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-11-09, 7T-\u00d8)"
+      "message": "F&G=34 (fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-11-10, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
-      "value": 98.18000030517578,
-      "status": "green",
-      "score": 0,
-      "message": "VVIX=98.2 \u2014 Normal vol regime"
+      "value": 100.13999938964844,
+      "status": "yellow",
+      "score": 1,
+      "message": "VVIX=100.1 \ud83d\udfe1 \u2014 Elevated uncertainty (threshold: 100.0)"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
@@ -51,53 +51,48 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 2.5216245362670966,
-      "status": "green",
-      "score": 0,
-      "message": "\u00d8 +2.5% \u2014 S&P: +2.2% | Nasdaq: +3.4% | Dow: +2.0%"
+      "value": -0.6352648781715491,
+      "status": "yellow",
+      "score": 1,
+      "message": "\u00d8 -0.6% \ud83d\udfe1 \u2014 S&P: -0.6% | Nasdaq: -0.8% | Dow: -0.5%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 1.1905611658367437,
+      "value": 0.45196674696552075,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +1.2% \u2014 ASX 200: +0.1% | FTSE 100: +1.0% | CAC 40: +1.2%"
+      "message": "\u00d8 +0.5% \u2014 FTSE 100: -0.3% | DAX: +0.3% | CAC 40: +0.6%"
     },
     {
       "name": "Buffett Indicator",
-      "value": 222.85573336696754,
+      "value": 228.3962358826267,
       "status": "red",
       "score": 2,
-      "message": "223% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
+      "message": "228% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
     },
     {
       "name": "MOVE Index (Bond Vol)",
-      "value": 85.98380279541016,
+      "value": 94.15910339355469,
       "status": "green",
       "score": 0,
-      "message": "MOVE=86.0 \u2014 Bond market calm"
+      "message": "MOVE=94.2 \u2014 Bond market calm"
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 153.5500030517578,
+      "value": 150.33999633789062,
       "status": "red",
       "score": 2,
-      "message": "SKEW=153.6 \ud83d\udd34 \u2014 High black swan risk (threshold: 150.0)"
+      "message": "SKEW=150.3 \ud83d\udd34 \u2014 High black swan risk (threshold: 150.0)"
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 1.0973382935256697,
+      "value": 0.793696548702084,
       "status": "green",
       "score": 0,
-      "message": "Vol=61M (1.1x avg) \u2014 Normal | SQQQ -10.3%"
+      "message": "Vol=45M (0.8x avg) \u2014 Normal | SQQQ +3.2%"
     }
   ],
   "history": [
-    {
-      "time": "17:48",
-      "score": 4,
-      "status": "yellow"
-    },
     {
       "time": "22:06",
       "score": 4,
@@ -192,8 +187,13 @@
       "time": "21:52",
       "score": 5,
       "status": "yellow"
+    },
+    {
+      "time": "19:13",
+      "score": 8,
+      "status": "red"
     }
   ],
-  "last_status": "yellow",
-  "yellow_streak": 1
+  "last_status": "red",
+  "yellow_streak": 0
 }
