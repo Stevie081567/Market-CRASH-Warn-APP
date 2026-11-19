@@ -1,46 +1,46 @@
 {
   "status": "red",
-  "score": 8,
+  "score": 9,
   "red_count": 1,
-  "yellow_count": 6,
-  "error_count": 1,
-  "last_updated": "2026-11-18T19:52:47.973174",
-  "last_updated_full": "2026-11-18T19:52:47.661223",
+  "yellow_count": 7,
+  "error_count": 2,
+  "last_updated": "2026-11-19T01:38:03.773392",
+  "last_updated_full": "2026-11-19T01:38:03.419245",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 24.65999984741211,
+      "value": 24.559999465942383,
       "status": "yellow",
       "score": 1,
-      "message": "VIX=24.7 \u2014 erh\u00f6hte Volatilit\u00e4t (Schwelle: 20.0)"
+      "message": "VIX=24.6 \u2014 erh\u00f6hte Volatilit\u00e4t (Schwelle: 20.0)"
     },
     {
       "name": "S&P 500",
-      "value": 7317.18017578125,
+      "value": 7322.27978515625,
       "status": "yellow",
       "score": 1,
-      "message": "SPX=7317 | Intraday -0.5% | ATH-Abstand -6.7% \ud83d\udfe1"
+      "message": "SPX=7322 | Intraday -0.5% | ATH-Abstand -6.7% \ud83d\udfe1"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 24.5505791505791,
+      "value": 24.607722007722,
       "status": "yellow",
       "score": 1,
       "message": "F&G=25 (extreme fear) \u2014 Angst im Markt \ud83d\udfe1 (Stand: 2026-11-18, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
-      "value": 116.58000183105469,
+      "value": 118.2300033569336,
       "status": "yellow",
       "score": 1,
-      "message": "VVIX=116.6 \ud83d\udfe1 \u2014 Elevated uncertainty (threshold: 100.0)"
+      "message": "VVIX=118.2 \ud83d\udfe1 \u2014 Elevated uncertainty (threshold: 100.0)"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": 0.29000000000000004,
+      "value": 0.2999999999999998,
       "status": "yellow",
       "score": 1,
-      "message": "Spread=+0.29% \u2014 flache Kurve (10Y=5.12% / 2Y=4.83%)"
+      "message": "Spread=+0.30% \u2014 flache Kurve (10Y=5.10% / 2Y=4.80%)"
     },
     {
       "name": "Put/Call Ratio",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -0.2879586342345844,
-      "status": "green",
-      "score": 0,
-      "message": "\u00d8 -0.3% \u2014 S&P: -0.2% | Nasdaq: +0.7% | Dow: -1.4%"
+      "value": -0.5155988358670097,
+      "status": "yellow",
+      "score": 1,
+      "message": "\u00d8 -0.5% \ud83d\udfe1 \u2014 S&P: -0.4% | Nasdaq: -0.1% | Dow: -1.0%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -0.9912623937226448,
-      "status": "green",
+      "value": null,
+      "status": "error",
       "score": 0,
-      "message": "\u00d8 -1.0% \u2014 FTSE 100: -1.3% | DAX: -1.2% | Euro Stoxx 50: -0.9%"
+      "message": "Keine globalen Marktdaten verf\u00fcgbar"
     },
     {
       "name": "Buffett Indicator",
@@ -72,32 +72,27 @@
     },
     {
       "name": "MOVE Index (Bond Vol)",
-      "value": 98.3489990234375,
+      "value": 98.15350341796875,
       "status": "green",
       "score": 0,
-      "message": "MOVE=98.3 \u2014 Bond market calm"
+      "message": "MOVE=98.2 \u2014 Bond market calm"
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 145.11000061035156,
+      "value": 142.83999633789062,
       "status": "yellow",
       "score": 1,
-      "message": "SKEW=145.1 \ud83d\udfe1 \u2014 Elevated tail risk (threshold: 140.0)"
+      "message": "SKEW=142.8 \ud83d\udfe1 \u2014 Elevated tail risk (threshold: 140.0)"
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.8187823659516498,
+      "value": 0.9300524024317094,
       "status": "green",
       "score": 0,
-      "message": "Vol=48M (0.8x avg) \u2014 Normal | SQQQ -0.5%"
+      "message": "Vol=55M (0.9x avg) \u2014 Normal | SQQQ +nan%"
     }
   ],
   "history": [
-    {
-      "time": "19:24",
-      "score": 13,
-      "status": "red"
-    },
     {
       "time": "00:28",
       "score": 13,
@@ -191,6 +186,11 @@
     {
       "time": "19:52",
       "score": 8,
+      "status": "red"
+    },
+    {
+      "time": "01:38",
+      "score": 9,
       "status": "red"
     }
   ],
