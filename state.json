@@ -1,11 +1,11 @@
 {
   "status": "red",
-  "score": 15,
-  "red_count": 6,
-  "yellow_count": 3,
+  "score": 16,
+  "red_count": 7,
+  "yellow_count": 2,
   "error_count": 1,
-  "last_updated": "2026-11-21T00:57:12.027674",
-  "last_updated_full": "2026-11-21T00:57:11.887096",
+  "last_updated": "2026-11-21T20:18:44.095224",
+  "last_updated_full": "2026-11-21T20:18:43.731813",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -51,28 +51,28 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -3.1850155328397327,
+      "value": -3.657072813487971,
       "status": "red",
       "score": 2,
-      "message": "\u00d8 -3.2% \ud83d\udd34 \u2014 S&P: -3.2% | Nasdaq: -4.9% | Dow: -1.5%"
+      "message": "\u00d8 -3.7% \ud83d\udd34 \u2014 S&P: -3.6% | Nasdaq: -5.5% | Dow: -1.9%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -1.5784016205943447,
-      "status": "yellow",
-      "score": 1,
-      "message": "\u00d8 -1.6% \ud83d\udfe1 | Schlimmste: ASX 200: -1.6%"
+      "value": -2.406134636142663,
+      "status": "red",
+      "score": 2,
+      "message": "\u00d8 -2.4% \ud83d\udd34 | Schlimmste: Nikkei 225: -5.1% | Euro Stoxx 50: -2.8% | DAX: -2.6%"
     },
     {
       "name": "Buffett Indicator",
-      "value": 216.80170331380432,
+      "value": 208.89740736726247,
       "status": "red",
       "score": 2,
-      "message": "217% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
+      "message": "209% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
     },
     {
       "name": "MOVE Index (Bond Vol)",
-      "value": 106.31189727783203,
+      "value": 106.30999755859375,
       "status": "yellow",
       "score": 1,
       "message": "MOVE=106.3 \ud83d\udfe1 \u2014 Elevated bond volatility (threshold: 100.0)"
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 1.7086745661923795,
+      "value": 1.7092760067913217,
       "status": "green",
       "score": 0,
       "message": "Vol=103M (1.7x avg) \u2014 Normal | SQQQ +16.5%"
     }
   ],
   "history": [
-    {
-      "time": "21:52",
-      "score": 5,
-      "status": "yellow"
-    },
     {
       "time": "19:13",
       "score": 8,
@@ -191,6 +186,11 @@
     {
       "time": "00:57",
       "score": 15,
+      "status": "red"
+    },
+    {
+      "time": "20:18",
+      "score": 16,
       "status": "red"
     }
   ],
