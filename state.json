@@ -1,46 +1,46 @@
 {
   "status": "red",
-  "score": 16,
-  "red_count": 7,
-  "yellow_count": 2,
+  "score": 11,
+  "red_count": 2,
+  "yellow_count": 7,
   "error_count": 1,
-  "last_updated": "2026-11-21T20:18:44.095224",
-  "last_updated_full": "2026-11-21T20:18:43.731813",
+  "last_updated": "2026-11-23T23:16:06.516891",
+  "last_updated_full": "2026-11-23T23:16:06.247396",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 35.88999938964844,
-      "status": "red",
-      "score": 2,
-      "message": "VIX=35.9 \u2014 CRASH-ALARM (Schwelle: 30.0)"
+      "value": 26.610000610351562,
+      "status": "yellow",
+      "score": 1,
+      "message": "VIX=26.6 \u2014 erh\u00f6hte Volatilit\u00e4t (Schwelle: 20.0)"
     },
     {
       "name": "S&P 500",
-      "value": 6918.4501953125,
-      "status": "red",
-      "score": 2,
-      "message": "SPX=6918 | Intraday -3.2% \ud83d\udd34 | ATH-Abstand -11.8% \ud83d\udd34"
+      "value": 7236.85009765625,
+      "status": "yellow",
+      "score": 1,
+      "message": "SPX=7237 | Intraday +0.1% | ATH-Abstand -7.7% \ud83d\udfe1"
     },
     {
       "name": "Fear & Greed Index",
-      "value": 9.67368421052632,
+      "value": 16.9658627087199,
       "status": "red",
       "score": 2,
-      "message": "F&G=10 (extreme fear) \u2014 EXTREME FEAR \ud83d\udd34 (Stand: 2026-11-20, 7T-\u00d8)"
+      "message": "F&G=17 (extreme fear) \u2014 EXTREME FEAR \ud83d\udd34 (Stand: 2026-11-23, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
-      "value": 144.72000122070312,
-      "status": "red",
-      "score": 2,
-      "message": "VVIX=144.7 \ud83d\udd34 \u2014 Panic regime (threshold: 120.0)"
+      "value": 117.98999786376953,
+      "status": "yellow",
+      "score": 1,
+      "message": "VVIX=118.0 \ud83d\udfe1 \u2014 Elevated uncertainty (threshold: 100.0)"
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": 0.28000000000000025,
+      "value": 0.29000000000000004,
       "status": "yellow",
       "score": 1,
-      "message": "Spread=+0.28% \u2014 flache Kurve (10Y=5.04% / 2Y=4.76%)"
+      "message": "Spread=+0.29% \u2014 flache Kurve (10Y=4.92% / 2Y=4.63%)"
     },
     {
       "name": "Put/Call Ratio",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": -3.657072813487971,
-      "status": "red",
-      "score": 2,
-      "message": "\u00d8 -3.7% \ud83d\udd34 \u2014 S&P: -3.6% | Nasdaq: -5.5% | Dow: -1.9%"
+      "value": 3.7488750815747927,
+      "status": "green",
+      "score": 0,
+      "message": "\u00d8 +3.7% \u2014 S&P: +3.7% | Nasdaq: +4.9% | Dow: +2.6%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": -2.406134636142663,
-      "status": "red",
-      "score": 2,
-      "message": "\u00d8 -2.4% \ud83d\udd34 | Schlimmste: Nikkei 225: -5.1% | Euro Stoxx 50: -2.8% | DAX: -2.6%"
+      "value": -1.879645467247304,
+      "status": "yellow",
+      "score": 1,
+      "message": "\u00d8 -1.9% \ud83d\udfe1 | Schlimmste: Nikkei 225: -5.1% | FTSE 100: +1.3%"
     },
     {
       "name": "Buffett Indicator",
@@ -72,32 +72,27 @@
     },
     {
       "name": "MOVE Index (Bond Vol)",
-      "value": 106.30999755859375,
+      "value": 100.9136962890625,
       "status": "yellow",
       "score": 1,
-      "message": "MOVE=106.3 \ud83d\udfe1 \u2014 Elevated bond volatility (threshold: 100.0)"
+      "message": "MOVE=100.9 \ud83d\udfe1 \u2014 Elevated bond volatility (threshold: 100.0)"
     },
     {
       "name": "SKEW Index (Tail Risk)",
-      "value": 138.83999633789062,
-      "status": "green",
-      "score": 0,
-      "message": "SKEW=138.8 \u2014 Normal tail risk distribution"
+      "value": 140.3699951171875,
+      "status": "yellow",
+      "score": 1,
+      "message": "SKEW=140.4 \ud83d\udfe1 \u2014 Elevated tail risk (threshold: 140.0)"
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 1.7092760067913217,
+      "value": 1.4387604246281562,
       "status": "green",
       "score": 0,
-      "message": "Vol=103M (1.7x avg) \u2014 Normal | SQQQ +16.5%"
+      "message": "Vol=91M (1.4x avg) \u2014 Normal | SQQQ -20.2%"
     }
   ],
   "history": [
-    {
-      "time": "19:13",
-      "score": 8,
-      "status": "red"
-    },
     {
       "time": "00:03",
       "score": 5,
@@ -191,6 +186,11 @@
     {
       "time": "20:18",
       "score": 16,
+      "status": "red"
+    },
+    {
+      "time": "23:16",
+      "score": 11,
       "status": "red"
     }
   ],
