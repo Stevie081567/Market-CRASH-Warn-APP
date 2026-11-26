@@ -4,15 +4,15 @@
   "red_count": 2,
   "yellow_count": 5,
   "error_count": 1,
-  "last_updated": "2026-11-26T03:24:35.414499",
-  "last_updated_full": "2026-11-26T03:24:35.197147",
+  "last_updated": "2026-11-26T20:51:00.528095",
+  "last_updated_full": "2026-11-26T20:51:00.159229",
   "indicators": [
     {
       "name": "VIX Fear Index",
-      "value": 28.31999969482422,
+      "value": 26.799999237060547,
       "status": "yellow",
       "score": 1,
-      "message": "VIX=28.3 \u2014 erh\u00f6hte Volatilit\u00e4t (Schwelle: 20.0)"
+      "message": "VIX=26.8 \u2014 erh\u00f6hte Volatilit\u00e4t (Schwelle: 20.0)"
     },
     {
       "name": "S&P 500",
@@ -23,10 +23,10 @@
     },
     {
       "name": "Fear & Greed Index",
-      "value": 15.2253164556962,
+      "value": 14.9967450271248,
       "status": "red",
       "score": 2,
-      "message": "F&G=15 (extreme fear) \u2014 EXTREME FEAR \ud83d\udd34 (Stand: 2026-11-25, 7T-\u00d8)"
+      "message": "F&G=15 (extreme fear) \u2014 EXTREME FEAR \ud83d\udd34 (Stand: 2026-11-26, 7T-\u00d8)"
     },
     {
       "name": "VVIX (Vol of VIX)",
@@ -51,17 +51,17 @@
     },
     {
       "name": "E-Mini Futures",
-      "value": 0.9416366772797455,
+      "value": 1.1807056299916465,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.9% \u2014 S&P: +0.8% | Nasdaq: +1.0% | Dow: +1.1%"
+      "message": "\u00d8 +1.2% \u2014 S&P: +1.0% | Nasdaq: +1.4% | Dow: +1.1%"
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 0.06229418660606946,
+      "value": 1.6591258285884165,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.1% \u2014 Euro Stoxx 50: -1.8% | DAX: -1.3% | CAC 40: -0.7%"
+      "message": "\u00d8 +1.7% \u2014 ASX 200: +0.8% | CAC 40: +1.6% | FTSE 100: +1.7%"
     },
     {
       "name": "Buffett Indicator",
@@ -72,7 +72,7 @@
     },
     {
       "name": "MOVE Index (Bond Vol)",
-      "value": 97.53710174560547,
+      "value": 97.54000091552734,
       "status": "green",
       "score": 0,
       "message": "MOVE=97.5 \u2014 Bond market calm"
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 1.3571178205845666,
+      "value": 1.3703243540301053,
       "status": "green",
       "score": 0,
-      "message": "Vol=92M (1.4x avg) \u2014 Normal | SQQQ +1.9%"
+      "message": "Vol=93M (1.4x avg) \u2014 Normal | SQQQ +1.9%"
     }
   ],
   "history": [
-    {
-      "time": "19:27",
-      "score": 3,
-      "status": "yellow"
-    },
     {
       "time": "00:37",
       "score": 5,
@@ -190,6 +185,11 @@
     },
     {
       "time": "03:24",
+      "score": 9,
+      "status": "red"
+    },
+    {
+      "time": "20:51",
       "score": 9,
       "status": "red"
     }
