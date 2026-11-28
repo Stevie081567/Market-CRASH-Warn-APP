@@ -4,8 +4,8 @@
   "red_count": 1,
   "yellow_count": 6,
   "error_count": 1,
-  "last_updated": "2026-11-27T20:36:40.245978",
-  "last_updated_full": "2026-11-27T20:36:40.053167",
+  "last_updated": "2026-11-28T02:57:23.358487",
+  "last_updated_full": "2026-11-28T02:57:23.095654",
   "indicators": [
     {
       "name": "VIX Fear Index",
@@ -37,10 +37,10 @@
     },
     {
       "name": "Yield Curve (10Y-2Y)",
-      "value": 0.28000000000000025,
+      "value": 0.23999999999999932,
       "status": "yellow",
       "score": 1,
-      "message": "Spread=+0.28% \u2014 flache Kurve (10Y=4.91% / 2Y=4.63%)"
+      "message": "Spread=+0.24% \u2014 flache Kurve (10Y=4.85% / 2Y=4.61%)"
     },
     {
       "name": "Put/Call Ratio",
@@ -58,17 +58,17 @@
     },
     {
       "name": "Globale M\u00e4rkte",
-      "value": 0.8714408637285928,
+      "value": 1.2242769357936787,
       "status": "green",
       "score": 0,
-      "message": "\u00d8 +0.9% \u2014 CAC 40: +0.6% | ASX 200: +0.8% | FTSE 100: +0.8%"
+      "message": "\u00d8 +1.2% \u2014 CAC 40: +0.6% | ASX 200: +0.8% | FTSE 100: +0.8%"
     },
     {
       "name": "Buffett Indicator",
-      "value": 217.01307089020477,
+      "value": 220.52574368568588,
       "status": "red",
       "score": 2,
-      "message": "217% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
+      "message": "221% \ud83d\udd34 \u2014 stark \u00fcberbewertet (Schwelle: 180.0%)"
     },
     {
       "name": "MOVE Index (Bond Vol)",
@@ -86,18 +86,13 @@
     },
     {
       "name": "SQQQ Volume Spike",
-      "value": 0.5823772221328921,
+      "value": 0.5925445058193124,
       "status": "green",
       "score": 0,
-      "message": "Vol=41M (0.6x avg) \u2014 Normal | SQQQ -7.7%"
+      "message": "Vol=42M (0.6x avg) \u2014 Normal | SQQQ -7.7%"
     }
   ],
   "history": [
-    {
-      "time": "00:19",
-      "score": 5,
-      "status": "yellow"
-    },
     {
       "time": "18:54",
       "score": 5,
@@ -190,6 +185,11 @@
     },
     {
       "time": "20:36",
+      "score": 8,
+      "status": "red"
+    },
+    {
+      "time": "02:57",
       "score": 8,
       "status": "red"
     }
